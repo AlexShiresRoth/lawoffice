@@ -1,0 +1,163 @@
+ /*=========================
+ Probate law css
+ */
+ /* main color theme blue #303F9F; */
+ 
+ 
+ .probate_body{
+    background-color: #fff;
+    padding-top:0px;
+    padding-bottom: 20px;
+    width:90%;
+    border-radius:5px;
+    line-height: 1.5;
+    margin:20px auto;
+}
+.external{
+    background-color:#e6e6e6;
+    margin-bottom: 0px;
+    font-family: 'Open Sans';
+}
+.probate-head{
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(250,250,250,0.9)),to(rgba(250,250,250,0.9))), url('img/willandtest.jpg');
+	background-image: linear-gradient(rgba(250,250,250,0.9),rgba(250,250,250,0.9)), url('img/willandtest.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-top:20px;
+	width:100%;
+}
+.probate-head h2{
+    margin-bottom: 0;
+    padding-top:40px;
+    padding-bottom: 20px;
+}
+.probate-par{
+    margin-top: 10px;
+    padding:0 40px;
+}
+.titles{
+    font-weight:400;
+    text-align: center;
+}
+.probate_body h3{
+    border-bottom: 1px solid #272e4f;
+    padding-bottom: 10px;
+    margin-top:20px;
+}
+.probate_body .image{
+    max-height:200px;
+    width: auto;
+}
+
+.probate-details{
+    list-style: none;
+    font-size:90%;
+    margin:0 20px;
+
+}
+.probate-details ion-icon{
+    vertical-align: top;
+    margin-left: 30px;
+}
+.probate_body .container {
+    background-color: #f9f9f9;
+}
+
+/*sticky nav*/
+.extended-nav{
+    float: right;
+    display: none;
+    background-color: #303F9F;
+}
+.extended-nav #lawlogo{
+    height:45px;
+    margin-top:0;
+}
+
+.external-nav{
+    float:right;
+
+}
+.nav-inline li{
+    
+}
+.m-nav{
+    float: right;
+}
+
+.extended-nav li{
+    margin-right: 0;
+    display: block;
+}
+
+a.service-toggle.nav-inline:link,
+a.service-toggle.nav-inline:visited,
+a.services.nav-inline:link,
+a.services.nav-inline:visited {
+  color: #f5f5f5;
+	-webkit-transition: .2s;
+	transition: .2s;
+	font-family:'Open Sans';
+	font-size:100%;
+	padding:12px;   
+}
+.extended-nav li a:link,
+.extended-nav li a:visited{
+    color: #f5f5f5;
+	-webkit-transition: .2s;
+	transition: .2s;
+	font-family:'Open Sans';
+	font-size:100%;
+	padding:5px;
+}
+.external-nav li a:link,
+.external-nav li a:visited{
+	color: #f5f5f5;
+	-webkit-transition: .2s;
+	transition: .2s;
+	border-right: .5px solid rgba(255,255,255, 0.5);
+} 
+a.services.nav-inline:hover,
+a.services.nav-inline:active,
+a.service-toggle.nav-inline:hover,
+a.service-toggle.nav-inline:active,
+.extended-nav li a:hover,
+.extended-nav li a:active,
+.external-nav li a:hover,
+.external-nav li a:active{
+        color: #e1e1e1;
+}
+/*=============================
+Logo
+=============*/
+
+.extended-logo{
+    height:90px;
+    width: auto;
+    
+}
+section.section-break{
+    text-align: center;
+    padding: 0;
+}
+
+/*======================================
+Realestate
+=======================================*/
+.realestate-head{
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(250,250,250,0.9)),to(rgba(250,250,250,0.9))), url('img/realestate.jpg');
+	background-image: linear-gradient(rgba(250,250,250,0.9),rgba(250,250,250,0.9)), url('img/realestate.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-top:20px;
+	width:100%;
+}
+.realestate-head h2{
+    margin-bottom: 0;
+    padding-top:40px;
+    padding-bottom: 20px;
+}
