@@ -12,14 +12,7 @@
         font-size: 90%;
     }
     .main-nav{
-        display: none; 
         font-size: 90%;
-        margin-left:0 !important;
-        margin-right:0 !important;
-    }
-   header ul.main-nav.js-main-nav{
-        margin-top:20px;
-       
     }
     a.mobile-nav-icon.js-nav{
         margin-top:0px;
@@ -90,10 +83,6 @@
     #lawlogo{
         padding-left: 0;
     }
-    .sticky .logo{
-        height:45px;
-        margin:10px 0 0 0;
-    }
     .probate-head h2{
         margin-top:10px;
     }
@@ -113,8 +102,7 @@
 
 
 @media only screen and (max-width: 680px){
-    
-.main-nav{display: none; }
+
     
 }
 
@@ -143,65 +131,44 @@
         margin: 0 0 4% 0; 
     }
    
-    .mobile-nav-icon{display: inline-block; z-index: 9999;}
+    .mobile-nav-icon{display:block; z-index: 9999;}
 
     h1{font-size: 210%;}
     h2{font-size: 140%;}
     
     .main-nav{ 
-        float: left; 
-        margin-top:30px; 
-        margin-left: 25px; 
+        min-height:30px;
         display: none; 
         z-index: 9999;
+    }
+    ul.main-nav{
+        flex-direction:column;
+        min-height:30px;
     }
     ul.external-nav{
         display: none;
     }
     
-     .external .main-nav{
-        display: inline-block;
-        margin:0;
-    }
     
     ul.extended-nav{
         display: none;
         float:left;
     }
-
+    
     .main-nav li{display: block;}
 
     .main-nav li a:link,
     .main-nav li a:visited{ 
-        display: block; 
         border: 0; 
         padding: 2px 0;
         font-size:100%;
         }
     
-
-    .sticky .mobile-nav-icon{margin-top: 12px; z-index: 9999;}
-    .sticky .main-nav{
-        float: left;
-        margin-top:5px;
-    }
-    .sticky .main-nav li a:link,
-    .sticky .main-nav li a:visited{
-        padding: 5px 0;
-    } 
-    .sticky .logo{
-        margin-top:5px ;
-        height:40px;
-    }
-    
     .m-nav{
         color:#f5f5f5; 
         font-size:170%; 
-        margin: 15px 0;
-        float: right;
+        display:flex;
     }
-        .sticky .m-nav{color:#f5f5f5;float: right; margin-top:0px; margin-bottom: 0;}
-        .sticky .m-nav-close{color: #555; float:right; display: none;}
     
    
     footer p{
