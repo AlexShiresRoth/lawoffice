@@ -97,13 +97,12 @@ section{
     align-items: center;
     padding: 100px 80px;
 }
-section:not(.hero):nth-child(even){
+section:not(.hero):nth-child(odd){
     background-color: #f5f5f5;
 }
 .container{
     display: flex;
     flex-direction:column;
-    justify-content:center;
 }
 /*==================================
 =============alerts===============
@@ -163,8 +162,8 @@ header hr{
     flex-direction:column;
     justify-content:center;
     opacity:0;
-    transform: translate(0,100%);
-    animation:2s slidein 1s forwards;
+    transform: translate(10%,200%);
+    animation:2.5s slidein .5s forwards;
 }
 @keyframes fadein{
     100%{
@@ -328,26 +327,8 @@ nav .logo{
     color:#303F9F;
     font-size:1.5em;
 }
-.section-about ul{
-    word-spacing: 2px;
-    list-style: none;
-    line-height: 1.5;
-    
-}
-.section-about-two ul li{
-    border-bottom: 1px solid #333d69;
-    font-size: 75%;
-    margin:5px;
-}
-ion-icon{
-    color:#333d69;
-    vertical-align: top;
-}
-.image-list{
-    display: flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-}
+
+
 
 .logo2{
    
@@ -364,19 +345,36 @@ ion-icon{
 }
 
 /* Section about Two */
-
+.section-about-two p{
+    word-spacing: 2px;
+    margin:0;
+    font-size:90%;
+    text-align:center;
+}
 .section-about-two .image{
-    height:180px;
+    height:150px;
     width: auto;
+    border-radius:50%;
    
 }
-.section-about-two{
+.section-about-two .container{
     display: flex;
     flex-direction:column;
     flex-wrap: wrap;
     min-height:100vh;
 }
-
+.image-list{
+   display: flex;
+   flex-direction:row;
+   justify-content: center;
+}
+.section-about-two ion-icon{
+    color:#333d69;
+    vertical-align: middle;
+}
+.about-list li{
+    line-height:0;
+}
 
 /*========================================
 ========practices======================
