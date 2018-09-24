@@ -3,17 +3,6 @@ var sectOne = document.querySelectorAll('.js-wp-about');
 
 $(document).ready(function(){
     
-    /*sticky nav */
-    $(sectOne).waypoint(function(direction){
-        if(direction == "down"){
-            $('nav').addClass('sticky');
-        }
-        else{
-         $('nav').removeClass('sticky');   
-        }
-    },{
-        offset: '60px;'
-    })
 
 
 /* scroll */
@@ -50,22 +39,22 @@ $('.scroll-to-start').click(function(){
 $('.js-wp-about').waypoint(function(direction){
     $('.js-wp-about').addClass('animated fadeIn');
 },{
-    offset:'50%'
+    offset:'60%'
 });
     $('.js-wp-1').waypoint(function(direction){
     $('.js-wp-1').addClass('animated fadeIn');
 },{
-    offset:'50%'
+    offset:'60%'
 });
 $('.js-wp-practices').waypoint(function(direction){
     $('.js-wp-practices').addClass('animated fadeIn');
 },{
-    offset:'50%'
+    offset:'60%'
 });
 $('.js-wp-4').waypoint(function(direction){
     $('.js-wp-4').addClass('animated pulse');
 },{
-    offset:'50%'
+    offset:'60%'
 });
     
      /* mobile nav */

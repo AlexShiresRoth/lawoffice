@@ -56,7 +56,7 @@
          line-height: 2;
     }
 	section{ 
-        padding: 25px 0; 
+        padding: 25px 10px; 
     }
    
     h4:after{
@@ -80,9 +80,7 @@
     header hr{
         margin-left:7%;
     }
-    #lawlogo{
-        padding-left: 0;
-    }
+   
     .probate-head h2{
         margin-top:10px;
     }
@@ -120,17 +118,6 @@
     h4:after{
         margin: 5px auto;
     }
-    
-    section{padding: 30px 0;}
-    
-    .row,
-    .hero-text-box{padding: 0 4%;}
-    
-    .col{ 
-        width: 100%;
-        margin: 0 0 4% 0; 
-    }
-   
     .mobile-nav-icon{display:block; z-index: 9999;}
 
     h1{font-size: 210%;}

@@ -99,6 +99,7 @@ section{
     flex-direction: column;
     align-items: center;
     padding: 100px 80px;
+    width:100vw;
 }
 section:not(.hero):nth-child(odd){
     background-color: #f5f5f5;
@@ -138,7 +139,6 @@ section:not(.hero):nth-child(odd){
 header{
 	background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.7)),to(rgba(0,0,0,0.7))), url('img/lib.jpg');
 	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url('img/law2.jpg');
-	height:100vh;
 	min-height:100vh;
 	background-size: cover;
 	background-position: center;
@@ -179,6 +179,34 @@ header hr{
         opacity:1;
         transform:translate(10%,100%);
     }
+}
+@keyframes slidein480{
+
+    100%{
+        opacity:1;
+        transform:translate(10%,100%);
+    }
+}
+
+@media (max-width: 535px){
+    
+    .hero-text-box{
+        font-size:60%;
+        opacity: 0;
+        transform:translate(10%,140%);
+        animation: 2s slidein480 .5s forwards;
+    }
+    .mobile-nav-icon{
+        display:block;
+        color:#fff;
+    }
+    #lawlogo{
+        margin:0;
+    }
+    .slogan{
+        margin-left:5px;
+    }
+        
 }
 
 
@@ -238,11 +266,28 @@ a.btn.btn-full:active,
 	margin-right:15px;
 	-webkit-transition: .2s linear;
 	transition: .2s linear;
+}
+.contact-button,
+.contact-button:link,
+.contact-button:visited{
+	background-color:var(--color);
+	border-radius: 5px;
+	border: 1px solid var(--color);
+	-webkit-transition: .2s linear;
+	transition: .2s linear;
+	color:#fff;
+	padding:5px 0;
+	margin-top:5px;
+	width:100%;
+	align-items:center;
+}
+.contact-button:hover,
+.contact-button:active{
+	background-color:#272e4f;
+	cursor: pointer;
+	border: 1px solid #272e4f;
+}
 
-}
-.btn-question{
-    margin-left:15px;
-}
 /*========================================
 ========navigation======================
 */
@@ -306,6 +351,24 @@ nav .logo{
     height:40px;
     width: 100%;
 }
+
+@media (max-width: 535px){
+    
+    .main-nav{
+        display:none;
+    }   
+    .mobile-nav-icon{
+        display:block;
+        float:right;
+    }
+    .js-main-nav{
+        background-color: var(--color);
+    }
+    header hr{
+        margin-left:10px;
+    }
+}
+
 
 /*========================================
 ========about======================
@@ -417,13 +480,22 @@ nav .logo{
 /*========================================
 ========contact======================
 */
-
+.section-contact{
+    display: flex;
+    flex-direction:column;
+    min-height: 100vh;
+}
 .section-contact p {
     margin-bottom: 10px;
 }
 .container-form{
     display: flex;
     flex-direction:row;
+    
+}
+.container-form label:after {
+    content: " *";
+    color:red;
 }
 .container-business{
     display:flex;
@@ -433,29 +505,54 @@ nav .logo{
 .container-business li{
     margin:0 50px;
 }
+@media (max-width: 847px){
+    div.container-form{
+        flex-direction:column;
+        height:1000px;
+        flex-shrink:1;
+    }
+    div.map{
+        margin-left:0;
+    }
+    #form.contact-form{
+        margin-right:0;
+    }
+}
+.form-map{
+    max-height:400px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+}
 .contact-form{
-    padding: 15px;
+    padding: 25px 45px;
     border-radius: 5px;
      background-color:#fff;
-     max-height:400px;
-     display: flex;
-     flex-direction: column;
-     margin:5px;
+    display:flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    justify-content:space-around;
+    margin-right:10px;
 }
 input[type=text],input[type=email],select,textarea{
 	padding:5px;
 	border-radius: 3px;
 	border: 1px solid #ccc;
+	background-color:#FFF7C5;
 }
-textarea{
+
+textarea{    
 	height: 150px;
 }
 
 .map{
-    width: 100%;
+    width: 400px;
+    height:400px;
     max-height:400px;
     border-radius: 5px;
-    margin:2% 0%;
+    margin-left: 10px;
     flex-basis:400px;
     /*-webkit-box-shadow: 0 2px 2px #555;
     box-shadow: 0 2px 2px #555;*/
@@ -472,6 +569,7 @@ textarea{
         flex-direction:row;
        justify-content:space-around;
        flex-wrap: wrap;
+       min-height: 100vh;
     }
     footer .container{
         display: flex;

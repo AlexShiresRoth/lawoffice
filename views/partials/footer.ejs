@@ -1,5 +1,10 @@
 
  <section class="section-contact" id="contact">
+     <% if(success && success.length > 0){ %>
+                    <p class="alert-success"> <%= success %></p>
+                    <% } if(error && error.length > 0) { %>
+                    <p class="alert-failure"> <%= error %></p>
+                    <% } %>
                 <div class="container-business">
                 <ul>
                     <li><h5>Business Hours</h5></li>
@@ -11,32 +16,24 @@
                     <li><p>Bohemia Location: 631-363-8749</p></li>
                     <li><p>Brooklyn Telephone: 646-633-4555</p></li>
                 </ul>
-                    <% if(success && success.length > 0){ %>
-                    <p class="alert-success"> <%= success %></p>
-                    <% } if(error && error.length > 0) { %>
-                    <p class="alert-failure"> <%= error %></p>
-                    <% } %>
+                    
                 </div>
                 
-                
+        <div class="form-map">   
             <div class="container-form">
                 <form action="send" method="POST" class="contact-form" id="form">
                         <label for="email">Email</label>
                                 <input type="email" name="email" placeholder="email" required>
-                        <label for="firstName">First Name</label>
-                                <input type="text" name="firstName" placeholder="First Name" required>
-                        <label for="lastName">Last Name</label>
-                                <input type="text" name="lastName" placeholder="Last Name" required>
-                        <label for="text">Inquiry</label>
-                                <textarea  name="message" placeholder="Reason for contact." cols="40" rows="10"></textarea>
-                        <label>&nbsp;</label>
-                        <input type = "submit" class="btn btn-full">
-                    </form> 
-                <div class='container-map'>
+                        <label for="name">Name</label>
+                                <input type="text" name="name" placeholder="First and Last Name" required>
+                                <label for="message">Message</label>
+                        <textarea  name="message" placeholder="Reason for contact." cols="30" rows="10"></textarea>
+                        
+                        <button class="contact-button">Send</button>
+                    </form>
                     <div class="map"></div>
-                </div>
-                
             </div>
+        </div>
         </section>
        
 

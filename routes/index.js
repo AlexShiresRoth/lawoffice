@@ -1,4 +1,4 @@
-//require('dotenv').config();
+require('dotenv').config();
 
 var express = require('express');
 var router = express.Router();
@@ -74,8 +74,7 @@ var nodemailer = require('nodemailer');
          <p> You have a new contact request</p>
          <h3>Contact Details</h3>
         <ul>
-            <li>First Name: ${ req.body.firstName } </li>
-            <li>Last Name: ${ req.body.lastName } </li>
+            <li>First Name: ${ req.body.name } </li>
             <li>Email: ${ req.body.email } </li>
         </ul>
         <h3>Message:</h3>
@@ -107,7 +106,7 @@ var nodemailer = require('nodemailer');
              res.redirect("/");
         }
         req.flash('success', 'Email has been sent!');
-        res.redirect("/#form");
+        res.redirect("/#contact");
     });
     });
     
