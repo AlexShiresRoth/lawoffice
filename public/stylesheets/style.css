@@ -2,6 +2,7 @@
 /* main color theme blue #303F9F; */
 :root {
     --color: #303F9F;
+    --mobileText: 80%;
 }
 * {
 	margin: 0;
@@ -98,7 +99,7 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 80px;
+    padding: 100px 50px;
     width:100vw;
 }
 section:not(.hero):nth-child(odd){
@@ -165,7 +166,7 @@ header hr{
     flex-direction:column;
     justify-content:center;
     opacity:0;
-    transform: translate(10%,200%);
+    transform: translate(5vw,100vh);
     animation:2.5s slidein .5s forwards;
 }
 @keyframes fadein{
@@ -177,37 +178,18 @@ header hr{
 
     100%{
         opacity:1;
-        transform:translate(10%,100%);
+        transform:translate(5vw,30vh);
     }
 }
 @keyframes slidein480{
 
     100%{
         opacity:1;
-        transform:translate(10%,100%);
+        transform:translate(5vw,20vh);
     }
 }
 
-@media (max-width: 535px){
-    
-    .hero-text-box{
-        font-size:60%;
-        opacity: 0;
-        transform:translate(10%,140%);
-        animation: 2s slidein480 .5s forwards;
-    }
-    .mobile-nav-icon{
-        display:block;
-        color:#fff;
-    }
-    #lawlogo{
-        margin:0;
-    }
-    .slogan{
-        margin-left:5px;
-    }
-        
-}
+
 
 
 
@@ -308,10 +290,13 @@ a.btn.btn-full:active,
 .main-nav li a:active{
     color:#bdbdbd;
 }
+.main-nav{
+    display:flex;
+    flex-direction:row;
+}
 .main-nav li{
-    display: inline-block;
     list-style: none;
-    margin: 0 5px;
+    margin: 0 8px;
 }
 
 nav{
@@ -338,36 +323,14 @@ nav .logo{
 
 
 /*mobile nav */
-.mobile-nav-icon{
-    float: right;
-    cursor: pointer;
-    display: none;
-    color: #f5f5f5;
+.mobile-navbar{
+    display:none;
 }
 
-.m-nav{
-    font-size: 200%;
-    color: #f5f5f5;
-    height:40px;
-    width: 100%;
+.mobile-nav{
+   display:none;
 }
 
-@media (max-width: 535px){
-    
-    .main-nav{
-        display:none;
-    }   
-    .mobile-nav-icon{
-        display:block;
-        float:right;
-    }
-    .js-main-nav{
-        background-color: var(--color);
-    }
-    header hr{
-        margin-left:10px;
-    }
-}
 
 
 /*========================================
@@ -491,6 +454,7 @@ nav .logo{
 .container-form{
     display: flex;
     flex-direction:row;
+    margin:10px;
     
 }
 .container-form label:after {
@@ -505,19 +469,7 @@ nav .logo{
 .container-business li{
     margin:0 50px;
 }
-@media (max-width: 847px){
-    div.container-form{
-        flex-direction:column;
-        height:1000px;
-        flex-shrink:1;
-    }
-    div.map{
-        margin-left:0;
-    }
-    #form.contact-form{
-        margin-right:0;
-    }
-}
+
 .form-map{
     max-height:400px;
     display:flex;
@@ -526,7 +478,7 @@ nav .logo{
     justify-content:space-around;
 }
 .contact-form{
-    padding: 25px 45px;
+    padding: 25px 125px;
     border-radius: 5px;
      background-color:#fff;
     display:flex;
@@ -541,15 +493,15 @@ input[type=text],input[type=email],select,textarea{
 	border-radius: 3px;
 	border: 1px solid #ccc;
 	background-color:#FFF7C5;
+	width:100%;
 }
 
 textarea{    
 	height: 150px;
+	width:100%;
 }
 
 .map{
-    width: 400px;
-    height:400px;
     max-height:400px;
     border-radius: 5px;
     margin-left: 10px;
@@ -570,6 +522,7 @@ textarea{
        justify-content:space-around;
        flex-wrap: wrap;
        min-height: 100vh;
+       padding-top:10px;
     }
     footer .container{
         display: flex;

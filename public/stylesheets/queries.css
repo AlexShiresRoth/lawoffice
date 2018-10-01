@@ -1,225 +1,140 @@
-@media only screen and (max-width: 280px){
-	.section-about h2,
-	.section-practices h2,
-	.section-contact h2{
-        font-size: 100% ;
+@media (max-width: 847px){
+   
+    .hero-text-box h1{
+        font-size:220%;
+    }
+    .section-contact p{
+        font-size: 80%;
+        margin:10px;
+    }
+    div.container-form{
+        flex-direction:column;
+        height:1000px;
+        flex-shrink:1;
+    }
+    div.map{
+        margin-left:0;
+    }
+    #form.contact-form{
+        margin-right:0;
     }
 }
 
-/*small phones 0 - 480px */
-@media only screen and (max-width: 480px){
-    h4{
-        font-size: 90%;
+
+@media (max-width: 767px){
+     .hero-text-box h1{
+        font-size:190%;
     }
-    .main-nav{
-        font-size: 90%;
-    }
-    a.mobile-nav-icon.js-nav{
-        margin-top:0px;
-    }
+}
+
+
+@media (max-width: 535px){
     
-    .m-logo{
-        margin: 0 auto;
-        text-align: center;
+   /*header */
+   
+    .hero-text-box{
+        font-size:90%;
+        opacity: 0;
+        transform:translate(5vw,120vh);
+        animation: 2s slidein480 .5s forwards;
     }
-    
-    .sticky ion-icon.m-nav.icon.hydrated{ 
-        color:#f5f5f5;
-        margin-top: 10px;
+    .mobile-nav-icon{
+        display:block;
+        color:#fff;
     }
-    .box-about{
-        padding: 15px;
-    }
-    .section-about{
-        padding:20px;
-    }
-    .section-about ul{
-        margin-bottom: 30px;
-    }
-    .section-about p {
-        font-size: 90%;
-    }
-    .section-about ul li{
-        font-size: 100%;
-    }
-    
-    .section-about img.image{
-        display: none;
-    }
-    .section-about div.col.span-1-of-4{
+    #lawlogo{
         margin:0;
     }
-    .list li{
-         list-style-position: inside;
-         text-indent:-1em;
-         padding-left:.05em;
-         line-height: 2;
+    .slogan{
+        margin-left:5px;
     }
-	section{ 
-        padding: 25px 10px; 
-    }
-   
-    h4:after{
-        margin:5px auto;
-    }
-    form.contact-form {
-        width: 100%;
-        margin-left:0;
-        margin-right: 0;
-    }
-    
-    header .logo{
-        height: 45px;
-        margin: 10px 5px 10px 0;
-        z-index:0;
-    }
-    header h1{
-        font-size:170%;
-        margin:0 2%;
-    }
-    header hr{
-        margin-left:7%;
-    }
-   
-    .probate-head h2{
-        margin-top:10px;
-    }
-    .extended-nav li a:link,
-    .extended-nav li a:visited{
-        padding:10px 0;
-    }
-    .probate-details ion-icon,
-    .probate-details li{
-        margin-left: 0;
-    }
-  
-   
-
-}
-
-
-
-@media only screen and (max-width: 680px){
-
-    
-}
-
-/*small phones to small tablets 481 to 767*/
-
-@media only screen and (max-width: 767px){
-
-    body{
-        font-size: 16px;
-      }
-    
-    .box{
-        text-align: center;
-    }
-    h4:after{
-        margin: 5px auto;
-    }
-    .mobile-nav-icon{display:block; z-index: 9999;}
-
-    h1{font-size: 210%;}
-    h2{font-size: 140%;}
-    
-    .main-nav{ 
-        min-height:30px;
-        display: none; 
-        z-index: 9999;
-    }
-    ul.main-nav{
-        flex-direction:column;
-        min-height:30px;
-    }
-    ul.external-nav{
-        display: none;
+    section{
+        padding:40px 30px;
     }
     
     
-    ul.extended-nav{
-        display: none;
-        float:left;
+        nav{
+        padding:20px;
     }
     
-    .main-nav li{display: block;}
-
-    .main-nav li a:link,
-    .main-nav li a:visited{ 
-        border: 0; 
-        padding: 2px 0;
-        font-size:100%;
-        }
-    
-    .m-nav{
-        color:#f5f5f5; 
-        font-size:170%; 
+    .main-nav{
+        display:none;
+    } 
+    .visible{
         display:flex;
+        flex-direction:row;
+        position:absolute;
+        margin-top:10vh;
+        width:100vw;
     }
     
+    h2{
+        font-size:150%;
+    }
+    a.mobile-nav{
+        display:flex;
+         font-size: 140%;
+        color: #f5f5f5;
+        z-index:20;
+        cursor:pointer;
+    }
+    a.mobile-nav:hover,
+    a.mobile-nav:active{
+        color:#bdbdbd;
+        cursor:pointer;
+    }
+    .mobile-navbar{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        flex-wrap:wrap;
+        align-items:center;
+        width:100vw;
+    }
+    #lawlogo{
+        display:none;
+    }
+     .mobile-logo{
+        display:block;
+         height:32px;
+        width: auto;
+        cursor: pointer;
+        margin-left:0px;
+    }
    
-    footer p{
-        float: left;
+    header hr{
+        margin-left:10px;
     }
     
     
-    .img-mob:first-child{
-        display: none;
+    
+    /* section contact */
+    
+    .section-contact{
+        padding:20px 0;
     }
-    .img-mob:nth-child(3){
-        display: none;
+    .contact-form{
+        padding:30px;
+      
     }
-    form.contact-form{
-        margin: 0 auto;
-        width: 100%;
+    textarea{
+        width:100%;
     }
-    .map{
-        margin: 0 auto;
+    .section-contact p{
+        font-size: 70%;
+        margin: 5px;
     }
+    
+    
+    /* section phrase */
+    
+      .section-phrase p{
+        font-size: var(--mobileText);
+        text-align:center;
     }
-
-
-
-
-
-/*small tablet to big tablet from 768 to 1023*/
-@media only screen and (max-width: 1023px){
-
-body{font-size: 18px;}
-section{padding:60px 0;}
-
-.contact-form{
-    width: 100%;
-}
-.about-list{
-    font-size: 90%;
-    margin-top: 20px;
-}
-}
-
-/*big tablet to 1200px (widths smaller than pixel row*/
-@media only screen and (max-width: 1200px){
-
-.hero-text-box{
-	padding:0 2%;
-	width: 100%;
-}
-.row{padding: 0 2%;}
-
-.sticky .logo{
-    height: 40px;
-}
+   
 }
 
 
-/*big tablet to 1200px (widths smaller than pixel row*/
-@media only screen and (max-width: 1200px){
-
-.hero-text-box{
-	padding:0 2%;
-	width: 100%;
-}
-.row{padding: 0 2%;}
 
 
-}

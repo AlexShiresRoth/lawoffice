@@ -1,5 +1,3 @@
-var sectOne = document.querySelectorAll('.js-wp-about');
-
 
 $(document).ready(function(){
     
@@ -58,20 +56,17 @@ $('.js-wp-4').waypoint(function(direction){
 });
     
      /* mobile nav */
-    
-    $('.js-nav').click(function(){
-        var nav = $('.js-main-nav');
-        var navExtended = $('.extended-nav');
-        var icon = $('.m-nav-close');
-        nav.slideToggle(200);
-        navExtended.slideToggle(200);
-        
-    });
-    $('.service-toggle').click(function(){
-        var navExtended = $('.extended-nav');
-        var services = $('.external-nav');
-        navExtended.slideToggle(200);
-    });
+     {
+       const mobileNav = document.querySelector('.mobile-nav');
+       const navAppear = document.querySelector('.js-main-nav');
+       
+         mobileNav.addEventListener("click", function() {
+            navAppear.classList.toggle('visible');
+            this.classList.toggle('inactive');
+         });
+     }
+     
+
     
     
     
