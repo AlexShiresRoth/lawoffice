@@ -114,7 +114,8 @@
         padding:20px 0;
     }
     .contact-form{
-        padding:30px;
+        height:70vh;
+        width:100vw;
       
     }
     textarea{

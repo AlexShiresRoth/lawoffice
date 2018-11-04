@@ -1,34 +1,29 @@
-    require('dotenv').config();
+require('dotenv').config();
+const express = require('express');
+const router = express.Router();
+const flash = require('connect-flash');
+const passport = require('passport');
+const nodemailer = require('nodemailer');
 
-var express = require('express');
-var router = express.Router();
-var flash = require('connect-flash');
-var LocalStrategy = require('passport-local');
-var passport = require('passport');
-var nodemailer = require('nodemailer');
-
-
-    router.use(flash());
+router.use(flash());
     
     
-    router.use(require("express-session")({
-        secret: "Sausage",
-        resave: false,
-        saveUninitialized: false
-    }));
+router.use(require("express-session")({
+    secret: "Sausage",
+    resave: false,
+    saveUninitialized: false
+}));
 
     
-    router.use(passport.initialize());
-    router.use(passport.session());
+router.use(passport.initialize());
+router.use(passport.session());
     
-    router.use(function(req, res, next){
-        res.locals.currentUser = req.user;
-        res.locals.error = req.flash('error');
-        res.locals.success = req.flash('success');
-        next();
-    });
-
-
+router.use(function(req, res, next){
+    res.locals.currentUser = req.user;
+    res.locals.error = req.flash('error');
+    res.locals.success = req.flash('success');
+    next();
+});
 
 
 
@@ -41,29 +36,57 @@ var nodemailer = require('nodemailer');
  //  Page ROUTES================================
 
     router.get('/probate_law', function(req, res){
-        res.render('probate_law');
+        res.render('probate_law', {
+            navDisplay: 'services',
+            page_title: 'probate_law',
+            headingDisplay: 'Probate Law'
+        });
     });
     
     router.get("/realestate", function(req, res){
-        res.render('realestate');
+        res.render('realestate' , {
+            navDisplay: 'services',
+            page_title: 'realestate',
+            headingDisplay: 'Real Estate'
+        });
     });
     
      router.get('/will_and_trust', function(req, res){
-        res.render('will_and_trust');
+        res.render('will_and_trust', {
+            navDisplay: 'services',
+            page_title:'will_and_trust',
+            headingDisplay: 'Wills and Trusts Law'
+        });
     });
     
     router.get("/wills_trusts_estates", function(req, res){
-        res.render('wills_trusts_estates');
+        res.render('wills_trusts_estates' , {
+            navDisplay: 'services',
+            page_title:'wills_trusts_estates',
+            headingDisplay: 'Wills Trusts and Estates'
+        });
     });
      router.get('/estate_litigation', function(req, res){
-        res.render('estate_litigation');
+        res.render('estate_litigation', {
+            navDisplay: 'services',
+            page_title:'estate_litigation',
+            headingDisplay: 'Estate Litigation'
+        });
     });
     
     router.get("/business_law", function(req, res){
-        res.render('business_law');
+        res.render('business_law' , {
+            navDisplay: 'services',
+            page_title:'business_law',
+            headingDisplay: 'Business Law'
+        });
     });
     router.get("/bankruptcy_law", function(req, res){
-        res.render('bankruptcy_law');
+        res.render('bankruptcy_law',{
+            navDisplay: 'services',
+            page_title:'bankruptcy_law',
+            headingDisplay: 'Banruptcy Law'
+        });
     });
     
     

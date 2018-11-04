@@ -32,66 +32,26 @@ $('.scroll-to-start').click(function(){
       });
     });
 
-/* animations on scroll */
-
-$('.js-wp-about').waypoint(function(direction){
-    $('.js-wp-about').addClass('animated fadeIn');
-},{
-    offset:'60%'
-});
-    $('.js-wp-1').waypoint(function(direction){
-    $('.js-wp-1').addClass('animated fadeIn');
-},{
-    offset:'60%'
-});
-$('.js-wp-practices').waypoint(function(direction){
-    $('.js-wp-practices').addClass('animated fadeIn');
-},{
-    offset:'60%'
-});
-$('.js-wp-4').waypoint(function(direction){
-    $('.js-wp-4').addClass('animated pulse');
-},{
-    offset:'60%'
-});
     
      /* mobile nav */
      {
        const mobileNav = document.querySelector('.mobile-nav');
        const navAppear = document.querySelector('.js-main-nav');
        
-         mobileNav.addEventListener("click", function() {
+         mobileNav.addEventListener("click", () => {
             navAppear.classList.toggle('visible');
             this.classList.toggle('inactive');
          });
      }
-     
-
-    
-    
-    
-    /* MAPS */
-var map = new GMaps({
-  div: '.map',
-  lat: 40.775611 ,
-  lng:  -73.103699,
-  zoom: 10
-});
-    
-  map.addMarker({
-  lat: 40.775611,
-  lng:  -73.103699,
-  title: 'Bohemia',
-     infoWindow: {
-  content: '<p>80 Orville Drive, Bohemia, NY</p>'
-}
-  /*click: function(e) {
-  for(var i = 0; i < map.length; i++){
-      alert(map[i]);
-  }
-
-  }*/
-});
+     /* service nav */
+     {
+       const navToggle = document.querySelector('.service-toggle');
+       const serviceList = document.querySelector('.service-list');
+       
+       $(navToggle).click(() => {
+           $(serviceList).slideToggle('slow');
+       });
+     }
 });
     
     

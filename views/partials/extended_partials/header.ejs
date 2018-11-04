@@ -7,35 +7,34 @@
 	<link rel="stylesheet" type="text/css" href="stylesheets/Grid.css">
 	<link href="stylesheets/style.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/queries.css" rel="stylesheet" type="text/css">
-    <link href="stylesheets/externalestyle.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/animate.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Raleway:300,400,700" rel="stylesheet">
 
 
 		<title>Rothenberg Law Offices, PLLC</title>
 	</head>
-	<body>
-	    
-	     <div class="external">
-                <nav class="sticky main-nav ">
-                    <div class="row">
-                        <a href="../">
-                            <img src="stylesheets/img/lawofficelogo.png" class="logo" id="lawlogo"></a>
-                               <ul class="external-nav">
-                                   <li><a href="#" class="service-toggle nav-inline">Services</a></li>
-                                   <li><a href="#contact" class="services nav-inline">Contact</a></li>
-                               </ul>
-                                
-                                <a class="mobile-nav-icon js-nav">
-                                    <ion-icon name="menu" class="m-nav"></ion-icon>
-                                </a>
-                                 <ul class="extended-nav">
-                                    <li><a href="/realestate" class="services">Real Estate Law</a></li>
-                                    <li><a href="/probate_law" class="services">Probate Law</a></li>
-                                    <li><a href="/wills_trusts_estates" class="services">Wills, Trusts, & Estates Law</a></li>
-                                    <li><a href="/estate_litigation" class="services">Estates Litigation</a></li>
-                                    <li><a href="/business_law" class="services">Business Law</a></li>
-                                    <li><a href="/bankruptcy_law" class="services">Bankruptcy Law</a></li>
-                                 </ul>
+	<body>    
+                <nav <% if(navDisplay === 'services') { %> class="services-nav" <% } %>>
+                    
+                    <!--Photo by j zamora on Unsplash-->
+                        <ul class="load-display">
+                            <li><a href="../" class="one"><img src="stylesheets/img/lawofficelogo.png" class="logo" id="lawlogo"></a></li>
+                            <li><a href="#" class=" two service-toggle"> Services</a></li>
+                            <li><a href="#contact" class="three"> Contact</a></li>
+                        </ul>
+                        <ul class="service-list">
+                                    <li><a href="/realestate"  <% if (page_title === 'realestate') { %>class="active" <% } %> >Real Estate Law</a></li>
+                                    <li><a href="/probate_law" <% if (page_title === 'probate_law') { %>class="active" <% } %>>Probate Law</a></li>
+                                    <li><a href="/wills_trusts_estates" <% if (page_title === 'wills_trusts_estates') { %>class="active" <% } %> >  Wills, Trusts, & Estates Law</a></li>
+                                    <li><a href="/estate_litigation" <% if (page_title === 'estate_litigation') { %>class="active" <% } %> >Estates Litigation</a></li>
+                                    <li><a href="/business_law" <% if (page_title === 'business_law') { %>class="active" <% } %> >Business Law</a></li>
+                                    <li><a href="/bankruptcy_law" <% if (page_title === 'bankruptcy_law') { %>class="active" <% } %> >Bankruptcy Law</a></li>
+                        </ul>
+                    <div class="mobile-navbar">
+                        <img src="stylesheets/img/lawofficelogo.png" class="mobile-logo">
+                        <a class="mobile-nav">
+                            <i class="bars icon"></i>
+                        </a>   
+                    </div>
                     </div>
                 </nav>
