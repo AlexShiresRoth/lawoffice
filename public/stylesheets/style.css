@@ -12,11 +12,12 @@
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-html,
+
 body {
 
 	color: #262626;
 	font-family: 'Open Sans',sans-serif;
+	font-weight:500;
 	font-size: 18px;
 	letter-spacing: 1.5px;
 	text-rendering: optimizeLegibility;
@@ -29,7 +30,7 @@ h2,
 h3,
 h4{
     font-family: 'Raleway';
-	font-weight: 300;
+	font-weight: 500;
 	word-spacing: 4px;
 	text-transform: uppercase;
 }
@@ -145,10 +146,13 @@ section:not(.hero):nth-child(odd){
 /*==================================
 =========header================*/
 
+.header{
+    padding: 0px;
+}
 header{
 	background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.7)),to(rgba(0,0,0,0.7))), url('img/lib.jpg');
-	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url('img/law2.jpg');
-	min-height:100vh;
+	background-image: linear-gradient(to right top, rgba(0, 0, 0,.5),rgba(39, 46, 79,0.5)), url('img/law2.jpg');
+	min-height:95vh;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -166,7 +170,7 @@ header hr{
     color: var(--color);
 }
 .slogan{
-    color: #bfbfbf;
+    color: #f4f4f4;
     margin-bottom: 30px;
     margin-left:15px;
     display: block;
@@ -437,7 +441,7 @@ nav .logo{
 .section-about p{
     word-spacing: 2px;
     margin:0;
-    font-size:90%;
+    font-size:100%;
     text-align:center;
 }
 .p-break{
@@ -449,7 +453,7 @@ nav .logo{
 }
 .p-break i {
     color: var(--accentColor);
-    font-size:1.5em;
+    font-size:2em;
 }
 
 
@@ -470,10 +474,11 @@ nav .logo{
 
 /* Section phrase Two */
 .section-phrase p{
-    word-spacing: 2px;
+    word-spacing: 4px;
     margin:0;
     font-size:90%;
     align-items:center;
+    letter-spacing: 2px;
 }
 .section-phrase i{
    color: var(--color);
@@ -481,12 +486,13 @@ nav .logo{
 .section-phrase{
     background: repeating-linear-gradient(
                 35deg,
-                #303F9F .2px, 
-                #272e4f 2px,
-                #4A57AB 1px
+                #303F9F 50px, 
+                #272e4f 50px,
+                #272e4f 50px
         );
         color: #fff;
         box-shadow: 0 2px 2px #212121;
+       
 }
 
 @keyframes skew{
@@ -529,6 +535,7 @@ nav .logo{
 
 .section-practices p{
     font-size:90%;
+    font-weight:500;
     line-height: 1.5;
     margin-top: 20px;
     word-spacing: 2px;
@@ -588,54 +595,80 @@ nav .logo{
     justify-content:space-around;
 }
 .contact-form{
-    padding: 5%;
-    min-height: 55vh;
+    padding:35px;
+    min-height: 60vh;
     min-width: 50vw;
     border-radius: 5px;
     background-color:#fff;
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:space-around;
+    justify-content:center;
     margin-right:10px;
     box-shadow: 0 2px 2px #bdbdbd;
 }
-.input-row{
+.inputs{
     display: flex;
     flex-direction:row;
+}
+.input-row{
+    display: flex;
+    flex-direction:column;
+    justify-content:center;
+    width:100%;
+}
+.row{
+    display: flex;
+    flex-direction:row;
+    margin:12px 0;
 }
 .input-column{
     display: flex;
     flex-direction: column;
-    width:15vw;
+    margin:5px;
+}
+.input-column ion-icon {
+    color: #fff;
+    padding:5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: var(--accentColor);
 }
 .input-column:nth-child(2){
     margin-top:2.5%;
 }
 
-input[type=text],input[type=email],select,textarea{
-	padding:3%;
-	margin:3%;
+input[type=text],input[type=email],select{
+	padding:5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border: 1px solid var(--color);
+	background-color:#f7f7f7;
+    width:100%;
+}
+
+textarea{
+	margin:5px;
+	padding:5px;
+	min-height:15vh;
 	border-radius: 3px;
 	border: 1px solid var(--color);
-	background-color:#FFF7C5;
-	min-width:100%;
+	background-color:#f7f7f7;
+    width:100%;
 }
-form label{
-    padding:3%;
-	margin:3%;
-}
+
 form .contact-button{
-    margin: 3%;
-    padding:5%;
+    margin: 5px;
+    padding:10px;
     font-size:80%;
+    width:100%;
+    letter-spacing:2px;
 }
-
-textarea{    
-	height: 25vh;
-	width:100%;
+#footer-logo.logo{
+    margin-top:10px;
+    max-height: 7vh;
+    max-width: 14vw;
 }
-
 .map{
     max-height:400px;
     border-radius: 5px;
@@ -705,11 +738,7 @@ textarea{
 .footer-title{
     font-family: 'Open Sans';
 }
-#footer-logo.logo{
-    max-height: 7vh;
-    max-width: 14vw;
-    margin: 11vh 10vh 0 0;
-}
+
 
 /*active classes */
 .active{

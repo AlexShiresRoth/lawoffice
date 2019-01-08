@@ -130,7 +130,7 @@ router.use(function(req, res, next){
         }
         req.flash('success', 'Email has been sent!');
         res.redirect("/#contact");
-    });
+        });
     });
     
 
