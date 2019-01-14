@@ -22,9 +22,11 @@
          
             <div class="container-form">
                 <form action="send" method="POST" class="contact-form" id="form">
-                    <h3>Send us an email.</h3>
-                    <hr>
-                    <img src="../stylesheets/img/lawofficelogo-blue.png" class="logo" id="footer-logo">
+                    <div class="header-row">
+                        <img src="../stylesheets/img/lawofficelogo-blue.png" class="logo" id="footer-logo">
+                        <h3>Send us an email.</h3>
+                    </div>
+                   
                     <div class="input-row">
                         <div class="input-column">
                             <div class="row">
@@ -36,13 +38,13 @@
                                 <input type="text" name="name" placeholder="First and Last Name" id="name" required>
                             </div>
                         </div>
-                        <div class="input-row">
-                            <textarea  name="message" value="Reason for contact."  id="message" required> </textarea>
+                        <div class="row">
+                            <textarea  name="message" placeholder="Reason for contact."  id="message" required> </textarea>
                         </div>
-                        </div>
-                        <div class="input-row">
+                        <div class="row">
                                 <button class="contact-button">Send</button>
                         </div>
+                    </div>
                 </form>
                     <!--<div class="map"></div>-->
             </div>
