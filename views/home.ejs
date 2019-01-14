@@ -56,50 +56,32 @@
         </section>
         
         <section class="section-practices js-wp-practices" id="services">
-            <div class="row">
-                <h2>Services</h2>
+            <div class="top">
+                <ul class="services">
+                    <li><a href="#">Wills, Trusts & Estates Law</a></li>
+                    <li><a href="#">Real Estate Law</a></li>
+                    <li><a href="#">Probate Law</a></li>
+                    <li><a href="#">Estate Litigation</a></li>
+                    <li><a href="#">Business Law</a></li>
+                    <li><a href="#">Bankruptcy Law</a></li>
+                </ul>
             </div>
             <div class="container">
-               
-                    <div class=" box">
-                        <img src="stylesheets/img/contract.svg" class="logo m-logo">
-                        <h4>Wills, Trusts & Estates Law</h4>
-                       <!-- <p class="practices-paragraph">Trust the planning of your estate with our reputable law firm. Our extensive experience with estate law in Bohemia, NY, has established us as the area’s preferred provider of estate planning. Rothenberg Law Office, PLLC offers personalized service that meets the individual needs and goals of each client. We help you develop the legally binding plan that best... </p>-->
-                        <a href="/wills_trusts_estates" class="btn btn-full">See More</a>
-                    </div>
-                      <div class=" box">
-                           <img src="stylesheets/img/house.svg" class="logo m-logo">
-                        <h4>Real Estate Law</h4>
-                        <!--<p class="practices-paragraph">Acquiring real estate is a major investment, and you want to ensure that all contractual details are consistent with the agreed upon terms. To protect your investment and guarantee that you’re entering into the contract you want, trust Rothenberg Law Office, PLLC. We are the experienced real estate transaction lawyers in Bohemia, NY, who make sure the deal is finalized to your satisfaction. Real estate law and contracts can be dense...</p>-->
-                        <a href="/realestate" class="btn btn-full">See More</a>
-                    </div>
-                    <div class=" box">
-                        <img src="stylesheets/img/probate.svg" class="logo m-logo">
-                        <h4>Probate Law</h4>
-                       <!-- <p class="practices-paragraph">When you need legal representation for the settlement of your estate, call Rothenberg Law Office, PLLC. Our probate law firm in Bohemia, NY, specializes in the administration of asset distribution. Whether or not there is a will, our law firm has the years of experience and the deep familiarity with probate law necessary to bring your case to successful resolution. From real estate probate to probate litigation in the courtroom...</p>-->
-                        <a href="/probate_law" class="btn btn-full">See More</a>
-                    </div>
-                    
-                    <div class=" box">
-                          <img src="stylesheets/img/house2.svg" class="logo m-logo">
-                        <h4>Estate Litigation</h4>
-                       <!-- <p class="practices-paragraph">Are you involved in a legal battle regarding the estate of a loved one? Are certain assets being withheld from you while you wait for proceedings to play out? When it comes to matters of estate litigation, you need a knowledgeable lawyer on your side to represent your best interests and that of the estate in question. That’s where the team at Rothenberg...</p>-->
-                        <a href="/estate_litigation" class="btn btn-full">See More</a>
-                    </div>
-                    <div class=" box">
-                        <img src="stylesheets/img/agreement.svg" class="logo m-logo">
-                        <h4>Business Law</h4>
-                       <!-- <p class="practices-paragraph">Do you find yourself facing legal troubles in regards to your commercial enterprise? The longer you run a business, the more likely it becomes that you'll need the help of a knowledgeable commercial litigation firm such as ours. Address any problems you might face by turning to Rothenberg Law Office, PLLC, the firm that Bohemia, NY, has trusted for years...</p>-->
-                        <a href="/business_law" class="btn btn-full">See More</a>
-                        
-                    </div>
-                    <div class=" box">
-                           <img src="stylesheets/img/deed.svg" class="logo m-logo">
-                        <h4>Bankruptcy Law</h4>
-                       <!-- <p class="practices-paragraph">At Rothenberg Law Office, PLLC, our philosophy is that bankruptcy lawyers in Bohemia, NY, should engage clients on a personalized, individual basis, rather than simply treating people like case files. This practice will help you to complete this stressful, intimidating process and to create your best future on the other side. No matter what your circumstances...</p>-->
-                        <a href="/bankruptcy_law" class="btn btn-full">See More</a>
-                    </div>
-                
+                <div class="left-bar">
+                  <i class="chevron left icon"></i>  
+                </div>
+                <div class="middle-content">
+                        <div class="box">
+                            <h6 class="service-title"><%= services[0].title%> <i class="address book outline icon"></i></h6>
+                            <p><%= services[0].content[0] %></p>
+                        </div>
+                        <div class="box"><p><%= services[0].content[1] %></p></div>
+                        <div class="box"><p><%= services[0].content[2] %></p></div>
+                        <div class="box"><p><%= services[0].content[3] %></p></div>    
+                </div>
+                <div class="right-bar">
+                    <i class="chevron right icon"></i>
+                </div>
             </div>
         </section>
         <section class="section-phrase">
