@@ -25,6 +25,32 @@
      .hero-text-box h1{
         font-size:190%;
     }
+    
+    
+      /*================================================== Section Practices =========================================*/
+    .section-practices .left-bar,
+    .section-practices .right-bar {
+        display:none;
+    }
+    .section-practices .services{
+        flex-wrap:wrap;
+        justify-content:space-around;
+        align-items:flex-start;
+        min-height:100%;
+    }
+    .section-practices .services li{
+        margin:.5rem;
+    }
+    .section-practices .middle-content{
+        width:100%;
+        display:grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2rem;
+        padding:1rem;
+    }
+    .section-practices .box {
+        padding:1.5rem 2rem;
+    }
 }
 
 
@@ -33,10 +59,15 @@
    /*header */
    
     .hero-text-box{
-        font-size:90%;
+        font-size:1.2rem;
         opacity: 0;
-        transform:translate(5vw,120vh);
+        transform:translate(0vw,120vh);
+        text-align:center;
         animation: 2s slidein480 .5s forwards;
+        padding:1rem;
+    }
+    .hero-text-box hr{
+        height:4px;
     }
     .mobile-nav-icon{
         display:block;
@@ -45,8 +76,9 @@
     #lawlogo{
         margin:0;
     }
-    .slogan{
-        margin-left:5px;
+    .slogan li{
+        margin-top:.5rem;
+        font-size:1rem;
     }
     section{
         padding:40px 30px;
@@ -96,15 +128,22 @@
     }
      .mobile-logo{
         display:block;
-         height:32px;
+        max-height:32px;
         width: auto;
         cursor: pointer;
         margin-left:0px;
     }
-   
-    header hr{
-        margin-left:10px;
+    /*==============================================Contact form=============================================*/
+    
+    .section-contact .header-row{
+        flex-direction:column;
+        width:100%;
     }
+
+   
+    
+    
+  
     
     
     
@@ -114,15 +153,15 @@
         padding:20px 0;
     }
     .contact-form{
-        height:70vh;
-        width:100vw;
+        min-height:70vh;
+        min-width:100vw;
       
     }
     textarea{
         width:100%;
     }
     .section-contact p{
-        font-size: 70%;
+        font-size: 80%;
         margin: 5px;
     }
     
@@ -130,8 +169,8 @@
     /* section phrase */
     
       .section-phrase p{
-        font-size: var(--mobileText);
         text-align:center;
+        font-size:.9rem;
     }
    
 }

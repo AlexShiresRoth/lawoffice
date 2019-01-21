@@ -114,7 +114,7 @@ section{
 }
 hr{
 	width: 150px;
-	height:.5px;
+	height:1px;
 	background-color: var(--accentColor);
 	border:0;
     margin: 0 0 10px 10px;
@@ -226,7 +226,7 @@ header hr{
 
     100%{
         opacity:1;
-        transform:translate(5vw,20vh);
+        transform:translate(0vw,25vh);
     }
 }
 
@@ -542,7 +542,7 @@ nav .logo{
 }
 .section-practices .top{
     width:100vw;
-    height:100%;
+    min-height:100%;
     background-color:#fff;
     display:flex;
     align-items:center;
@@ -553,7 +553,7 @@ nav .logo{
     flex-direction:row;
     justify-content: space-around;
     width:80vw;
-    height:10vh;
+    min-height:10vh;
     align-items:center;
 }
 .services a{
@@ -568,9 +568,10 @@ nav .logo{
 .section-practices .left-bar,
 .section-practices .right-bar,
 .section-practices .middle-content{
-    height:100vh;
+    min-height:100vh;
 }
 .section-practices .middle-content{
+    min-height:100vh;
     width:90%;
     display:grid;
     grid-template-columns: repeat(2, 1fr);
@@ -632,6 +633,10 @@ nav .logo{
 .section-contact h5{
     font-size:1.9rem;
 }
+.section-contact h6{
+    margin-top:1.2rem;
+    font-family:'Raleway';
+}
 .section-contact h3{
     margin-top: 0;
 }
@@ -646,7 +651,7 @@ nav .logo{
 }
 .section-contact .header-row{
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
     align-items:center;
     width:100%;
     justify-content:space-around;
@@ -748,9 +753,9 @@ form .contact-button{
     width:100%;
     letter-spacing:2px;
 }
-#footer-logo.logo{
-    max-height: 7vh;
-    max-width: 14vw;
+#footer-logo {
+ max-height: 3rem;
+ margin-bottom:1rem;
 }
 .map{
     max-height:400px;

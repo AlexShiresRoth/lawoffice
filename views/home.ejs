@@ -1,26 +1,5 @@
 <% include partials/header %>
 
-
-    <div class="header">
-        <header id="header">
-            <nav>
-                    <a href="#header">
-                        <img src="stylesheets/img/lawofficelogo.png" class="logo" id="lawlogo"></a>
-                    <!--Photo by j zamora on Unsplash-->
-                        <ul class="main-nav js-main-nav">
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#Blog">Blog</a></li>
-                            <li class="contact-link"><a href="#contact">Contact</a></li>
-                        </ul>
-                    <div class="mobile-navbar">
-                        <img src="stylesheets/img/lawofficelogo.png" class="mobile-logo">
-                        <a class="mobile-nav">
-                            <i class="bars icon"></i>
-                        </a>   
-                    </div>
-                   
-                </nav>
                 
             <div class="hero-text-box">
                 <div>
@@ -58,12 +37,12 @@
         <section class="section-practices js-wp-practices" id="services">
             <div class="top">
                 <ul class="services">
-                    <li><a href="#">Wills, Trusts & Estates Law</a></li>
-                    <li><a href="#">Real Estate Law</a></li>
-                    <li><a href="#">Probate Law</a></li>
-                    <li><a href="#">Estate Litigation</a></li>
-                    <li><a href="#">Business Law</a></li>
-                    <li><a href="#">Bankruptcy Law</a></li>
+                    <li id="wills"><a href="#services">Wills, Trusts & Estates Law</a></li>
+                    <li><a href="#services">Real Estate Law</a></li>
+                    <li><a href="#services">Probate Law</a></li>
+                    <li><a href="#services">Estate Litigation</a></li>
+                    <li><a href="#services">Business Law</a></li>
+                    <li id="real-estate"><a href="#services">Bankruptcy Law</a></li>
                 </ul>
             </div>
             <div class="container">
@@ -71,13 +50,13 @@
                   <i class="chevron left icon"></i>  
                 </div>
                 <div class="middle-content">
-                        <div class="box">
-                            <h6 class="service-title"><%= services[0].title%> <i class="address book outline icon"></i></h6>
-                            <p><%= services[0].content[0] %></p>
+                        <div class="box box-one">
+                            <h6 class="service-title"> <i class="address book outline icon"></i></h6>
+                            <p></p>
                         </div>
-                        <div class="box"><p><%= services[0].content[1] %></p></div>
-                        <div class="box"><p><%= services[0].content[2] %></p></div>
-                        <div class="box"><p><%= services[0].content[3] %></p></div>    
+                        <div class="box"><p></p></div>
+                        <div class="box"><p></p></div>
+                        <div class="box"><p></p></div>    
                 </div>
                 <div class="right-bar">
                     <i class="chevron right icon"></i>
