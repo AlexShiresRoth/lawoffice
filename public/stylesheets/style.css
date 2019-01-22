@@ -207,29 +207,6 @@ header hr{
     transform: translate(0vw,100vh);
     animation:.5s slidein .5s forwards;
 }
-@keyframes fadein{
-    0%{
-        opacity:0;
-    }
-    100%{
-        opacity:1;
-    }
-}
-@keyframes slidein{
-
-    100%{
-        opacity:1;
-        transform:translate(0vw,30vh);
-    }
-}
-@keyframes slidein480{
-
-    100%{
-        opacity:1;
-        transform:translate(0vw,25vh);
-    }
-}
-
 
 
 
@@ -239,8 +216,10 @@ header hr{
 
 /*active classes */
 .active{
-    background-color: rgba(10,10,42, 0.1);
-    padding:5px;
+   background: rgba(48, 63, 159, 0.3);
+   padding:1rem;
+   color:#fff;
+   border-radius:200px;
 }
 
 .box{
@@ -319,82 +298,7 @@ a.btn.btn-full:active,
 /* services navbar */
 
 
-.services-nav li a:link,
-.services-nav li a:visited{
-    color: #fff;
-    text-decoration: none;
-    list-style: none;
-    font-size: 100%;
-    letter-spacing: 1.5px;  
-    -webkit-transition: .2s;
-    transition: .2s;
-}
 
-.services-nav li a:hover,
-.services-nav li a:active{
-    color:#bdbdbd;
-}
-.services-nav{
-    background:repeating-linear-gradient(
-        var(--color) 1px,
-        var(--background) 1px,
-        var(--color) 1px 
-    );
-    align-items:center;
-    display: flex;
-    flex-wrap:wrap;
-    padding:7px;
-    box-shadow: 0 3px 3px #bdbdbd;
-}
-.services-nav ul{
-    display:flex;
-    flex-direction:row;
-    align-content:space-around;
-    flex-wrap:wrap;
-}
-ul.service-list{
-    display:none;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    width:100vw;
-    top:0;
-}
-ul.service-list li {
-    padding: 2vh 1vw;
-    align-items:center;
-}
-ul.service-list li:nth-child(odd){
-    border-bottom: .5px solid rgba(255, 255, 255, 0.7);
-    border-top: .5px solid rgba(255, 255, 255, 0.7);
-}
-ul.service-list a {
- width:100vw;
-}
-
-ul.load-display{
-    display: flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    justify-content:space-between;
-    width: 100vw;
-}
-ul.load-display a{
-    color: #fff;
-    padding-top:5px;
-}
-
-ul.load-display li:first-child{
-    flex:2;
-}
-ul.load-display > li{
-    flex: 0 0 auto;
-    padding:5px;
-}
-ul.load-display > li:nth-child(2),
-ul.load-display > li:nth-child(3){
-    padding-top:10px;
-}
 /* main nav */
 
 .main-nav li a:link,
@@ -528,11 +432,7 @@ nav .logo{
        
 }
 
-@keyframes skew{
-    100%{
-        transform: skew(40vw,60vw);
-    }
-}
+
 /*========================================
 ========practices======================
 */
@@ -556,14 +456,13 @@ nav .logo{
     min-height:10vh;
     align-items:center;
 }
-.services a{
-    color: #222;
-    font-size: 1.1rem;
-    padding-bottom: .5rem;
+.services li{
+    font-size: 1rem;
     border-bottom: 1px solid transparent;
 }
-.services a:hover{
+.services li:hover{
     border-bottom: 1px solid var(--color);
+    cursor:pointer;
 }
 .section-practices .left-bar,
 .section-practices .right-bar,
@@ -587,7 +486,21 @@ nav .logo{
     justify-content:center;
     background: rgba(20,20,20,0.05);
     align-items:center;
+    transition: .2s linear;
+    color:var(--background);
 }
+.section-practices .left-bar:hover,
+.section-practices .right-bar:hover{
+    background: rgba(20,20,20,0.09);
+    cursor: pointer;
+    color: #fff;
+}
+
+.section-practices .left-bar i:hover,
+.section-practices .right-bar i:hover{
+    animation: 1s scaleUp infinite;
+}
+
 .section-practices .container{
     display: flex;
     justify-content:center;
@@ -827,5 +740,44 @@ form .contact-button{
     font-family: 'Open Sans';
 }
 
+/*=============================================ANIMATIONS=========================================*/
 
 
+
+@keyframes scaleUp {
+    0%{
+        transform:scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+@keyframes skew{
+    100%{
+        transform: skew(40vw,60vw);
+    }
+}
+
+@keyframes fadein{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+@keyframes slidein{
+
+    100%{
+        opacity:1;
+        transform:translate(0vw,30vh);
+    }
+}
+@keyframes slidein480{
+
+    100%{
+        opacity:1;
+        transform:translate(0vw,25vh);
+    }
+}

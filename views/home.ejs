@@ -37,12 +37,12 @@
         <section class="section-practices js-wp-practices" id="services">
             <div class="top">
                 <ul class="services">
-                    <li id="wills"><a href="#services">Wills, Trusts & Estates Law</a></li>
-                    <li><a href="#services">Real Estate Law</a></li>
-                    <li><a href="#services">Probate Law</a></li>
-                    <li><a href="#services">Estate Litigation</a></li>
-                    <li><a href="#services">Business Law</a></li>
-                    <li id="real-estate"><a href="#services">Bankruptcy Law</a></li>
+                    <li id="wills" class="active">Wills, Trusts & Estates Law</li>
+                    <li>Real Estate Law</li>
+                    <li>Probate Law</li>
+                    <li>Estate Litigation</li>
+                    <li>Business Law</li>
+                    <li id="bankruptcy">Bankruptcy Law</li>
                 </ul>
             </div>
             <div class="container">
@@ -51,12 +51,12 @@
                 </div>
                 <div class="middle-content">
                         <div class="box box-one">
-                            <h6 class="service-title"> <i class="address book outline icon"></i></h6>
-                            <p></p>
+                            <h6 class="service-title"><i class="address book outline icon"></i><%= services[0].title %></h6>
+                            <p><%= services[0].content[0] %></p>
                         </div>
-                        <div class="box"><p></p></div>
-                        <div class="box"><p></p></div>
-                        <div class="box"><p></p></div>    
+                        <div class="box"><p><%= services[0].content[1] %></p></div>
+                        <div class="box"><p><%= services[0].content[2] %></p></div>
+                        <div class="box"><p><%= services[0].content[3] %></p></div>    
                 </div>
                 <div class="right-bar">
                     <i class="chevron right icon"></i>

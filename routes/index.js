@@ -3,7 +3,6 @@ const express = require('express');
 const router = express.Router();
 const flash = require('connect-flash');
 const passport = require('passport');
-const nodemailer = require('nodemailer');
 const helper = require('../helpers/helper');
 
 router.use(flash());
@@ -31,6 +30,8 @@ router.use(function(req, res, next){
 /* GET home page. */
 router.get('/', helper.getServicesInfo);
 
+/* Get Api Posts */
+router.get('/posts', helper.getApiPosts);
 
 // POST ROUTES FOR NODEMAILER:
 router.post('/send', helper.sendEmail);

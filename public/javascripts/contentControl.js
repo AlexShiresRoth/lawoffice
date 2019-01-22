@@ -2,45 +2,62 @@
 
 (() => {
     
-    const selectors = {
-        boxOneTitle: document.querySelector('.service-title'),
-        boxOneContent: document.querySelector('.box-one p'),
-        willsTrustsAndEstates: document.querySelector('#wills'),
-        realEstate: document.querySelector('#real-estate')
+    const Titles = {
+        willsTitle: `Wills, Trusts and Estates Law`,
+        bankruptcyTitle: `Bankruptcy Law`
     }
     
+    const selectors = {
+        willsTrustsAndEstatesButton: document.querySelector('#wills'),
+        bankruptcyButton: document.querySelector('#bankruptcy'),
+        boxesTitle: document.querySelector('.box h6'),
+        boxes: document.querySelectorAll('.box p')
+    };
+    
+    console.log(selectors.boxes[2])
     let getUrl = () => {
         const url = '/api/contents';
         return url;
     };
     
-    let getWillsAndTrusts =  async () => {
+    let getContent =  async () => {
       await axios.get(getUrl())
         .then(response => {
-            selectors.boxOneTitle.textContent = response.data[2].title;
-            selectors.boxOneContent.textContent = response.data[0].content;
+            if(response.data[0].title === Titles.willsTitle){
+                selectors.boxesTitle.textContent = response.data[0].title;
+                selectors.boxes[0].textContent = response.data[0].content[0];
+                selectors.boxes[1].textContent = response.data[0].content[1];
+                selectors.boxes[2].textContent = response.data[0].content[2];
+                selectors.boxes[3].textContent = response.data[0].content[3];
+            }
         })
         .catch(err => {
-            console.log(err)
+            console.log(err);
             selectors.boxOneTitle.textContent = err;
         });
     };
-     let getRealEstate = async () => {
-        await axios.get(getUrl())
-            .then(res => {
-                selectors.boxOneTitle.textContent = res.data[4].title;
-                selectors.boxOneContent.textContent = res.data[4].content
-            })
-            .catch(err => {
-                console.log(err)
-            })
-        }
+    
+let getBankruptcy = async () => {
+    await axios.get(getUrl())
+        .then(response => {
+            if(response.data[1].title === Titles.bankruptcyTitle){
+                selectors.boxesTitle.textContent = response.data[1].title;
+                selectors.boxes[0].textContent = response.data[1].content[0];
+                selectors.boxes[1].textContent = response.data[1].content[1];
+                selectors.boxes[2].textContent = response.data[1].content[2];
+                selectors.boxes[3].textContent = response.data[1].content[3];
+            }
+        })
+        .catch(err => {
+            selectors.boxes[0].textContent = err;
+        })
+    }
     
     
     let addContent = () => {
-        selectors.willsTrustsAndEstates.addEventListener('click', getWillsAndTrusts)
-        selectors.realEstate.addEventListener('click', getRealEstate)
-    }
+        selectors.willsTrustsAndEstatesButton.addEventListener('click', getContent);
+        selectors.bankruptcyButton.addEventListener('click', getBankruptcy);
+    };
     addContent();
     
    
