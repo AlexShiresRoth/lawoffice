@@ -14,7 +14,6 @@
        const res = await axios.get(getUrl())
        
         res.data.map(newData => {
-            console.log(newData)
             
             let Title = document.createElement('h2')
             let paragraph = document.createElement('p')

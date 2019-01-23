@@ -14,7 +14,9 @@ const app = express();
 //mongoose setup
 
 mongoose.set('debug', true);
-mongoose.connect('mongodb://localhost/law-api-v1', {useNewUrlParser: true});
+const url = process.env.DATABASEURL || 'mongodb://localhost/law-api-v1';
+mongoose.connect(process.env.DATABASEURL, { useNewUrlParser: true});
+mongoose.connect(url, { useNewUrlParser: true});
 
 mongoose.Promise = Promise;
 

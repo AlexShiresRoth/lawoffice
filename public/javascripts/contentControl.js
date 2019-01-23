@@ -49,9 +49,11 @@ let getBankruptcy = async () => {
             }
         })
         .catch(err => {
+            console.log(err);
             selectors.boxes[0].textContent = err;
-        })
-    }
+        });
+    };
+    
     
     
     let addContent = () => {
