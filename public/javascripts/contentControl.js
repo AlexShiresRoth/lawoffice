@@ -14,12 +14,20 @@
         boxes: document.querySelectorAll('.box p')
     };
     
-    console.log(selectors.boxes[2])
+    //get services nodelist
+    let getServicesList = () => {
+        let servicesList = document.querySelector('.services');
+        let serviceLis = servicesList.querySelectorAll('li');
+        return serviceLis;
+    };
+    getServicesList();
+    
     let getUrl = () => {
         const url = '/api/contents';
         return url;
     };
     
+    //get content for first link in services section
     let getContent =  async () => {
       await axios.get(getUrl())
         .then(response => {
@@ -55,9 +63,22 @@ let getBankruptcy = async () => {
     };
     
     
+    //add active class to content select links in services section
+   let addActiveClass = () => {
+       let services = getServicesList();
+    
+        for(let li of services){
+            console.log(li)
+            li.classList.add('active');
+        }
+   }
     
     let addContent = () => {
-        selectors.willsTrustsAndEstatesButton.addEventListener('click', getContent);
+        selectors.willsTrustsAndEstatesButton.addEventListener('click', function() {
+            getContent();
+            addActiveClass();
+        });
+        
         selectors.bankruptcyButton.addEventListener('click', getBankruptcy);
     };
     addContent();

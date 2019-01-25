@@ -459,10 +459,17 @@ nav .logo{
 .services li{
     font-size: 1rem;
     border-bottom: 1px solid transparent;
+    margin: 0 .5rem;
 }
 .services li:hover{
     border-bottom: 1px solid var(--color);
     cursor:pointer;
+}
+.services li:focus{
+   background: rgba(48, 63, 159, 0.3);
+   padding:1rem;
+   color:#fff;
+   border-radius:200px;
 }
 .section-practices .left-bar,
 .section-practices .right-bar,

@@ -1,7 +1,22 @@
+@media (max-width: 900px){
+        .section-practices .services{
+        flex-wrap:wrap;
+        justify-content:space-around;
+        align-items:flex-start;
+        min-height:100%;
+        width:100vw;
+        margin:1rem;
+    }
+    .services li{
+        margin:0 1rem;
+    }
+}
+
 @media (max-width: 847px){
+    
    
     .hero-text-box h1{
-        font-size:220%;
+        font-size:3rem;
     }
     .section-contact p{
         font-size: 80%;
