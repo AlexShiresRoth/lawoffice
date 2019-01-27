@@ -460,9 +460,14 @@ nav .logo{
     font-size: 1rem;
     border-bottom: 1px solid transparent;
     margin: 0 .5rem;
+    padding:1rem;
+    transition: .2s linear;
 }
 .services li:hover{
-    border-bottom: 1px solid var(--color);
+    background: rgba(48, 63, 159, 0.5);
+    padding:1rem;
+    color:#fff;
+    border-radius:200px;
     cursor:pointer;
 }
 .services li:focus{

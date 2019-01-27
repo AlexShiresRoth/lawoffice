@@ -2,6 +2,7 @@
 
 (() => {
     
+    //titles for the services navbar
     const Titles = {
         willsTitle: `Wills, Trusts and Estates Law`,
         bankruptcyTitle: `Bankruptcy Law`
@@ -28,7 +29,7 @@
     };
     
     //get content for first link in services section
-    let getContent =  async () => {
+    let getWills =  async () => {
       await axios.get(getUrl())
         .then(response => {
             if(response.data[0].title === Titles.willsTitle){
@@ -65,25 +66,28 @@ let getBankruptcy = async () => {
     
     //add active class to content select links in services section
    let addActiveClass = () => {
+       
        let services = getServicesList();
-    
+       
         for(let li of services){
-            console.log(li)
-            li.classList.add('active');
-        }
-   }
-    
-    let addContent = () => {
-        selectors.willsTrustsAndEstatesButton.addEventListener('click', function() {
-            getContent();
-            addActiveClass();
-        });
+            li.addEventListener('click', () => {
+                let current = document.getElementsByClassName('active');
+                
+                 current[0].className = current[0].className.replace('active', '');
+                 li.classList.add('active');
         
+            });
+        }
+   };
+   
+    addActiveClass();
+
+    //add content to services boxes by calling to API 
+    let addContent = () => {
+        selectors.willsTrustsAndEstatesButton.addEventListener('click', getWills);
         selectors.bankruptcyButton.addEventListener('click', getBankruptcy);
     };
     addContent();
-    
-   
    
 })();
 
