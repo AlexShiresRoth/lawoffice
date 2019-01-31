@@ -5,22 +5,21 @@
                     <% } if(error && error.length > 0) { %>
                     <p class="alert-failure"> <%= error %></p>
                     <% } %>
-                <div class="container-business">
-                <ul>
+            <div class="container-business">
+                <ul class="business--list">
                     <li><h5>Business Hours</h5></li>
-                    <li><p>Mon - Fri: 9:00am - 5:30pm</p></li>
+                        <li><p>Mon - Fri: 9:00am - 5:30pm</p></li>
                     <li><p>Weekends: By appointment</p></li>
                 </ul>
-                <ul>
+                <ul class="business--list">
                     <li><h5>Phone</h5></li>
-                    <li><p>Bohemia Location: 631-363-8749</p></li>
+                        <li><p>Bohemia Location: 631-363-8749</p></li>
                     <li><p>Brooklyn Telephone: 646-633-4555</p></li>
                 </ul>
-                    
-                </div>
+            </div>
                 
          
-            <div class="container-form">
+            <div class="container-form-map-row">
                 <form action="send" method="POST" class="contact-form" id="form">
                     <div class="header-row">
                         <img src="../stylesheets/img/lawofficelogo-blue.png" class="logo" id="footer-logo">
@@ -30,11 +29,15 @@
                     <div class="input-row">
                         <div class="input-column">
                             <div class="row">
-                                <ion-icon name="mail"></ion-icon>
+                                <div class="icon--container">
+                                    <ion-icon name="mail"></ion-icon>
+                                </div>
                                 <input type="email" name="email" placeholder="Email" id="email" required>
                             </div>
                             <div class="row">
-                                <ion-icon name="person"></ion-icon>
+                                <div class="icon--container">
+                                    <ion-icon name="person"></ion-icon>
+                                </div>
                                 <input type="text" name="name" placeholder="First and Last Name" id="name" required>
                             </div>
                         </div>
@@ -46,7 +49,11 @@
                         </div>
                     </div>
                 </form>
-                    <!--<div class="map"></div>-->
+                    <div id="map" class="map">
+                        
+                    </div>
+                    
+                    
             </div>
         </section>
        
@@ -99,8 +106,6 @@
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
             <script src="javascripts/imakewebthings-waypoints-34d9f6d/lib/jquery.waypoints.min.js"></script>
-            <script src="https://maps.google.com/maps/api/js"></script>
-            <script src="/javascripts/maps.js"></script>
             <script src="/javascripts/contentControl.js"></script>
             <script src="/javascripts/api_posts.js"></script>
             <script src="/javascripts/app.js"></script>

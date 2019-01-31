@@ -12,6 +12,36 @@
     <link href="/stylesheets/animate.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700|Open+Sans:300,400,700" rel="stylesheet">
     
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQmMt4Lv-pJjKzuAseXQDuP5EyOmzQUhk&callback=initMap" type="text/javascript"></script>
+    <script type="text/javascript">
+    let initialize = () => {
+      let map = new google.maps.Map(
+        document.getElementById('map'), {
+          center: new google.maps.LatLng(40.775350, -73.103430),
+          zoom: 13,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+      });
+      
+      let contentString = `<div id="content">
+                            <div id="siteNotice">
+                                <p>Bohemia Location: 80 Orville Drive 11716</p>
+                           </div>
+                          </div>`;
+                          
+      let infowindow = new google.maps.InfoWindow({
+          content: contentString
+      });
+      
+      let marker = new google.maps.Marker({
+            position: new google.maps.LatLng(40.775350, -73.103430),
+            map: map
+      });
+      marker.addListener('click', () => {
+          infowindow.open(map, marker);
+      });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 
 
 		<title>Rothenberg Law Offices, PLLC</title>

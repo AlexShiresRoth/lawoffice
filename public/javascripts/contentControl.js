@@ -4,9 +4,15 @@
     
     //titles for the services navbar
     const Titles = {
-        willsTitle: `Wills, Trusts and Estates Law`,
-        bankruptcyTitle: `Bankruptcy Law`
-    }
+      serviceTitles: [
+          'Wills, Trusts & Estates Law',
+          'Real Estate Law',
+          'Probate Law',
+          'Estate Litigation',
+          'Business Law',
+          'Bankruptcy Law'
+         ]
+    };
     
     const selectors = {
         willsTrustsAndEstatesButton: document.querySelector('#wills'),
@@ -23,6 +29,17 @@
     };
     getServicesList();
     
+    //render services list array to page
+    let renderServicesList = () => {
+        let serviceList = getServicesList();
+        
+        for(let title = 0; title < serviceList.length; title++){
+          serviceList[title].textContent = Titles.serviceTitles[title];
+        }
+    };
+    renderServicesList();
+    
+    //api url
     let getUrl = () => {
         const url = '/api/contents';
         return url;
@@ -32,24 +49,25 @@
     let getWills =  async () => {
       await axios.get(getUrl())
         .then(response => {
-            if(response.data[0].title === Titles.willsTitle){
                 selectors.boxesTitle.textContent = response.data[0].title;
                 selectors.boxes[0].textContent = response.data[0].content[0];
                 selectors.boxes[1].textContent = response.data[0].content[1];
                 selectors.boxes[2].textContent = response.data[0].content[2];
                 selectors.boxes[3].textContent = response.data[0].content[3];
-            }
+            
         })
         .catch(err => {
             console.log(err);
             selectors.boxOneTitle.textContent = err;
         });
     };
-    
+   
+
+//call api for content to the bankruptcy section
 let getBankruptcy = async () => {
     await axios.get(getUrl())
         .then(response => {
-            if(response.data[1].title === Titles.bankruptcyTitle){
+            if(response.data[1].title === Titles.serviceTitles[5]){
                 selectors.boxesTitle.textContent = response.data[1].title;
                 selectors.boxes[0].textContent = response.data[1].content[0];
                 selectors.boxes[1].textContent = response.data[1].content[1];
@@ -68,7 +86,7 @@ let getBankruptcy = async () => {
    let addActiveClass = () => {
        
        let services = getServicesList();
-       
+       //cycle through services nav lis
         for(let li of services){
             li.addEventListener('click', () => {
                 let current = document.getElementsByClassName('active');
@@ -84,8 +102,24 @@ let getBankruptcy = async () => {
 
     //add content to services boxes by calling to API 
     let addContent = () => {
-        selectors.willsTrustsAndEstatesButton.addEventListener('click', getWills);
-        selectors.bankruptcyButton.addEventListener('click', getBankruptcy);
+        
+        let servicesList = getServicesList();
+        
+        for(let item of servicesList){
+            //fix this to match the string in titles to 
+            
+                item.addEventListener('click', function(){
+                if(this.textContent === Titles.serviceTitles[0]){
+                    getWills();
+                }
+                if(this.textContent === Titles.serviceTitles[5]){
+                    getBankruptcy();
+                }
+                else {
+                    console.log('No Match Found!')
+                }
+            });
+        }
     };
     addContent();
    
