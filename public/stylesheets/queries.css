@@ -23,8 +23,8 @@
         margin:10px;
     }
     div.container-form-map-row{
-        flex-direction:column;
-        justify-content:space-around;
+        flex-direction:row;
+        justify-content:space-between;
         
     }
     
@@ -66,6 +66,13 @@
 .section-contact{
     padding:2vh 2vw;
 }
+
+ div.container-form-map-row{
+        width:100vw;
+        min-height:100vh;
+        display:flex;
+        justify-content:space-around;
+    }
 
     
 }
@@ -150,11 +157,41 @@
         cursor: pointer;
         margin-left:0px;
     }
+    .section-phrase{
+        min-height:100vh;
+    }
+    .section-phrase-p-break{
+        flex-direction:column;
+        width:100vw;
+        margin:0;
+    }
+    .p--block{
+        width:100vw;
+        margin:2rem;
+    }
+    .icon--block i{
+        font-size:1.5rem;
+    }
     /*==============================================Contact form=============================================*/
     
+    .section-contact{
+        min-height:100vh;
+    }
     .section-contact .header-row{
         flex-direction:column;
         width:100%;
+    }
+    div.container-form-map-row{
+        width:100vw;
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
+    }
+    form#form.contact-form{
+        width:90vw;
+    }
+    #map{
+        width:90vw;
     }
    
     

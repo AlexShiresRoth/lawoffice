@@ -109,7 +109,7 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5rem 6rem;
+    padding: 4rem 4rem;
     width:100vw;
 }
 hr{
@@ -163,7 +163,7 @@ section:nth-child(odd){
     padding: 0px;
 }
 header{
-	background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.6))), url('img/lib.jpg');
+	background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.6))), url('img/law2.jpg');
 	background-image: linear-gradient(to right top, rgba(0, 0, 0,.5),rgba(0, 0, 0,0.6)), url('img/law2.jpg');
 	min-height:95vh;
 	background-size: cover;
@@ -413,12 +413,12 @@ nav .logo{
 .section-phrase p{
     word-spacing: 4px;
     margin:0;
-    font-size:1.3rem;
+    font-size:1.2rem;
     align-items:center;
     letter-spacing: 2px;
 }
 .section-phrase i{
-   color: var(--color);
+   color: var(--accentColor);
 }
 .section-phrase{
     background: repeating-linear-gradient(
@@ -429,7 +429,35 @@ nav .logo{
         );
         color: #fff;
         box-shadow: 0 2px 2px #212121;
-       
+}
+ .section-phrase-p-break{
+    width:100%;
+    margin:2rem;
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:space-around;
+}
+
+ .p--block{
+    align-items: center;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    width:20vw;
+    margin:0 1.5rem;
+}
+.p--block p {
+    text-align:center;
+    font-size:1.1rem;
+}
+.icon--block{
+    min-height:5vh;
+    width:100%;
+    margin:1rem;
+    display:flex;
+    justify-content:center;
+    font-size:2rem;
 }
 
 
@@ -601,10 +629,10 @@ div.container-form-map-row{
         align-items:center;
         justify-content:space-around;
         width:80%;
-        height:70vh;
+        min-height:70vh;
     }
 #map {
-    height:100%;
+    height:70vh;
     min-height:100%;
     width: 30vw;
     min-width:30vw;
