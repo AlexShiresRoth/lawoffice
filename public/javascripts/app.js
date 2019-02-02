@@ -38,19 +38,10 @@ $('.scroll-to-start').click(function(){
        const mobileNav = document.querySelector('.mobile-nav');
        const navAppear = document.querySelector('.js-main-nav');
        
-         mobileNav.addEventListener("click", () => {
+         mobileNav.addEventListener("click", function() {
             navAppear.classList.toggle('visible');
             this.classList.toggle('inactive');
          });
-     }
-     /* service nav */
-     {
-       const navToggle = document.querySelector('.service-toggle');
-       const serviceList = document.querySelector('.service-list');
-       
-       $(navToggle).click(() => {
-           $(serviceList).slideToggle('slow');
-       });
      }
 });
     

@@ -3,7 +3,7 @@ const nodemailer = require('nodemailer');
 exports.getServicesInfo = (req,res,next) => {
     res.render('home', {
         services: [
-              { title: 'Wills, Trusts and Estates Law', content: [
+              { title: 'Wills, Trusts & Estates Law', content: [
               `Trust the planning of your estate with our reputable law firm. 
                Our extensive experience with estate law in Bohemia, NY, has established 
                us as the area’s preferred provider of estate planning. Rothenberg Law Office, 

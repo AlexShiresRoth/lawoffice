@@ -113,11 +113,12 @@ section{
     width:100vw;
 }
 hr{
-	width: 150px;
+	width: 70%;
 	height:1px;
 	background-color: var(--accentColor);
 	border:0;
-    margin: 0 0 10px 10px;
+	margin:.5rem 0;
+   
 }
 section:nth-child(odd){
     background: repeating-linear-gradient(
@@ -163,8 +164,8 @@ section:nth-child(odd){
     padding: 0px;
 }
 header{
-	background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.6))), url('img/law2.jpg');
-	background-image: linear-gradient(to right top, rgba(0, 0, 0,.5),rgba(0, 0, 0,0.6)), url('img/law2.jpg');
+	background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.6))), url('img/lib-background.png');
+	background-image: linear-gradient(to right top, rgba(0, 0, 0,.5),rgba(0, 0, 0,0.6)), url('img/lib-background.png');
 	min-height:95vh;
 	background-size: cover;
 	background-position: center;
@@ -457,7 +458,7 @@ nav .logo{
     margin:1rem;
     display:flex;
     justify-content:center;
-    font-size:2rem;
+    font-size:2.5rem;
 }
 
 
@@ -466,7 +467,7 @@ nav .logo{
 */
 .section-practices{
     min-height:100vh;
-    padding:2rem;
+    padding:2rem 2rem 0 2rem;
 }
 .section-practices .top{
     width:100vw;
@@ -528,12 +529,7 @@ nav .logo{
     transition: .2s linear;
     color:var(--background);
 }
-.section-practices .left-bar:hover,
-.section-practices .right-bar:hover{
-    background: rgba(20,20,20,0.09);
-    cursor: pointer;
-    color: #fff;
-}
+
 
 .section-practices .left-bar i:hover,
 .section-practices .right-bar i:hover{
@@ -550,6 +546,7 @@ nav .logo{
 }
 .service-title{
     margin-bottom:.5rem;
+    font-size:1.3rem;
 }
 .section-practices .box{
     display: flex;
@@ -591,6 +588,7 @@ nav .logo{
 }
 .section-contact h3{
     margin-top: 0;
+    font-size:1.3rem;
 }
 .section-contact p {
     margin-bottom: 10px;
@@ -614,9 +612,14 @@ nav .logo{
     justify-content:space-around;
     align-items:center;
     width:80%;
+    margin:1rem 0;
 }
 .business--list{
     width:30vw;
+}
+.business--list h5{
+    font-size:1.4rem;
+    margin:1rem 0;
 }
 .business--list p {
     font-size:1.2rem;
@@ -634,8 +637,8 @@ div.container-form-map-row{
 #map {
     height:70vh;
     min-height:100%;
-    width: 30vw;
-    min-width:30vw;
+    width: 32vw;
+    min-width:32vw;
     display:inline-block;
     border-radius:5px;
     box-shadow: 0 2px 2px #bdbdbd;
@@ -643,10 +646,10 @@ div.container-form-map-row{
 
 #form.contact-form{
     height: 100%;
-    width: 30vw;
+    width: 32vw;
     min-height:100%;
     padding:2rem;
-    min-width:30vw;
+    min-width:32vw;
     border-radius: 5px;
     background-color:#fff;
     display:flex;
@@ -683,7 +686,7 @@ div.container-form-map-row{
     display:flex;
     align-items:center;
     padding:.5rem;
-    width:2vw;
+    min-width:2vw;
     justify-content:center;
     background-color: var(--accentColor);
     border-top-left-radius: 5px;
