@@ -164,8 +164,8 @@ section:nth-child(odd){
     padding: 0px;
 }
 header{
-	background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.6))), url('img/lib-background.png');
-	background-image: linear-gradient(to right top, rgba(0, 0, 0,.5),rgba(0, 0, 0,0.6)), url('img/lib-background.png');
+	background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.6))), url('img/law2.jpg');
+	background-image: linear-gradient(to right top, rgba(0, 0, 0,.5),rgba(0, 0, 0,0.6)), url('img/law2.jpg');
 	min-height:95vh;
 	background-size: cover;
 	background-position: center;
