@@ -20,6 +20,9 @@
 }
 
 @media (max-width: 900px){
+    .header h1{
+        font-size:3.5rem;
+    }
     .section-practices .services{
         flex-wrap:wrap;
         justify-content:space-around;
@@ -159,8 +162,9 @@ form#form.contact-form{
         display:flex;
         flex-direction:row;
         position:absolute;
-        margin-top:10vh;
+        transform: translate(5vw,10vh);
         width:100%;
+        animation:mobileNavSlide .2s linear;
     }
     
     h2{
@@ -182,12 +186,14 @@ form#form.contact-form{
         align-items:center;
         justify-content:center;
         border-radius:20%;
-        background-color:rgba(20,20,20,0.5);
+        border:.5px solid transparent;
+        background-color:transparent;
         transition:.5s linear;
     }
     .nav-icon-container:hover,
     .nav-icon-container:active{
         color:#222;
+        border:.5px solid rgba(250,250,250,0.7);
         cursor:pointer;
         border-radius:20%;
         background-color:rgba(250,250,250,0.7);
@@ -279,6 +285,18 @@ form#form.contact-form{
         font-size:.9rem;
     }
    
+}
+
+@keyframes mobileNavSlide{
+    0%{
+        transform: translate(5vw,-20vh);
+    }
+    90%{
+        transform: translate(5vw,10.5vh);
+    }
+    100%{
+        transform: translate(5vw, 10vh);
+    }
 }
 
 

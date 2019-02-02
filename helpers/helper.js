@@ -59,11 +59,12 @@ exports.getServicesInfo = (req,res,next) => {
     });
 };
 
-exports.getApiPosts = (req,res) => {
-    res.render('api_posts');
-};
-
 exports.sendEmail = (req, res, next) => {
+    
+        const sanitizedString = req.sanitize(req.body.propertyToSanitize);
+        // send the response -- res.body.sanitized
+        
+        
         const output = `
          <p> You have a new contact request</p>
          <h3>Contact Details</h3>

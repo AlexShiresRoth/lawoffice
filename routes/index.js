@@ -30,9 +30,6 @@ router.use(function(req, res, next){
 /* GET home page. */
 router.get('/', helper.getServicesInfo);
 
-/* Get Api Posts */
-router.get('/posts', helper.getApiPosts);
-
 // POST ROUTES FOR NODEMAILER:
 router.post('/send', helper.sendEmail);
     
