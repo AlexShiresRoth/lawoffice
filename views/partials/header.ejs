@@ -12,7 +12,9 @@
     
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQmMt4Lv-pJjKzuAseXQDuP5EyOmzQUhk&callback=initMap" type="text/javascript"></script>
     <script type="text/javascript">
-    let initialize = () => {
+    
+    
+    function initMap(){
       let map = new google.maps.Map(
         document.getElementById('map'), {
           center: new google.maps.LatLng(40.775350, -73.103430),
@@ -38,7 +40,8 @@
           infowindow.open(map, marker);
       });
     }
-    google.maps.event.addDomListener(window, 'load', initialize);
+    
+    google.maps.event.addDomListener(window, 'load', initMap);
     </script>
 
 
