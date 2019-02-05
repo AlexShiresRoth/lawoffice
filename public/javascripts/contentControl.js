@@ -274,3 +274,38 @@
    
 })();
 
+//scrolling page module
+(() => {
+    
+    const Selectors = {
+        sections: document.querySelectorAll('section'),
+        anchors: [
+            {
+                aboutAnchor: document.querySelector('#nav--about'),
+                servicesAnchor: document.querySelector('#nav--services'),
+                contactAnchor: document.querySelector('#nav--contact')
+                
+            }
+        ]
+    };
+    //scroll function
+    let scrollToSection = (event) => {
+                event.scrollIntoView({
+                block:'start',
+                behavior:'smooth'
+            });  
+        };
+    //refactor this to be dryer
+    Selectors.anchors[0].aboutAnchor.addEventListener('click', () => {
+        scrollToSection(Selectors.sections[0]);
+    });
+    Selectors.anchors[0].servicesAnchor.addEventListener('click',()=> {
+        scrollToSection(Selectors.sections[1]);
+    });
+    Selectors.anchors[0].contactAnchor.addEventListener('click', () => {
+        scrollToSection(Selectors.sections[3]);
+    });
+   
+    
+})();
+

@@ -16,7 +16,7 @@
 body {
 
 	color: #262626;
-	font-family: 'Open Sans',sans-serif;
+	font-family: 'Work Sans',sans-serif;
 	font-weight:500;
 	font-size: 100%;
 	letter-spacing: 1.5px;
@@ -92,7 +92,7 @@ h6{
     font-size:1.5rem;
 }
 a{
-    font-family: 'Open Sans', 'Arial', sans-serif;
+    font-family: 'Work Sans', 'Arial', sans-serif;
 }
 img{
     padding: 0;
@@ -109,8 +109,9 @@ section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4rem 4rem;
+    padding: 6rem 6rem;
     width:100vw;
+    min-height:100vh;
 }
 hr{
 	width: 70%;
@@ -164,23 +165,26 @@ section:nth-child(odd){
     padding: 0px;
 }
 header{
-	background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url('img/law2.jpg');
-	background-image: linear-gradient(to right top, rgba(0, 0, 0,.5),rgba(0, 0, 0,0.6)), url('img/law2.jpg');
+    background: -ms-linear-gradient(to right top, rgba(0, 0, 0,.5),rgba(0, 0, 0,0.6)), url('img/law2.jpg');
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0,.5),rgba(0, 0, 0,0.6)), url('img/law2.jpg');
+    background: -moz-linear-gradient(to right top, rgba(0, 0, 0,.5),rgba(0, 0, 0,0.6)), url('img/law2.jpg');
+	background: -webkit-gradient(linear, rgba(0, 0, 0,.5),rgba(0, 0, 0,0.6)), url('img/law2.jpg');
+	background: linear-gradient(to right top, rgba(0, 0, 0,.5),rgba(0, 0, 0,0.6)), url('img/law2.jpg');
+	top:0px;
+	left:0px;
+	right:0px;
 	min-height:95vh;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	background-attachment: fixed;
-	
+	background-attachment: inherit;
+	filter:grayscale(40%);
+	animation: .6s fadein linear;
 }
-header:before{
-    content: "";
-    background-color: var(--color);
-}
+
 header hr{
     width:50%;
-    font-family: 'Open Sans';
-    background-color: rgba(48, 63, 159, 0.3);
+    background-color: rgba(48, 63, 159, 0.7);
     margin:1rem 0 ;
 }
 .slogan{
@@ -301,8 +305,7 @@ a.btn.btn-full:active,
 
 /* main nav */
 
-.main-nav li a:link,
-.main-nav li a:visited{
+.main-nav li a{
     color: #F5F5F5;
     text-decoration: none;
     list-style: none;
@@ -318,9 +321,7 @@ a.btn.btn-full:active,
     color:#bdbdbd;
     padding-bottom:5px;
     border-bottom: 2px solid var(--color);
-}
-.main-nav li:last-child{
-    color:red;
+    cursor:pointer;
 }
 
 .services-nav,
@@ -429,10 +430,11 @@ nav .logo{
         );
         color: #fff;
         box-shadow: 0 2px 2px #212121;
+        height:50vh;
 }
  .section-phrase-p-break{
     width:100%;
-    margin:2rem;
+    margin:3rem 1.5rem;
     display: flex;
     flex-direction:row;
     align-items:center;
@@ -445,7 +447,7 @@ nav .logo{
     justify-content:center;
     flex-direction:column;
     width:20vw;
-    margin:0 1.5rem;
+    margin:0 2.5rem;
 }
 .p--block p {
     text-align:center;
@@ -457,7 +459,7 @@ nav .logo{
     margin:1rem;
     display:flex;
     justify-content:center;
-    font-size:2.5rem;
+    font-size:4rem;
 }
 
 
@@ -552,8 +554,9 @@ nav .logo{
     align-items:flex-start;
     flex-direction: column;
     justify-content: center;
+    align-items:center;
     flex-wrap: wrap;
-    padding: 1rem 2rem;
+    padding: 2rem 2rem;
     background-color:#fff;
     border-radius: .5rem;
     box-shadow: 0 1px 1px #bdbdbd;
@@ -562,7 +565,6 @@ nav .logo{
     font-size: 1.1rem;
     color: #222;
     font-weight: 500;
-    animation: .2s fadein linear;
 }
 
 /*========================================
@@ -796,7 +798,7 @@ form .contact-button{
     color: #fff;
 }
 .footer-title{
-    font-family: 'Open Sans';
+    font-family: 'Work Sans';
 }
 
 /*=============================================ANIMATIONS=========================================*/
