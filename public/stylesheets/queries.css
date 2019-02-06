@@ -160,11 +160,15 @@ form#form.contact-form{
     } 
     .visible{
         display:flex;
-        flex-direction:row;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
         position:absolute;
-        transform: translate(5vw,10vh);
-        width:100%;
-        animation:mobileNavSlide .2s linear;
+        left:0;
+        background:rgba(35,35,35, 0.9);
+        transform: translate(0vw,14.5vh);
+        width:100vw;
+        animation:mobileNavSlide .4s linear;
     }
     
     h2{
@@ -260,7 +264,7 @@ form#form.contact-form{
         width:90vw;
     }
     .contact-form textarea{
-        min-height:30vh;
+        min-height:12rem;
     }
     #map{
         width:90vw;
@@ -289,15 +293,17 @@ form#form.contact-form{
 
 @keyframes mobileNavSlide{
     0%{
-        transform: translate(5vw,-20vh);
+        transform: translate(0vw,-20vh);
     }
     90%{
-        transform: translate(5vw,10.5vh);
+        transform: translate(0vw,15vh);
     }
     100%{
-        transform: translate(5vw, 10vh);
+        transform: translate(0vw, 14.5vh);
     }
 }
+
+
 
 
 

@@ -295,7 +295,7 @@
                 behavior:'smooth'
             });  
         };
-    //refactor this to be dryer
+    //refactor this to be DRY
     Selectors.anchors[0].aboutAnchor.addEventListener('click', () => {
         scrollToSection(Selectors.sections[0]);
     });
