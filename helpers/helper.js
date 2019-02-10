@@ -77,7 +77,10 @@ exports.sendEmail = (req, res, next) => {
         `;
         
         let transporter = nodemailer.createTransport({
-        service: 'Gmail', // true for 465, false for other ports
+        service: 'Outlook365', // true for 465, false for other ports
+        host: "smtpout.secureserver.net",  
+        secureConnection: true,
+        port: 465,
         auth: {
             user: process.env.ACCOUNT_USER, // generated ethereal user
             pass: process.env.ACCOUNT_PASS // generated ethereal password
@@ -86,8 +89,8 @@ exports.sendEmail = (req, res, next) => {
 
     // setup email data with unicode symbols
     let mailOptions = {
-        from: '"Nodemailer contact <alexroth96@gmail.com>"', // sender address
-        to: 'alexroth96@gmail.com', // list of receivers
+        from: '"Nodemailer contact <bruce@urmyattorney.com>"', // sender address
+        to: 'bruce@urmyattorney.com', // list of receivers
         subject: 'Client Contact Request', // Subject line
         text: 'Hello world?', // plain text body
         html: output // html body
