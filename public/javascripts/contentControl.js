@@ -309,3 +309,17 @@
     
 })();
 
+//Navbar module
+(() => {
+     
+       const mobileNav = document.querySelector('.mobile-nav');
+       const navAppear = document.querySelector('.main-nav');
+       //figure out why toggling between two classes doesn't work
+       let slideToggleNav = () => {
+         mobileNav.addEventListener("click", () => {
+             navAppear.classList.toggle('visible');
+         });
+       };
+       slideToggleNav();
+})();
+
