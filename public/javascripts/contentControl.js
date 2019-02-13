@@ -299,7 +299,7 @@
     Selectors.anchors[0].aboutAnchor.addEventListener('click', () => {
         scrollToSection(Selectors.sections[0]);
     });
-    Selectors.anchors[0].servicesAnchor.addEventListener('click',()=> {
+    Selectors.anchors[0].servicesAnchor.addEventListener('click', ()=> {
         scrollToSection(Selectors.sections[1]);
     });
     Selectors.anchors[0].contactAnchor.addEventListener('click', () => {
@@ -307,5 +307,19 @@
     });
    
     
+})();
+
+//Navbar module
+(() => {
+     
+       const mobileNav = document.querySelector('.mobile-nav');
+       const navAppear = document.querySelector('.main-nav');
+       //figure out why toggling between two classes doesn't work
+       let slideToggleNav = () => {
+         mobileNav.addEventListener("click", () => {
+             navAppear.classList.toggle('visible');
+         });
+       };
+       slideToggleNav();
 })();
 

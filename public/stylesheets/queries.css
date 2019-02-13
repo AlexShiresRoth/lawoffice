@@ -99,7 +99,7 @@
 /*============================CONTACT==============================================*/
 
 .section-contact{
-    padding:2vh 2vw;
+    padding:1rem 2rem;
 }
 
  div.container-form-map-row{
@@ -166,9 +166,21 @@ form#form.contact-form{
         position:absolute;
         left:0;
         background:rgba(35,35,35, 0.9);
-        transform: translate(0vw,14.5vh);
+        transform: translate(0vw,17vh);
         width:100vw;
-        animation:mobileNavSlide .4s linear;
+        animation:mobileNavSlide .3s linear;
+    }
+    .invisible{
+        display: flex;
+        transform: translate(0,-17vh);
+        animation:reverseSlide .6s linear;
+         flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        position:absolute;
+        left:0;
+        background:rgba(35,35,35, 0.9);
+        width:100vw;
     }
     
     h2{
@@ -296,10 +308,18 @@ form#form.contact-form{
         transform: translate(0vw,-20vh);
     }
     90%{
-        transform: translate(0vw,15vh);
+        transform: translate(0vw,17vh);
     }
     100%{
-        transform: translate(0vw, 14.5vh);
+        transform: translate(0vw, 16.5vh);
+    }
+}
+@keyframes reverseSlide{
+    0%{
+        transform: translate(0,100%);
+    }
+    100%{
+        transform: translate(0,-17vh);
     }
 }
 

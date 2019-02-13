@@ -60,21 +60,19 @@ exports.getServicesInfo = (req,res,next) => {
 };
 
 exports.sendEmail = (req, res, next) => {
-    
-        const sanitizedString = req.sanitize(req.body.propertyToSanitize);
         // send the response -- res.body.sanitized
         
         
         const output = `
-         <p> You have a new contact request</p>
-         <h3>Contact Details</h3>
-        <ul>
-            <li>First Name: ${ req.body.name } </li>
-            <li>Email: ${ req.body.email } </li>
-        </ul>
-        <h3>Message:</h3>
-        <p>${req.body.message }</p> 
-        `;
+             <p> You have a new contact request</p>
+             <h3>Contact Details</h3>
+                <ul>
+                    <li>Name: ${ req.body.name } </li>
+                    <li>Email: ${ req.body.email } </li>
+                    <li>Subject: ${req.body.subject}</li>
+                </ul>
+            <h3>Message:</h3>
+            <p>${req.body.message }</p>`;
         
         let transporter = nodemailer.createTransport({
         service: 'Outlook365', // true for 465, false for other ports

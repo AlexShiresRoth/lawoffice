@@ -5,12 +5,12 @@ const bodyParser = require('body-parser');
 const expressSanitizer = require('express-sanitizer');
 const logger = require('morgan');
 
-
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
 
 const app = express();
+
 
 
 app.use(logger('dev'));
@@ -25,6 +25,7 @@ app.use(express.static(path.join(__dirname, '/views')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
 
 
 
