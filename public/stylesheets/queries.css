@@ -166,7 +166,11 @@ form#form.contact-form{
         position:absolute;
         left:0;
         background:rgba(35,35,35, 0.9);
+<<<<<<< HEAD
         transform: translate(0vw,16vh);
+=======
+        transform: translate(0vw,17vh);
+>>>>>>> 9ee25ed9dc3c88476f3584337ce2f7ffaf4701a1
         width:100vw;
         animation:mobileNavSlide .3s linear;
     }
@@ -308,15 +312,25 @@ form#form.contact-form{
         transform: translate(0vw,-10vh);
     }
     90%{
+
         transform: translate(0vw,16.5vh);
     }
     100%{
         transform: translate(0vw, 16vh);
+
+        transform: translate(0vw,17vh);
+    }
+    100%{
+        transform: translate(0vw, 16.5vh);
+
     }
 }
 @keyframes reverseSlide{
     0%{
         transform: translate(0,16vh);
+
+        transform: translate(0,100%);
+
     }
     100%{
         transform: translate(0,-17vh);
