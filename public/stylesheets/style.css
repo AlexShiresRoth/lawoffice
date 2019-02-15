@@ -329,7 +329,7 @@ a.btn.btn-full:active,
 .main-nav{
     display:flex;
     flex-direction:row;
-
+    z-index:9999;
 }
 
 

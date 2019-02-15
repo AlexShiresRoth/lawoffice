@@ -165,12 +165,9 @@ form#form.contact-form{
         align-items:center;
         position:absolute;
         left:0;
+        z-index:0;
         background:rgba(35,35,35, 0.9);
-<<<<<<< HEAD
         transform: translate(0vw,16vh);
-=======
-        transform: translate(0vw,17vh);
->>>>>>> 9ee25ed9dc3c88476f3584337ce2f7ffaf4701a1
         width:100vw;
         animation:mobileNavSlide .3s linear;
     }
@@ -197,7 +194,7 @@ form#form.contact-form{
         display:flex;
         font-size: 1.4rem;
         color: #f5f5f5;
-        z-index:99999;
+        z-index:8888;
         cursor:pointer;
     }
     .nav-icon-container{
@@ -309,20 +306,26 @@ form#form.contact-form{
 
 @keyframes mobileNavSlide{
     0%{
-        transform: translate(0vw,-10vh);
+        transform: translate(0vw,16vh);
+        height:0%;
+        width:0%;
+        color:transparent;
+    }
+    50%{
+        height:50%;
+        width:50%;
+        transform: translate(0vw,16vh);
     }
     90%{
-
-        transform: translate(0vw,16.5vh);
+        height:110%;
+        color:#fff;
     }
     100%{
+        color:#fff;
+        width:100%;
+        height:100%;
         transform: translate(0vw, 16vh);
-
-        transform: translate(0vw,17vh);
-    }
-    100%{
-        transform: translate(0vw, 16.5vh);
-
+        z-index:9999999;
     }
 }
 @keyframes reverseSlide{
