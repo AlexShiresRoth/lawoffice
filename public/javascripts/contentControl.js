@@ -110,7 +110,7 @@
                     easy to get the legal help you need. Call today 
                     to schedule your consultation. `,
                     
-                    `<img src="./stylesheets/img/willandtest.jpg" alt="Last Will and Testament" style="width:100%; height:100%;filter:grayScale(80%);">`
+                    `<img src="./stylesheets/img/willandtest.jpg" alt="Last Will and Testament" style="width:100%; height:100%; border-radius:5px;">`
                     ],
                 probate: [
                     `When you need legal representation for the settlement of your estate,
@@ -175,7 +175,7 @@
                             <li><ion-icon name="checkmark"></ion-icon>Lease Drafting</li>
                          </ul>`,
                          
-                         `<img src="./stylesheets/img/sign.jpg" alt="Deed" style="width:100%; height:100%;filter:grayScale(80%);">`
+                         `<img src="./stylesheets/img/sign.jpg" alt="Deed" style="width:100%; height:100%; border-radius:5px">`
                         ]
         };
         
