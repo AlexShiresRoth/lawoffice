@@ -282,18 +282,19 @@ form#form.contact-form{
     #map{
         width:90vw;
     }
-   
-    
-  
-    
-    
-    
     /* section contact */
     
     textarea{
         width:100%;
     }
-    
+    footer{
+        flex-direction:column;
+        justify-content:center;
+        align-items:flex-start;
+    }
+    footer .container{
+        margin:0 1rem;
+    }
     
     /* section phrase */
     
