@@ -793,9 +793,10 @@ form .contact-button{
         display: flex;
         flex-direction: column;
         flex-wrap:wrap;
+        padding:.6rem;
     }
     footer .container:first-child{
-        flex-basis:100vw;
+        width:100vw;
         justify-content:center;
         align-items:center;
     }
