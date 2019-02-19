@@ -108,6 +108,7 @@ section p{
 section{
     display: flex;
     flex-direction: column;
+    justify-content:center;
     align-items: center;
     padding: 6rem 6rem;
     width:100vw;
@@ -400,7 +401,7 @@ nav .logo{
 .p-break{
     display: flex;
     flex-direction:row;
-    margin:25px 0 40px;
+    margin:2rem 0 4rem;
     justify-content:space-around;
 }
 .p-break i {
@@ -453,11 +454,11 @@ nav .logo{
     flex-direction:row;
     align-items:center;
     justify-content:space-around;
-    transform: translateX(-100vw);
+    opacity: 0;
+    transition:all .5s;
 }
 .section-phrase-transition{
-    animation: slideInFromLeft .5s linear;
-    transform: translateX(0)
+    opacity: 1;
 }
  .p--block{
     align-items: center;
