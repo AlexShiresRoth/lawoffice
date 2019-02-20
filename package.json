@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "sass:compile": "node-sass --include-path sass main.scss main.css"
+    "compile:sass": "node-sass --include-path sass sass/main.scss public/stylesheets/style.css"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -19,7 +19,7 @@
     "express-session": "^1.15.6",
     "google-maps": "^3.3.0",
     "mongoose": "^5.4.5",
-    "morgan": "~1.9.0",
+    "morgan": "^1.9.1",
     "nodemailer": "^4.6.8",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",

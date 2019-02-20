@@ -1,5 +1,5 @@
 (() => {
-  //about section wp
+  //about section wp fadein
   const aboutWaypoint = new Waypoint({
     element: document.getElementById('js-wp-about'),
     handler: function(direction) {
