@@ -295,7 +295,7 @@
                 behavior:'smooth'
             });  
         };
-    //refactor this to be DRY
+    // DRY this badboy up
     Selectors.anchors[0].aboutAnchor.addEventListener('click', () => {
         scrollToSection(Selectors.sections[0]);
     });
@@ -311,7 +311,7 @@
 
 //Navbar module
 (() => {
-     
+     //slide in nav toggle feature
        const mobileNav = document.querySelector('.mobile-nav');
        const navAppear = document.querySelector('.main-nav');
        //figure out why toggling between two classes doesn't work

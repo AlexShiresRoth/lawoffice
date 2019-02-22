@@ -1,5 +1,4 @@
 
-
 @media (max-width: 970px){
     .container-business{
         width:100vw;
@@ -18,7 +17,6 @@
         min-width:45vw;
     }
 }
-
 @media (max-width: 900px){
     .header h1{
         font-size:3.5rem;
@@ -36,7 +34,6 @@
     }
      
 }
-
 @media (max-width: 847px){
     
    
@@ -64,8 +61,6 @@
     }
     
 }
-
-
 @media (max-width: 767px){
      .hero-text-box h1{
         font-size:2rem;
@@ -98,6 +93,9 @@
     }
 /*============================CONTACT==============================================*/
 
+.container-business{
+    width:75vw;
+}
 .section-contact{
     padding:1rem 2rem;
 }
@@ -118,8 +116,6 @@ form#form.contact-form{
 }
     
 }
-
-
 @media (max-width: 535px){
     
    /*header */
@@ -290,10 +286,12 @@ form#form.contact-form{
     footer{
         flex-direction:column;
         justify-content:center;
-        align-items:flex-start;
+        align-items:center;
     }
     footer .container{
         margin:0 1rem;
+        width:100vw;
+        padding:1rem 2rem;
     }
     
     /* section phrase */
@@ -305,41 +303,11 @@ form#form.contact-form{
    
 }
 
-@keyframes mobileNavSlide{
-    0%{
-        transform: translate(0vw,16vh);
-        height:0%;
-        width:0%;
-        color:transparent;
-    }
-    50%{
-        height:50%;
-        width:50%;
-        transform: translate(0vw,16vh);
-    }
-    90%{
-        height:110%;
-        color:#fff;
-    }
-    100%{
-        color:#fff;
-        width:100%;
-        height:100%;
-        transform: translate(0vw, 16vh);
-        z-index:9999999;
-    }
-}
-@keyframes reverseSlide{
-    0%{
-        transform: translate(0,16vh);
 
-        transform: translate(0,100%);
 
-    }
-    100%{
-        transform: translate(0,-17vh);
-    }
-}
+
+
+
 
 
 
