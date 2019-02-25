@@ -75,7 +75,8 @@ exports.sendEmail = (req, res, next) => {
             <p>${req.body.message }</p>`;
         
         let transporter = nodemailer.createTransport({
-        service: 'smtp.office365.com', // true for 465, false for other ports
+        // true for 465, false for other ports
+        host: "smtp.office365.com",  
         secureConnection: false,
         port: 587,
         auth: {
