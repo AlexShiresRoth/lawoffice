@@ -52,7 +52,7 @@
 
 @keyframes mobileNavSlide{
     0%{
-        transform: translate(0vw,16vh);
+        transform: translate(0vw,50vh);
         height:0%;
         width:0%;
         color:transparent;
@@ -60,7 +60,7 @@
     50%{
         height:50%;
         width:50%;
-        transform: translate(0vw,16vh);
+        transform: translate(0vw,50vh);
     }
     90%{
         height:110%;
@@ -69,8 +69,8 @@
     100%{
         color:#fff;
         width:100%;
-        height:100%;
-        transform: translate(0vw, 16vh);
+        height:90vh;
+        transform: translate(0vw, 50vh);
         z-index:9999999;
     }
 }

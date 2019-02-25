@@ -171,9 +171,10 @@ form#form.contact-form{
         position:absolute;
         left:0;
         z-index:0;
-        background:rgba(35,35,35, 0.9);
-        transform: translate(0vw,16vh);
+        background:rgba(30,30,30, 0.9);
+        transform: translate(0vw,50vh);
         width:100vw;
+        height:90vh;
         animation:mobileNavSlide .3s linear;
     }
     .invisible{

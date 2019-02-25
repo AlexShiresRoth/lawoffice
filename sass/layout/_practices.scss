@@ -57,11 +57,11 @@
 .section-practices .left-bar,
 .section-practices .right-bar{
     width:5%;
-    font-size:4rem;
+    height:100%;
     display:flex;
     flex-direction:column;
     justify-content:center;
-    background: rgba(20,20,20,0.05);
+    background: transparent;
     align-items:center;
     transition: .2s linear;
     color:var(--background);
