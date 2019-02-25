@@ -82,6 +82,9 @@ exports.sendEmail = (req, res, next) => {
         auth: {
             user: process.env.ACCOUNT_USER, // generated ethereal user
             pass: process.env.ACCOUNT_PASS // generated ethereal password
+        },
+        tls: {
+        ciphers:'SSLv3'
         }
     });
 
