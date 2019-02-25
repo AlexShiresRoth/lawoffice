@@ -152,7 +152,7 @@ p.subject--select {
   display: flex;
   align-items: center;
   padding: .2rem;
-  min-width: 2vw;
+  min-width: 2rem;
   justify-content: center;
   background-color: #3F51B5;
   border-top-left-radius: 5px;
@@ -329,12 +329,20 @@ form .contact-button {
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  align-content: space-around;
+  align-items: flex-start;
   width: 100vw; }
 
 .service-title {
   margin-bottom: .5rem;
   font-size: 1.3rem; }
+
+.list__separator {
+  height: 1px;
+  margin: .2rem 0;
+  display: block;
+  width: 100%;
+  border-radius: 200px;
+  background: repeating-linear-gradient(#3F51B5, #303F9F, #3F51B5); }
 
 .section-practices .box {
   display: flex;
@@ -343,12 +351,15 @@ form .contact-button {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 2rem 2rem;
+  padding: 2rem 3rem;
   background-color: #fff;
   border-radius: .5rem;
   box-shadow: 0 1px 1px #bdbdbd;
   transition: all 0s;
   opacity: 0; }
+
+.box-ome {
+  align-items: flex-start; }
 
 .section-practices-box-animation {
   animation: fadein .1s forwards;

@@ -49,9 +49,11 @@
                speak about the following types of bankruptcy:`,
                 
                `<ul>
-                    <li><ion-icon name="checkmark"></ion-icon>Chapter 7</li>
-                    <li><ion-icon name="checkmark"></ion-icon>Chapter 11</li>
-                    <li><ion-icon name="checkmark"></ion-icon>Chapter 13</li>
+                    <li>Chapter 7</li>
+                        <div class="list__separator"></div>
+                    <li>Chapter 11</li>
+                        <div class="list__separator"></div>
+                    <li>Chapter 13</li>
                 </ul>`,
                
                `When you need personal bankruptcy attorneys that are competent, attentive, and ready to 
@@ -71,10 +73,13 @@
                 the following legal aspects of your company:`,
                 
                 `<ul>
-                    <li><ion-icon name="checkmark"></ion-icon>Forming Contracts</li>
-                    <li><ion-icon name="checkmark"></ion-icon>Defending Lawsuits</li>
-                    <li><ion-icon name="checkmark"></ion-icon>Addressing Copyright Infringement</li>
-                    <li><ion-icon name="checkmark"></ion-icon>Forming LLCs</li>
+                    <li>Forming Contracts</li>
+                        <div class="list__separator"></div>
+                    <li>Defending Lawsuits</li>
+                        <div class="list__separator"></div>
+                    <li>Addressing Copyright Infringement</li>
+                        <div class="list__separator"></div>
+                    <li>Forming LLCs</li>
                 </ul>`,
                 
                 `Running a business is difficult enough without having to 
@@ -124,13 +129,19 @@
                     our services include:`,
                     
                     `<ul>
-                        <li><ion-icon name="checkmark"></ion-icon>Mediating Disputes over Assets between Beneficiaries</li>
-                        <li><ion-icon name="checkmark"></ion-icon>Validating the Will</li>
-                        <li><ion-icon name="checkmark"></ion-icon>Settling Outstanding Debts</li>
-                        <li><ion-icon name="checkmark"></ion-icon>Paying Taxes</li>
-                        <li><ion-icon name="checkmark"></ion-icon>Making an Inventory of Assets</li>
-                        <li><ion-icon name="checkmark"></ion-icon>Distributing Remaining Assets on Behalf of the Decedent</li>
-                        <li><ion-icon name="checkmark"></ion-icon>Preparing and Filing the Necessary Paper Work</li>
+                        <li>Mediating Disputes over Assets between Beneficiaries</li>
+                            <div class="list__separator"></div>
+                        <li>Validating the Will</li>
+                            <div class="list__separator"></div>
+                        <li>Settling Outstanding Debts</li>
+                            <div class="list__separator"></div>
+                        <li>Paying Taxes</li>
+                            <div class="list__separator"></div>
+                        <li>Making an Inventory of Assets</li>
+                            <div class="list__separator"></div>
+                        <li>Distributing Remaining Assets on Behalf of the Decedent</li>
+                            <div class="list__separator"></div>
+                        <li>Preparing and Filing the Necessary Paper Work</li>
                     </ul>`,
                     
                     `We understand that estate settlement can be a sensitive, emotionally 
@@ -162,17 +173,27 @@
                         services, we specialize in:`,
                         
                         `<ul>
-                            <li><ion-icon name="checkmark"></ion-icon>Resolution of Landlord/Tenant Disputes</li>
-                            <li><ion-icon name="checkmark"></ion-icon>Transfer of Title and Ownership</li>
-                            <li><ion-icon name="checkmark"></ion-icon>Title Dispute Representation</li>
-                            <li><ion-icon name="checkmark"></ion-icon>Contract Disputes</li>
-                            <li><ion-icon name="checkmark"></ion-icon>Breach of Contract</li>
-                            <li><ion-icon name="checkmark"></ion-icon>Boundary Dispute Representation</li>
-                            <li><ion-icon name="checkmark"></ion-icon>Property Liens</li>
-                            <li><ion-icon name="checkmark"></ion-icon>Easements, Right Of Way, and Access Issues</li>
-                            <li><ion-icon name="checkmark"></ion-icon>Buying and Selling Property</li>
-                            <li><ion-icon name="checkmark"></ion-icon>Commercial Leases</li>
-                            <li><ion-icon name="checkmark"></ion-icon>Lease Drafting</li>
+                            <li>Resolution of Landlord/Tenant Disputes</li>
+                                <div class="list__separator"></div>
+                            <li>Transfer of Title and Ownership</li>
+                                <div class="list__separator"></div>
+                            <li>Title Dispute Representation</li>
+                                <div class="list__separator"></div>
+                            <li>Contract Disputes</li>
+                                <div class="list__separator"></div>
+                            <li>Breach of Contract</li>
+                                <div class="list__separator"></div>
+                            <li>Boundary Dispute Representation</li>
+                                <div class="list__separator"></div>
+                            <li>Property Liens</li>
+                                <div class="list__separator"></div>
+                            <li>Easements, Right Of Way, and Access Issues</li>
+                                <div class="list__separator"></div>
+                            <li>Buying and Selling Property</li>
+                                <div class="list__separator"></div>
+                            <li>Commercial Leases</li>
+                                <div class="list__separator"></div>
+                            <li>Lease Drafting</li>
                          </ul>`,
                          
                          `<img src="./stylesheets/img/sign.jpg" alt="Deed" style="width:100%; height:100%; border-radius:5px">`
