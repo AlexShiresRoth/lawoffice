@@ -77,13 +77,6 @@ exports.sendEmail = (req, res, next) => {
         let transporter = nodemailer.createTransport({
         // true for 465, false for other ports
         service: 'Outlook365', // true for 465, false for other ports
-        host: "smtpout.secureserver.net",  
-        secureConnection: false,
-        port: 587,
-        tls: {
-            rejectUnauthorized: false,
-            debug: true
-        },
         auth: {
             user: process.env.ACCOUNT_USER, // generated ethereal user
             pass: process.env.ACCOUNT_PASS // generated ethereal password
