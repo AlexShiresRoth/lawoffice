@@ -76,15 +76,15 @@ exports.sendEmail = (req, res, next) => {
         
         let transporter = nodemailer.createTransport({
         // true for 465, false for other ports
-        host: "smtp.office365.com",  
+        host: "smtp-mail.outlook.com",  
         secureConnection: false,
         port: 587,
+         tls: {
+            ciphers:'SSLv3'
+        },
         auth: {
             user: process.env.ACCOUNT_USER, // generated ethereal user
             pass: process.env.ACCOUNT_PASS // generated ethereal password
-        },
-        tls: {
-        ciphers:'SSLv3'
         }
     });
 
