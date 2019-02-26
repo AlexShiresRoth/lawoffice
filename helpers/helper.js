@@ -81,7 +81,8 @@ exports.sendEmail = (req, res, next) => {
         secureConnection: false,
         port: 587,
         tls: {
-            ciphers:'SSLv3'
+            rejectUnauthorized: false,
+            debug: true
         },
         auth: {
             user: process.env.ACCOUNT_USER, // generated ethereal user
