@@ -51,7 +51,6 @@
         flex-direction:row;
         justify-content:space-around;
         align-items:center;
-        width:100vw;
     }
     form#form.contact-form{
         min-width:45vw;
@@ -103,22 +102,27 @@
 /*============================CONTACT==============================================*/
 
 .container-business{
-    width:75vw;
+    width:70vw;
+    display:flex;
+    flex-direction:column;
 }
 .section-contact{
     padding:1rem 2rem;
 }
 
+form#form.contact-form{
+    width:70vw;
+}
+
  div.container-form-map-row{
-        width:100vw;
-        min-height:100vh;
         display:flex;
-        flex-direction:column;
-        justify-content:space-around;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center;
     }
 
 form#form.contact-form{
-    min-width:70vw;
+    width:60vw;
 }
 #map{
     min-width:70vw;
@@ -266,6 +270,9 @@ form#form.contact-form{
     .container-business{
         width:100vw;
         justify-content:space-around;
+        display:flex;
+        flex-direction:row;
+        order:0;
     }
     .business--list{
         width:45vw;
@@ -281,6 +288,7 @@ form#form.contact-form{
     }
     form#form.contact-form{
         width:90vw;
+        order:1;
     }
     .contact-form textarea{
         min-height:12rem;

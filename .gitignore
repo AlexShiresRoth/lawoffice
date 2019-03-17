@@ -1,4 +1,4 @@
 .env
-certs/
-certs/urmyattorney.com/
-node_modules/
+/certs/
+/certs/urmyattorney.com/
+/node_modules

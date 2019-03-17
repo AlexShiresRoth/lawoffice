@@ -42,7 +42,6 @@
 .section-contact {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   background: repeating-linear-gradient(145deg, #f5f5f5 0.5px, #e6e6e6 1px, #fff 2px); }
 
 .section-contact h5 {
@@ -74,7 +73,7 @@
 
 .container-business {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   width: 80vw;
@@ -96,18 +95,18 @@ div.container-form-map-row {
   align-items: center;
   justify-content: space-around;
   width: 80%;
-  min-height: 70vh; }
+  margin: 1.5rem 0; }
 
 #map {
   height: 40rem;
-  width: 32rem;
+  min-height: 40rem;
+  width: 98vw;
   padding: 2rem;
   border-radius: 5px;
   box-shadow: 0 2px 2px #bdbdbd; }
 
 #form.contact-form {
-  height: 40rem;
-  width: 32rem;
+  width: 50rem;
   padding: 2rem;
   border-radius: 5px;
   background-color: #fff;
@@ -132,7 +131,7 @@ div.container-form-map-row {
 .input-column .row {
   display: flex;
   flex-direction: row;
-  margin: 1.5rem 0;
+  margin: .3rem 0;
   width: 100%; }
 
 div.row.subject--row {
@@ -145,7 +144,7 @@ p.subject--select {
 .input-column {
   display: flex;
   flex-direction: column;
-  margin: 1rem 0; }
+  margin: .3rem 0; }
 
 .icon--container {
   min-height: 2rem;
