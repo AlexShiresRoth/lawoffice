@@ -1,9 +1,6 @@
 
-
-(() => {
-    
     //titles for the services navbar
-    const Titles = {
+   export const Titles = {
       serviceTitles: [
           'Wills, Trusts & Estates Law',
           'Real Estate Law',
@@ -14,7 +11,7 @@
          ]
     };
     
-    const Content = {
+   export const Content = {
          wills: [
               `Trust the planning of your estate with our reputable law firm. 
                Our extensive experience with estate law in Bohemia, NY, has established 
@@ -199,148 +196,3 @@
                          `<img src="./stylesheets/img/sign.jpg" alt="Deed" style="width:100%; height:100%; border-radius:5px">`
                         ]
         };
-        
-    
-    const selectors = {
-        willsTrustsAndEstatesButton: document.querySelector('#wills'),
-        bankruptcyButton: document.querySelector('#bankruptcy'),
-        boxesTitle: document.querySelector('.box h6'),
-        boxes: document.querySelectorAll('.box p')
-    };
-    
-    //get services nodelist
-    let getServicesList = () => {
-        let servicesList = document.querySelector('.services');
-        let serviceLis = servicesList.querySelectorAll('li');
-        return serviceLis;
-    };
-    getServicesList();
-    
-    //render services list array to page
-    let renderServicesList = () => {
-        let serviceList = getServicesList();
-        
-        for(let title = 0; title < serviceList.length; title++){
-          serviceList[title].textContent = Titles.serviceTitles[title];
-        }
-    };
-    renderServicesList();
-
-    //render content to service list
-    let getContent = (arr, text, title) => {
-        for(let i = 0; i < arr.length; i++) {
-            selectors.boxesTitle.innerHTML = title;
-            arr[i].innerHTML = text[i];
-        }
-    };
-    
-    
-    
-    
-    
-    //add active class to content select links in services section
-   let addActiveClass = () => {
-       
-       let services = getServicesList();
-       //cycle through services nav lis
-        for(let li of services){
-            li.addEventListener('click', () => {
-                let current = document.getElementsByClassName('active');
-                
-                 current[0].className = current[0].className.replace('active', '');
-                 li.classList.add('active');
-        
-            });
-        }
-   };
-   
-    addActiveClass();
-
-    //add content to services boxes by calling to API 
-    let addContent = () => {
-        
-        let servicesList = getServicesList();
-        //nodelist of services boxes
-        let boxArr = selectors.boxes;
-        
-        for(let item of servicesList){
-            //fix this to match the string in titles to 
-            
-                item.addEventListener('click', function(){
-                if(this.textContent === Titles.serviceTitles[0]){
-                    return getContent(boxArr,Content.wills,Titles.serviceTitles[0]);
-                }
-                if(this.textContent === Titles.serviceTitles[1]){
-                    return getContent(boxArr,Content.realestate, Titles.serviceTitles[1]);
-                }
-                if(this.textContent === Titles.serviceTitles[2]){
-                    return getContent(boxArr,Content.probate, Titles.serviceTitles[2]);
-                }
-                if(this.textContent === Titles.serviceTitles[3]){
-                    return getContent(boxArr,Content.estate, Titles.serviceTitles[3]);
-                }
-                if(this.textContent === Titles.serviceTitles[4]){
-                    return getContent(boxArr,Content.business, Titles.serviceTitles[4]);
-                }
-                if(this.textContent === Titles.serviceTitles[5]){
-                    return getContent(boxArr,Content.bankruptcy, Titles.serviceTitles[5]);
-                }
-                else {
-                    console.log(`no match`);
-                }
-            });
-        }
-    };
-    addContent();
-   
-})();
-
-//scrolling page module
-(() => {
-    
-    const Selectors = {
-        sections: document.querySelectorAll('section'),
-        anchors: [
-            {
-                aboutAnchor: document.querySelector('#nav--about'),
-                servicesAnchor: document.querySelector('#nav--services'),
-                contactAnchor: document.querySelector('#nav--contact')
-                
-            }
-        ]
-    };
-    //scroll function
-    let scrollToSection = (event) => {
-                event.scrollIntoView({
-                block:'start',
-                behavior:'smooth'
-            });  
-        };
-    // DRY this badboy up
-    Selectors.anchors[0].aboutAnchor.addEventListener('click', () => {
-        scrollToSection(Selectors.sections[0]);
-    });
-    Selectors.anchors[0].servicesAnchor.addEventListener('click', ()=> {
-        scrollToSection(Selectors.sections[1]);
-    });
-    Selectors.anchors[0].contactAnchor.addEventListener('click', () => {
-        scrollToSection(Selectors.sections[3]);
-    });
-   
-    
-})();
-
-//Navbar module
-(() => {
-     //slide in nav toggle feature
-       const mobileNav = document.querySelector('.mobile-nav');
-       const navAppear = document.querySelector('.main-nav');
-       //figure out why toggling between two classes doesn't work
-       let slideToggleNav = () => {
-         mobileNav.addEventListener("click", () => {
-             navAppear.classList.toggle('visible');
-         });
-       };
-       slideToggleNav();
-})();
-
