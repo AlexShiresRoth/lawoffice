@@ -1,0 +1,12 @@
+/*active classes */
+.active{
+   background: rgba(48, 63, 159, 0.3);
+   padding:1rem;
+   color:#fff;
+   border-radius:200px;
+}
+.js-wp-active{
+    padding-bottom:.5rem;
+    border-bottom: 2px solid $color;
+    color: $color;
+}

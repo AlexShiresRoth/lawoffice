@@ -99,8 +99,10 @@ export let scrollToSection = (event) => {
   
   
 //Mobile navbar slidetoggle
+
 export let slideToggleNav = () => {
          Selectors.mobileNav.addEventListener("click", () => {
              Selectors.navAppear.classList.toggle('visible');
          });
        };
+slideToggleNav();

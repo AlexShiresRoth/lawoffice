@@ -167,6 +167,8 @@ form#form.contact-form{
     .main-nav{
         display:none;
     } 
+    
+    /*===========Filtered menu slide in =============================*/
     .visible{
         display:flex;
         flex-direction:column;
@@ -175,25 +177,25 @@ form#form.contact-form{
         position:absolute;
         left:0;
         z-index:0;
-        background:rgba(30,30,30, 0.9);
+        background:rgba(30,30,30, 0.8);
         transform: translate(0vw,50vh);
         width:100vw;
-        height:90vh;
+        height:92vh;
         animation:mobileNavSlide .3s linear;
     }
     .invisible{
         display: flex;
         transform: translate(0,-17vh);
         animation:reverseSlide .6s linear;
-         flex-direction:column;
+        flex-direction:column;
         justify-content:center;
         align-items:center;
         position:absolute;
         left:0;
-        background:rgba(35,35,35, 0.9);
+        background:rgba(35,35,35, 0.8);
         width:100vw;
     }
-    
+    /*=================================================================*/
     h2{
         font-size:1.5rem;
     }
