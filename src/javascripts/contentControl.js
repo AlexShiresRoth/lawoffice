@@ -3,30 +3,30 @@ import { Selectors, getServicesList } from './Selectors.js';
 
 
 
-  //render services list array to page
-  export let renderServicesList = () => {
+//render services list array to page
+ export let renderServicesList = () => {
+     console.log(renderServicesList,'works');
+     
         let serviceList = getServicesList();
         
         for(let title = 0; title < serviceList.length; title++){
           serviceList[title].textContent = Titles.serviceTitles[title];
         }
     };
-    
 
-    //render content to service list
-   export let getContent = (arr, text, title) => {
+
+
+//render content to service list
+export let getContent = (arr, text, title) => {
         for(let i = 0; i < arr.length; i++) {
             Selectors.boxesTitle.innerHTML = title;
             arr[i].innerHTML = text[i];
         }
     };
-    
-    
-    
-    
-    
-    //add active class to content select links in services section
-  export let addActiveClass = () => {
+
+
+//add active class to content select links in services section
+export let addActiveClass = () => {
        
        let services = getServicesList();
        //cycle through services nav lis
@@ -41,8 +41,10 @@ import { Selectors, getServicesList } from './Selectors.js';
         }
    };
 
-    //add content to services boxes by calling to API 
-   export let addContent = () => {
+
+
+//add content to services boxes by calling to API 
+  export let addContent = () => {
         
         let servicesList = getServicesList();
         //nodelist of services boxes
@@ -77,13 +79,8 @@ import { Selectors, getServicesList } from './Selectors.js';
         }
     };
     
-
-
-
-
-//scrolling page module
-//scroll function
-   export let scrollToSection = (event) => {
+//scrolling navbar module
+export let scrollToSection = (event) => {
                 event.scrollIntoView({
                 block:'start',
                 behavior:'smooth'
@@ -99,19 +96,11 @@ import { Selectors, getServicesList } from './Selectors.js';
     Selectors.anchors[0].contactAnchor.addEventListener('click', () => {
         scrollToSection(Selectors.sections[3]);
     });
-   
-
-     //Navbar module
-     //slide in nav toggle feature
-     //figure out why toggling between two classes doesn't work
-       
-     export let slideToggleNav = () => {
+  
+  
+//Mobile navbar slidetoggle
+export let slideToggleNav = () => {
          Selectors.mobileNav.addEventListener("click", () => {
              Selectors.navAppear.classList.toggle('visible');
          });
        };
-       
-
-
-
-

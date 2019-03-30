@@ -22,4 +22,4 @@
         let serviceLis = servicesList.querySelectorAll('li');
         return serviceLis;
     };
-    getServicesList();
+getServicesList();

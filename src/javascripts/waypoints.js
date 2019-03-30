@@ -3,7 +3,7 @@
   const aboutWaypoint = new Waypoint({
     element: document.getElementById('js-wp-about'),
     handler: function(direction) {
-        console.log('Scrolled to waypoint!')
+        
         let aboutSection = document.querySelector('.section-about');
         aboutSection.classList.add('section-about--transition');
     },
@@ -14,7 +14,7 @@
     const phraseWaypoint = new Waypoint({
         element: document.getElementById('js-wp-phrase'),
         handler: function(direction) {
-        console.log('Scrolled to waypoint phrase!')
+        
         let phraseSection = document.querySelector('.section-phrase-p-break');
         phraseSection.classList.add('section-phrase-transition')
         },
@@ -24,7 +24,7 @@
       const practicesWaypoint = new Waypoint({
         element: document.getElementById('js-wp-practices'),
         handler: function(direction) {
-        console.log('Scrolled to waypoint!')
+      
         let practicesSection = document.querySelectorAll('.section-practices .box');
         console.log(practicesSection)
         setTimeout(() => {
@@ -38,9 +38,9 @@
         },900)
          setTimeout(() => {
           practicesSection[3].classList.add('section-practices-box-animation')
-        },1200)
+        },1200);
       },
     offset: "40%"
-      })
-})()
+      });
+})();
 
