@@ -10,3 +10,22 @@
     border-bottom: 2px solid $color;
     color: $color;
 }
+
+//hidden 
+
+.hidden {
+    display: none;
+    opacity: 0;
+    height: 0;
+}
+
+.show{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:1rem;
+    background-color: rgba(30, 30, 30, 0.9);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,95 @@
+<% include partials/header %>
+<section class="section-contact" id="contact">
+  <div class="container-form-map-row">
+    <form action="/api/send-email" method="POST" class="contact-form" id="form">
+      <div class="header-row">
+        <img
+          src="../stylesheets/img/lawofficelogo-blue.png"
+          class="logo"
+          id="footer-logo"
+        />
+        <h3>Send us an email.</h3>
+      </div>
+
+      <div class="input-row">
+        <div class="input-column">
+          <div class="row">
+            <div class="icon--container">
+              <ion-icon name="mail"></ion-icon>
+            </div>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              id="email"
+              required
+            />
+          </div>
+          <div class="row">
+            <div class="icon--container">
+              <ion-icon name="person"></ion-icon>
+            </div>
+            <input
+              type="text"
+              name="name"
+              placeholder="First and Last Name"
+              id="name"
+              required
+            />
+          </div>
+        </div>
+        <div class="input-column">
+          <div class="row subject--row">
+            <p class="subject--select">Please Select a message subject.</p>
+          </div>
+          <div class="row">
+            <div class="icon--container">
+              <ion-icon name="filing"></ion-icon>
+            </div>
+            <select id="subject" name="subject" class="dropdown">
+              <option>Wills, Trusts and Estates Law</option>
+              <option>Bankruptcy Law</option>
+              <option>Business Law</option>
+              <option>Estate Litigation</option>
+              <option>Real Estate Law</option>
+              <option>Probate Law</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <textarea
+            name="message"
+            placeholder="Reason for contact."
+            id="message"
+            required
+          >
+          </textarea>
+        </div>
+        <div class="row">
+          <button class="contact-button">Send</button>
+        </div>
+      </div>
+    </form>
+    <div class="container-business">
+      <% if(success && success.length > 0){ %>
+      <p class="alert-success"><%= success %></p>
+      <% } if(error && error.length > 0) { %>
+      <p class="alert-failure"><%= error %></p>
+      <% } %>
+      <ul class="business--list">
+        <li><h5>Hours:</h5></li>
+        <li><p>Mon - Fri: 9:00am - 5:30pm</p></li>
+        <li><p>Weekends: By appointment</p></li>
+      </ul>
+      <ul class="business--list">
+        <li><h5>Phone:</h5></li>
+        <li><p>Bohemia Location: 631-363-8749</p></li>
+        <li><p>Brooklyn Telephone: 646-633-4555</p></li>
+      </ul>
+    </div>
+  </div>
+  <!-- map row-- fill entire width -->
+  <div id="map" class="map"></div>
+</section>
+
+<% include partials/footer %>

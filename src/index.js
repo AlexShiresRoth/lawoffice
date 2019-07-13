@@ -3,7 +3,8 @@ import {
   addActiveClass,
   addContent,
   scrollToSection,
-  slideToggleNav
+  slideToggleNav,
+  toggleDropDown
 } from "./javascripts/contentControl.js";
 
 const loadFile = () => {
@@ -18,6 +19,7 @@ const loadFile = () => {
   scrollToSection();
 
   slideToggleNav();
+
 };
 
 (() => {

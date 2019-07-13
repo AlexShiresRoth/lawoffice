@@ -35,6 +35,7 @@ export let addActiveClass = () => {
 };
 
 //add content to services boxes by calling to API
+//change to switch statement
 export let addContent = () => {
   let servicesList = getServicesList();
   //nodelist of services boxes
@@ -73,16 +74,16 @@ export let scrollToSection = event => {
     behavior: "smooth"
   });
 };
-// DRY this badboy up
-Selectors.anchors[0].aboutAnchor.addEventListener("click", () => {
-  scrollToSection(Selectors.sections[0]);
-});
-Selectors.anchors[0].servicesAnchor.addEventListener("click", () => {
-  scrollToSection(Selectors.sections[1]);
-});
-Selectors.anchors[0].contactAnchor.addEventListener("click", () => {
-  scrollToSection(Selectors.sections[3]);
-});
+
+export let toggleDropDown = () => {
+  let serviceUl = document.querySelector(".main-nav__dropdown--service-list");
+
+  Selectors.dropDown.addEventListener("click", () => {
+    serviceUl.classList.toggle("hidden");
+    serviceUl.classList.toggle("show");
+  });
+};
+toggleDropDown();
 
 //Mobile navbar slidetoggle
 

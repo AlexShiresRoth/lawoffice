@@ -1,68 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.2/semantic.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
+    <link href="/stylesheets/queries.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300,400,700|Work+Sans:300,400,700"
+      rel="stylesheet"
+    />
 
-	<!DOCTYPE html>
-	<html>
-	<head>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.2/semantic.min.css" rel="stylesheet" type="text/css">
-	<link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
-	<link href="/stylesheets/queries.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700|Work+Sans:300,400,700" rel="stylesheet">
-    
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQmMt4Lv-pJjKzuAseXQDuP5EyOmzQUhk&callback=initMap" type="text/javascript"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQmMt4Lv-pJjKzuAseXQDuP5EyOmzQUhk&callback=initMap"
+      type="text/javascript"
+    ></script>
     <script type="text/javascript">
-    
-    
-    function initMap(){
-      let map = new google.maps.Map(
-        document.getElementById('map'), {
-          center: new google.maps.LatLng(40.775350, -73.103430),
+      function initMap() {
+        let map = new google.maps.Map(document.getElementById("map"), {
+          center: new google.maps.LatLng(40.77535, -73.10343),
           zoom: 10,
           mapTypeId: google.maps.MapTypeId.ROADMAP
-      });
-      
-      let contentString = `<div id="content">
+        });
+
+        let contentString = `<div id="content">
                             <div id="siteNotice">
                                 <p>Bohemia Location: 80 Orville Drive 11716</p>
                            </div>
                           </div>`;
-                          
-      let infowindow = new google.maps.InfoWindow({
+
+        let infowindow = new google.maps.InfoWindow({
           content: contentString
-      });
-      
-      let marker = new google.maps.Marker({
-            position: new google.maps.LatLng(40.775350, -73.103430),
-            map: map
-      });
-      marker.addListener('click', () => {
+        });
+
+        let marker = new google.maps.Marker({
+          position: new google.maps.LatLng(40.77535, -73.10343),
+          map: map
+        });
+        marker.addListener("click", () => {
           infowindow.open(map, marker);
-      });
-    }
-    
-    google.maps.event.addDomListener(window, 'load', initMap);
+        });
+      }
+
+      google.maps.event.addDomListener(window, "load", initMap);
     </script>
 
+    <title>Rothenberg Law Offices, PLLC</title>
+  </head>
 
-		<title>Rothenberg Law Offices, PLLC</title>
-	</head>
-		
-		    <nav>
-                    <a href="#header">
-                        <img src="stylesheets/img/lawofficelogo.png" class="logo" id="lawlogo"></a>
-                    <!--Photo by j zamora on Unsplash-->
-                        <ul class="main-nav">
-                            <li><a id="nav--about">About</a></li>
-                            <li><a id="nav--services">Services</a></li>
-                            <li class="contact--link"><a id="nav--contact">Contact</a></li>
-                        </ul>
-                    <div class="mobile-navbar">
-                        <img src="stylesheets/img/lawofficelogo.png" class="mobile-logo">
-                        <a class="mobile-nav">
-                            <div class="nav-icon-container">
-                                <i class="bars icon"></i>
-                            </div>
-                        </a> 
-                    </div>
-                   
-                </nav>
+  <nav>
+    <a href="/">
+      <img src="stylesheets/img/lawofficelogo.png" class="logo" id="lawlogo"
+    /></a>
+
+    <!--Photo by j zamora on Unsplash-->
+    <ul class="main-nav">
+      <li><a id="nav--about" href="/about">About</a></li>
+      <li>
+        <div class="main-nav__dropdown">
+          <a id="nav--services">Services<i class="angle down icon"></i></a>
+          <ul class="main-nav__dropdown--service-list hidden">
+            <li><a href="/bankruptcy">Bankruptcy Law</a></li>
+            <li><a href="/business">Business Law</a></li>
+            <li><a href="/estate">Estate Planning</a></li>
+            <li><a href="/willsandtrusts">Wills and Trusts Law</a></li>
+            <li><a href="/probate">Probate Law</a></li>
+          </ul>
+        </div>
+      </li>
+      <li class="contact--link">
+        <a id="nav--contact" href="/contact">Contact</a>
+      </li>
+    </ul>
+    <div class="mobile-navbar">
+      <img src="stylesheets/img/lawofficelogo.png" class="mobile-logo" />
+      <a class="mobile-nav">
+        <div class="nav-icon-container">
+          <i class="bars icon"></i>
+        </div>
+      </a>
+    </div>
+  </nav>
+</html>

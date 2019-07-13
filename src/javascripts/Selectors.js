@@ -6,6 +6,7 @@ export const Selectors = {
   sections: document.querySelectorAll("section"),
   mobileNav: document.querySelector(".mobile-nav"),
   navAppear: document.querySelector(".main-nav"),
+  dropDown : document.querySelector('.main-nav__dropdown'),
   anchors: [
     {
       aboutAnchor: document.querySelector("#nav--about"),
