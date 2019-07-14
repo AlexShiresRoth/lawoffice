@@ -1,25 +1,9 @@
-import {
-  renderServicesList,
-  addActiveClass,
-  addContent,
-  scrollToSection,
-  slideToggleNav,
-  toggleDropDown
-} from "./javascripts/contentControl.js";
+import { scrollToSection } from "./javascripts/contentControl.js";
 
 const loadFile = () => {
   //make sure DOM is loaded
 
-  renderServicesList();
-
-  addActiveClass();
-
-  addContent();
-
   scrollToSection();
-
-  slideToggleNav();
-
 };
 
 (() => {

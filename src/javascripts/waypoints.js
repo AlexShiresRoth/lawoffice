@@ -1,4 +1,7 @@
 (() => {
+
+  const elements = [...document.querySelectorAll(".section-practices__container--service-bubble")];
+
   //about section wp fadein
   const aboutWaypoint = new Waypoint({
     element: document.getElementById("js-wp-about"),
@@ -17,27 +20,13 @@
     },
     offset: "40%"
   });
-
   const practicesWaypoint = new Waypoint({
     element: document.getElementById("js-wp-practices"),
     handler: function(direction) {
-      let practicesSection = document.querySelectorAll(
-        ".section-practices .box"
-      );
-      console.log(practicesSection);
-      setTimeout(() => {
-        practicesSection[0].classList.add("section-practices-box-animation");
-      }, 300);
-      setTimeout(() => {
-        practicesSection[1].classList.add("section-practices-box-animation");
-      }, 600);
-      setTimeout(() => {
-        practicesSection[2].classList.add("section-practices-box-animation");
-      }, 900);
-      setTimeout(() => {
-        practicesSection[3].classList.add("section-practices-box-animation");
-      }, 1200);
+      return elements.forEach(service => {
+        return service.classList.add("fadeIn")
+      })
     },
     offset: "40%"
-  });
+  })
 })();

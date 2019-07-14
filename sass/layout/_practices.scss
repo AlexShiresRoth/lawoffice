@@ -1,119 +1,58 @@
-
 /*========================================
 ========practices======================
 */
-.section-practices{
-    min-height:100vh;
-    padding:2rem 2rem 0 2rem;
+.section-practices {
+  min-height: 100vh;
+  padding: 2rem 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
 }
-.section-practices .top{
-    width:100vw;
-    min-height:100%;
-    background-color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-.section-practices .services{
+.section-practices__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  &--service-bubble {
+    opacity: 0;
+    background: $color;
+    border-radius: 1px;
+    min-height: 20rem;
+    min-width: 20rem;
+    box-shadow: 0 25px 25px darken($color, 20%);
     display: flex;
-    flex-direction:row;
-    justify-content: space-around;
-    width:100vw;
-    min-height:10vh;
-    align-items:center;
-}
-.services li{
-    font-size: 1rem;
-    border-bottom: 1px solid transparent;
-    padding:.7rem;
-    transition: .2s linear;
-}
-.services li:hover{
-    background: rgba(48, 63, 159, 0.5);
-    padding:.7rem;
-    color:#fff;
-    border-radius:200px;
-    cursor:pointer;
-}
-.services li:focus{
-   background: rgba(48, 63, 159, 0.3);
-   padding:.7rem;
-   color:#fff;
-   border-radius:200px;
-}
-.section-practices .left-bar,
-.section-practices .right-bar,
-.section-practices .middle-content{
-    min-height:100vh;
-}
-.section-practices .middle-content{
-    min-height:100vh;
-    width:90%;
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2rem;
-    padding:1rem;
-}
-.section-practices .left-bar,
-.section-practices .right-bar{
-    width:5%;
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    background: transparent;
-    align-items:center;
-    transition: .2s linear;
-    color:var(--background);
-}
-
-
-.section-practices .left-bar i:hover,
-.section-practices .right-bar i:hover{
-    animation: 1s scaleUp infinite;
-}
-
-.section-practices .container{
-    display: flex;
-    justify-content:center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-start;
-    width:100vw;
-}
-.service-title{
-    margin-bottom:.5rem;
-    font-size:1.3rem;
-}
-.list__separator{
-    height:1px;
-    margin:.2rem 0;
-    display:block;
-    width:100%;
-    border-radius: 200px;
-    background: repeating-linear-gradient($accentColor, $color, $accentColor);
-}
-.section-practices .box{
-    display: flex;
-    align-items:flex-start;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items:center;
-    flex-wrap: wrap;
-    padding: 2rem 3rem;
-    background-color:#fff;
-    border-radius: .5rem;
-    box-shadow: 0 1px 1px #bdbdbd;
-    transition: all 0s;
-    opacity:0;
-}
+    padding: 2rem;
+    margin: 5rem;
+    transition: all 0.3s ease-in-out;
+    & h4 {
+      color: #fff;
+      font-size: 1.2rem;
 
-.section-practices-box-animation{
-    animation:fadein .1s forwards;
-    opacity:1;
-}
-.section-practices .box p{
-    font-size: 1.1rem;
-    color: #222;
-    font-weight: 500;
+      &:after {
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    & i {
+      color: lighten($accentColor, 10%);
+      font-size: 5rem;
+      transition: all 0.3s ease-in-out;
+    }
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 35px 35px darken($color, 20%);
+      transform: translateY(-2vh);
+      background: lighten($color, 10%);
+    }
+    &:hover i {
+      color: lighten($accentColor, 20%);
+    }
+    &:hover h4:after {
+      background-color: lighten($accentColor, 10%);
+    }
+  }
 }

@@ -18,58 +18,19 @@
     </header>
   </div>
 
-  <section class="section-about js-wp-about" id="js-wp-about">
-    <h2>About Rothenberg Law Offices</h2>
-
-    <div class="container">
-      <p>
-        You can protect your rights and your interests with the help of a lawyer
-        from the Rothenberg Law Office in Bohemia, NY. Since 1989, we've been
-        assisting clients like you who want someone to guide them through the
-        process. We've brought or defended cases before the New York State
-        Supreme Court and New York Surrogates Court.
-      </p>
-      <div class="p-break">
-        <i class="handshake outline icon"></i>
-        <i class="balance scale icon"></i>
-        <i class="hourglass outline icon"></i>
-      </div>
-      <p>
-        Our goal will be to give your case the kind of personal attention it
-        deserves. We have the resources to tackle legal issues of any scope or
-        complexity in the courtroom or in the boardroom. When you choose us,
-        we'll provide you with individual guidance so that you can make informed
-        decisions.
-      </p>
-    </div>
-  </section>
-
   <section class="section-practices" id="js-wp-practices">
-    <div class="top">
-      <ul class="services">
-        <li id="wills" class="active"></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li id="bankruptcy"></li>
-      </ul>
-    </div>
-    <div class="container">
-      <div class="left-bar"></div>
-      <div class="middle-content">
-        <div class="box box-one">
-          <h6 class="service-title"><%= services[0].title %></h6>
-          <hr />
-          <p><%= services[0].content[0] %></p>
+    <div class="section-practices__container">
+      <% services.map(service => { %>
+      <a href="<%=service.ref %>">
+        <div class="section-practices__container--service-bubble">
+          <i class="<%=service.icon%>"> </i>
+          <h4><%= service.title %></h4>
         </div>
-        <div class="box"><p><%= services[0].content[1] %></p></div>
-        <div class="box"><p><%= services[0].content[2] %></p></div>
-        <div class="box"><p><%= services[0].content[3] %></p></div>
-      </div>
-      <div class="right-bar"></div>
+      </a>
+      <% }) %>
     </div>
   </section>
+
   <section class="section-phrase" id="js-wp-phrase">
     <h2>Contact us!</h2>
 
@@ -104,5 +65,31 @@
       </div>
     </div>
   </section>
+
+  <section class="section-about js-wp-about" id="js-wp-about">
+      <h2>About Rothenberg Law Offices</h2>
+  
+      <div class="container">
+        <p>
+          You can protect your rights and your interests with the help of a lawyer
+          from the Rothenberg Law Office in Bohemia, NY. Since 1989, we've been
+          assisting clients like you who want someone to guide them through the
+          process. We've brought or defended cases before the New York State
+          Supreme Court and New York Surrogates Court.
+        </p>
+        <div class="p-break">
+          <i class="handshake outline icon"></i>
+          <i class="balance scale icon"></i>
+          <i class="hourglass outline icon"></i>
+        </div>
+        <p>
+          Our goal will be to give your case the kind of personal attention it
+          deserves. We have the resources to tackle legal issues of any scope or
+          complexity in the courtroom or in the boardroom. When you choose us,
+          we'll provide you with individual guidance so that you can make informed
+          decisions.
+        </p>
+      </div>
+    </section>
 </body>
 <% include partials/footer %>

@@ -6,7 +6,8 @@ export const Selectors = {
   sections: document.querySelectorAll("section"),
   mobileNav: document.querySelector(".mobile-nav"),
   navAppear: document.querySelector(".main-nav"),
-  dropDown : document.querySelector('.main-nav__dropdown'),
+  dropDown: document.querySelector(".main-nav__dropdown"),
+  serviceUl: document.querySelector(".main-nav__dropdown--service-list"),
   anchors: [
     {
       aboutAnchor: document.querySelector("#nav--about"),
@@ -16,10 +17,4 @@ export const Selectors = {
   ]
 };
 
-//get services nodelist
-export let getServicesList = () => {
-  let servicesList = document.querySelector(".services");
-  let serviceLis = servicesList.querySelectorAll("li");
-  return serviceLis;
-};
-getServicesList();
+

@@ -9,3 +9,8 @@
     margin:1rem 0;
     font-size: .85rem;
 }
+
+.fadeIn {
+    opacity:1;
+    animation: fadein .4s ease-in;
+}
