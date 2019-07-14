@@ -1,176 +1,178 @@
 /*========================================
 ========contact======================
 */
-.section-contact{
-    display: flex;
-    flex-direction:column;
-    background: repeating-linear-gradient(
-        145deg,
-        #f5f5f5 .5px,
-        #e6e6e6 1px,
-        #fff 2px
-    );
+.section-contact {
+  display: flex;
+  flex-direction: column;
+  background: repeating-linear-gradient(
+    145deg,
+    #f5f5f5 0.5px,
+    #e6e6e6 1px,
+    #fff 2px
+  );
 }
-.section-contact h5{
-    font-size:1.9rem;
+.section-contact h5 {
+  font-size: 1.9rem;
 }
-.section-contact h6{
-    margin-top:1.2rem;
-    font-family:'Raleway';
+.section-contact h6 {
+  margin-top: 1.2rem;
+  font-family: "Raleway";
 }
-.section-contact h3{
-    margin-top: 0;
-    font-size:1.3rem;
+.section-contact h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
 }
 .section-contact p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
-.section-contact .header-row{
-    display: flex;
-    flex-direction:column;
-    align-items:center;
-    width:100%;
-    justify-content:space-around;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #d6d6d6;
+.section-contact .header-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #d6d6d6;
 }
 .container-form label:after {
-    content: " *";
-    color:red;
+  content: " *";
+  color: red;
 }
-.container-business{
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
-    align-items:center;
-    width:80vw;
-    margin:1rem 0;
+.container-business {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 80vw;
+  margin: 1rem 0;
 }
-.business--list{
-    width:25rem
+.business--list {
+  width: 25rem;
 }
-.business--list h5{
-    font-size:1.4rem;
-    margin:1rem 0;
+.business--list h5 {
+  font-size: 1.4rem;
+  margin: 1rem 0;
 }
 .business--list p {
-    font-size:1.2rem;
+  font-size: 1.2rem;
 }
 
-
-div.container-form-map-row{
-        display:flex;
-        flex-direction:row;
-        align-items:center;
-        justify-content:space-around;
-        width:80%;
-        margin:1.5rem 0;
-    }
+div.container-form-map-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  margin: 1.5rem 0;
+}
 #map {
-    height:40rem;
-    min-height:40rem;
-    width: 98vw;
-    padding:2rem;
-    border-radius:5px;
-    box-shadow: 0 2px 2px #bdbdbd;
+  height: 40rem;
+  min-height: 40rem;
+  width: 98vw;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px #bdbdbd;
 }
 
-#form.contact-form{
-    width: 50rem;
-    padding:2rem;
-    border-radius: 5px;
-    background-color:#fff;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    box-shadow: 0 2px 2px #bdbdbd;
+#form.contact-form {
+  width: 50rem;
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 2px #bdbdbd;
 }
-.inputs{
-    display: flex;
-    flex-direction:row;
-    min-height:5vh;
+.inputs {
+  display: flex;
+  flex-direction: row;
+  min-height: 5vh;
 }
-.input-row{
-    display: flex;
-    flex-direction:column;
-    justify-content:center;
-    width:100%;
-    min-height:5vh;
+.input-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-height: 5vh;
 }
-.input-column .row{
-    display: flex;
-    flex-direction:row;
-    margin:.3rem 0 ;
-    width:100%;
+.input-column .row {
+  display: flex;
+  flex-direction: row;
+  margin: 0.3rem 0;
+  width: 100%;
 }
-div.row.subject--row{
-    margin:0;
+div.row.subject--row {
+  margin: 0;
 }
-p.subject--select{
-    font-size:1.2rem;
-    margin:0;
+p.subject--select {
+  font-size: 1.2rem;
+  margin: 0;
 }
-.input-column{
-    display: flex;
-    flex-direction: column;
-    margin:.3rem 0;
+.input-column {
+  display: flex;
+  flex-direction: column;
+  margin: 0.3rem 0;
 }
-.icon--container{
-    min-height:2rem;
-    display:flex;
-    align-items:center;
-    padding:.2rem;
-    min-width:2rem;
-    justify-content:center;
-    background-color: $accentColor;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+.icon--container {
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  padding: 0.2rem;
+  min-width: 2rem;
+  justify-content: center;
+  background-color: $accentColor;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 .input-column ion-icon {
-    color: #fff;
-    font-size:1.2rem;
+  color: #fff;
+  font-size: 1.2rem;
 }
-.input-column:nth-child(2){
-    margin-top:2.5%;
-}
-
-input[type=text],input[type=email],select{
-	min-height:2rem;
-	padding:.2rem;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
-	border: 1px solid $color;
-	background-color:#f7f7f7;
-    width:100%;
+.input-column:nth-child(2) {
+  margin-top: 2.5%;
 }
 
-textarea{
-	padding:.2rem;
-	min-height:8rem;
-	border-radius: 3px;
-	border: 1px solid $color;
-	background-color:#f7f7f7;
-    width:100%;
-}
-textarea:hover,input:hover{
-    border:1px solid navy;
+input[type="text"],
+input[type="email"],
+select {
+  min-height: 2rem;
+  padding: 0.2rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid $color;
+  background-color: #f7f7f7;
+  width: 100%;
 }
 
-form .contact-button{
-    margin: 1.5rem 0;
-    padding:.5rem;
-    font-size:1.2rem;
-    width:100%;
-    letter-spacing:2px;
+textarea {
+  padding: 0.2rem;
+  min-height: 8rem;
+  border-radius: 3px;
+  border: 1px solid $color;
+  background-color: #f7f7f7;
+  width: 100%;
+}
+textarea:hover,
+input:hover {
+  border: 1px solid navy;
+}
+
+form .contact-button {
+  margin: 1.5rem 0;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  width: 100%;
+  letter-spacing: 2px;
 }
 
 #footer-logo {
- max-height: 3rem;
- margin-bottom:1rem;
+  max-height: 3rem;
+  margin-bottom: 1rem;
 }
 
-*:focus{
-    outline: none;
+*:focus {
+  outline: none;
 }
