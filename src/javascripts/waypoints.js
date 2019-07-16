@@ -23,7 +23,7 @@
   const practicesWaypoint = new Waypoint({
     element: document.getElementById("js-wp-practices"),
     handler: function(direction) {
-      return elements.forEach(service => {
+      return elements.forEach(service => { 
         return service.classList.add("fadeIn")
       })
     },

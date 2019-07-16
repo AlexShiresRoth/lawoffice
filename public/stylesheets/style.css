@@ -4,7 +4,7 @@
 .section-about {
   line-height: 1.6;
   opacity: 0;
-  transition: all .6s; }
+  transition: all 0.6s; }
 
 .section-about--transition {
   opacity: 1; }
@@ -49,7 +49,7 @@
 
 .section-contact h6 {
   margin-top: 1.2rem;
-  font-family: 'Raleway'; }
+  font-family: "Raleway"; }
 
 .section-contact h3 {
   margin-top: 0;
@@ -131,7 +131,7 @@ div.container-form-map-row {
 .input-column .row {
   display: flex;
   flex-direction: row;
-  margin: .3rem 0;
+  margin: 0.3rem 0;
   width: 100%; }
 
 div.row.subject--row {
@@ -144,13 +144,13 @@ p.subject--select {
 .input-column {
   display: flex;
   flex-direction: column;
-  margin: .3rem 0; }
+  margin: 0.3rem 0; }
 
 .icon--container {
   min-height: 2rem;
   display: flex;
   align-items: center;
-  padding: .2rem;
+  padding: 0.2rem;
   min-width: 2rem;
   justify-content: center;
   background-color: #3F51B5;
@@ -164,9 +164,11 @@ p.subject--select {
 .input-column:nth-child(2) {
   margin-top: 2.5%; }
 
-input[type=text], input[type=email], select {
+input[type="text"],
+input[type="email"],
+select {
   min-height: 2rem;
-  padding: .2rem;
+  padding: 0.2rem;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   border: 1px solid #303F9F;
@@ -174,19 +176,20 @@ input[type=text], input[type=email], select {
   width: 100%; }
 
 textarea {
-  padding: .2rem;
+  padding: 0.2rem;
   min-height: 8rem;
   border-radius: 3px;
   border: 1px solid #303F9F;
   background-color: #f7f7f7;
   width: 100%; }
 
-textarea:hover, input:hover {
+textarea:hover,
+input:hover {
   border: 1px solid navy; }
 
 form .contact-button {
   margin: 1.5rem 0;
-  padding: .5rem;
+  padding: 0.5rem;
   font-size: 1.2rem;
   width: 100%;
   letter-spacing: 2px; }
@@ -353,6 +356,16 @@ header hr {
   opacity: 0;
   transform: translate(0vw, 100vh);
   animation: 0.5s slidein 0.5s forwards; }
+
+@media screen and (max-width: 480px) {
+  .hero-text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translate(0vw, 100vh);
+    animation: 0.5s slidein480 0.5s forwards; } }
 
 /*========================================
 ========footer======================
@@ -625,7 +638,7 @@ nav .logo {
 @keyframes slidein480 {
   100% {
     opacity: 1;
-    transform: translate(0vw, 40vh); } }
+    transform: translate(0vw, 0vh); } }
 
 @keyframes slideInFromLeft {
   0% {

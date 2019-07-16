@@ -18,7 +18,7 @@ exports.getServicesInfo = (req, res) => {
         ref: "/estate"
       },
       { title: "probate law", icon: "briefcase icon", ref: "/probate" },
-      { title: "Something Else", icon: "certificate icon", ref: "/" }
+      { title: "Something Else", icon: "certificate icon",   ref: "/" }
     ]
   });
 };
