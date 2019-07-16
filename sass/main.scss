@@ -9,6 +9,9 @@
 @import "layout/header";
 @import "layout/footer";
 
+@import "mediaqueries/mobile/headerMobile";
+@import "mediaqueries/mobile/servicesMobile";
+
 @import "components/buttons";
 @import "components/alerts";
 @import "components/active";
@@ -117,7 +120,7 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem 6rem;
+  padding: 6rem;
   width: 100vw;
   min-height: 100vh;
 }

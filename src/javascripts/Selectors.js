@@ -5,6 +5,7 @@ export const Selectors = {
   boxes: document.querySelectorAll(".box p"),
   sections: document.querySelectorAll("section"),
   mobileNav: document.querySelector(".mobile-nav"),
+  navIcon: document.querySelector(".nav-icon-container"),
   navAppear: document.querySelector(".main-nav"),
   dropDown: document.querySelector(".main-nav__dropdown"),
   serviceUl: document.querySelector(".main-nav__dropdown--service-list"),
