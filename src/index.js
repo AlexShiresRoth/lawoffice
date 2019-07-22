@@ -5,7 +5,8 @@ import {
 
 const loadFile = () => {
   //make sure DOM is loaded
-
+  generateQuestionnaire();
+  
   scrollToSection();
 };
 
