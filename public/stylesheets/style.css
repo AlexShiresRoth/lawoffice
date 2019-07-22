@@ -55,8 +55,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      min-height: 20rem;
-      background: red; }
+      min-height: 20rem; }
 
 .section-contact h5 {
   font-size: 1.9rem; }
