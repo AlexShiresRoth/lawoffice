@@ -1,4 +1,7 @@
-import { scrollToSection } from "./javascripts/contentControl.js";
+import {
+  scrollToSection,
+  generateQuestionnaire
+} from "./javascripts/contentControl.js";
 
 const loadFile = () => {
   //make sure DOM is loaded

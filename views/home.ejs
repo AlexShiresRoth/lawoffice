@@ -22,12 +22,15 @@
     <h2>Practices</h2>
     <div class="section-practices__container">
       <% services.map(service => { %>
-      <a href="<%=service.ref %>">
         <div class="section-practices__container--service-bubble">
           <i class="<%=service.icon%>"> </i>
-          <h4><%= service.title %></h4>
+          <a href="<%=service.ref %>"><h4><%= service.title %></h4></a>
+          <ul>
+            <% service.subCat.forEach(sub => { %>
+                <li><%= sub %></li>
+            <% }) %>
+          </ul>
         </div>
-      </a>
       <% }) %>
     </div>
   </section>

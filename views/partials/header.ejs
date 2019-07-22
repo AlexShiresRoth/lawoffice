@@ -69,11 +69,9 @@
         <div class="main-nav__dropdown">
           <a id="nav--services">Services<i class="angle down icon"></i></a>
           <ul class="main-nav__dropdown--service-list hidden">
-            <li><a href="/bankruptcy">Bankruptcy Law</a></li>
-            <li><a href="/business">Business Law</a></li>
-            <li><a href="/estate">Estate Planning</a></li>
-            <li><a href="/willsandtrusts">Wills and Trusts Law</a></li>
-            <li><a href="/probate">Probate Law</a></li>
+            <% services.forEach(service => { %>
+              <li><a href="<%= service.ref %>"> <%= service.title %> </a></li>
+             <% }) %>
           </ul>
         </div>
       </li>

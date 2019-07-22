@@ -1,4 +1,20 @@
 import { Selectors } from "./Selectors.js";
+import { questionnaires } from "./Content";
+
+
+//generate a questionnaire for every topic
+export const generateQuestionnaire = () => {
+  const questions = questionnaires[0].questions.map((question, i) => {
+    return `<input name="question${i}" type="checkbox"><p>${
+      question
+    }</p></input>`;
+  });
+
+  const markup = `<div class="question--container"></h2>${questions}</div>`;
+
+  Selectors.surveyForm.insertAdjacentHTML("afterbegin", markup);
+};
+generateQuestionnaire();
 
 //scrolling navbar module
 export const scrollToSection = event => {

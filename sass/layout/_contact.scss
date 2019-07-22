@@ -10,6 +10,22 @@
     #e6e6e6 1px,
     #fff 2px
   );
+  &--questionnaire {
+    min-height: 20rem;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    &--buttons{
+      display:flex;
+      flex-direction:row;
+    }
+    &--container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      min-height: 20rem;
+    }
+  }
 }
 .section-contact h5 {
   font-size: 1.9rem;

@@ -1,5 +1,15 @@
 <% include partials/header %>
 <section class="section-contact" id="contact">
+  <div class="section-contact--questionnaire">
+    <div class="section-contact--questionnaire--buttons">
+      <% services.forEach((service) => { %>
+      <button><%=service.title %></button>
+      <% }) %>
+    </div>
+
+    <div class="section-contact--questionnaire--container"></div>
+  </div>
+
   <div class="container-form-map-row">
     <form action="/api/send-email" method="POST" class="contact-form" id="form">
       <div class="header-row">

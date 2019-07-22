@@ -9,6 +9,7 @@ export const Selectors = {
   navAppear: document.querySelector(".main-nav"),
   dropDown: document.querySelector(".main-nav__dropdown"),
   serviceUl: document.querySelector(".main-nav__dropdown--service-list"),
+  surveyForm: document.querySelector(".section-contact--questionnaire--container"),
   anchors: [
     {
       aboutAnchor: document.querySelector("#nav--about"),

@@ -195,3 +195,19 @@ export const Content = {
     `<img src="./stylesheets/img/sign.jpg" alt="Deed" style="width:100%; height:100%; border-radius:5px">`
   ]
 };
+
+export const questionnaires = [
+  {
+    title: "Estate Administration",
+    questions: [
+      "Have you recently lost someone?",
+      "Has anyone filed anything with the surrogates courts?",
+      "Are you seeking to be the estate administrator?",
+      "Will some object to you becoming the administrator?",
+      "Are you seeking to challenge the person seeking to be the estate aministrator?",
+      "Is there a will?",
+      "Are there other beneficiaries?",
+      "Do you know what assets the decedent owned?"
+    ],
+  }
+];

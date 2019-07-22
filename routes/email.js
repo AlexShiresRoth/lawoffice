@@ -20,7 +20,7 @@ router.post("/", async (req, res) => {
     await mg.messages().send(data, (error, body) => {
       console.log(body);
       req.flash("success", "Email has been sent!");
-      res.redirect("/#contact");
+      res.redirect("/contact#contact");
     });
   } catch (error) {
     console.log(error);
@@ -28,7 +28,7 @@ router.post("/", async (req, res) => {
       "error",
       "Something went wrong with the request, please try again."
     );
-    res.redirect("/#contact");
+    res.redirect("/contact#contact");
   }
 });
 

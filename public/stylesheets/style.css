@@ -43,6 +43,20 @@
   display: flex;
   flex-direction: column;
   background: repeating-linear-gradient(145deg, #f5f5f5 0.5px, #e6e6e6 1px, #fff 2px); }
+  .section-contact--questionnaire {
+    min-height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    .section-contact--questionnaire--buttons {
+      display: flex;
+      flex-direction: row; }
+    .section-contact--questionnaire--container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      min-height: 20rem;
+      background: red; }
 
 .section-contact h5 {
   font-size: 1.9rem; }
@@ -277,19 +291,25 @@ form .contact-button {
     border-radius: 1px;
     min-height: 20rem;
     min-width: 10rem;
-    max-height: 20rem;
     max-width: 30rem;
     box-shadow: 0 25px 25px #182051;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 2rem;
+    justify-content: space-around;
+    padding: 3rem;
     margin: 2rem;
     transition: all 0.3s ease-in-out; }
+    .section-practices__container--service-bubble a {
+      display: block; }
     .section-practices__container--service-bubble h4 {
       color: #fff;
-      font-size: 1.2rem; }
+      font-size: 1.2rem;
+      transition: all 0.3s ease-in-out;
+      text-align: center; }
+      .section-practices__container--service-bubble h4:hover {
+        cursor: pointer;
+        color: #eee; }
       .section-practices__container--service-bubble h4:after {
         transition: all 0.3s ease-in-out; }
     .section-practices__container--service-bubble i {
@@ -297,14 +317,20 @@ form .contact-button {
       font-size: 5rem;
       transition: all 0.3s ease-in-out; }
     .section-practices__container--service-bubble:hover {
-      cursor: pointer;
       box-shadow: 0 35px 35px #182051;
-      transform: translateY(-2vh);
-      background: #3d50c5; }
+      transform: translateY(-2vh); }
     .section-practices__container--service-bubble:hover i {
       color: #8591d5; }
     .section-practices__container--service-bubble:hover h4:after {
       background-color: #606fc7; }
+    .section-practices__container--service-bubble ul {
+      margin: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start; }
+      .section-practices__container--service-bubble ul li {
+        color: #eee; }
 
 /*==================================
 =========header================*/
@@ -570,7 +596,7 @@ a.btn.btn-full:active,
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 1rem;
   background-color: rgba(30, 30, 30, 0.9);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }
