@@ -3,9 +3,15 @@ import {
   generateQuestionnaire
 } from "./javascripts/contentControl.js";
 
+const genSurvey = generateQuestionnaire();
+const renderEstateAdmin = genSurvey[0];
+const changeBtns = genSurvey[2];
+
 const loadFile = () => {
   //make sure DOM is loaded
-  generateQuestionnaire();
+  renderEstateAdmin();
+
+  changeBtns();
   
   scrollToSection();
 };

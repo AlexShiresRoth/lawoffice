@@ -10,6 +10,7 @@ export const Selectors = {
   dropDown: document.querySelector(".main-nav__dropdown"),
   serviceUl: document.querySelector(".main-nav__dropdown--service-list"),
   surveyForm: document.querySelector(".section-contact--questionnaire--container"),
+  surveyBtns: [...document.querySelectorAll(".section-contact--questionnaire--buttons--button")],
   anchors: [
     {
       aboutAnchor: document.querySelector("#nav--about"),

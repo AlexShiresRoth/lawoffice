@@ -3,19 +3,63 @@ import { questionnaires } from "./Content";
 
 //generate a questionnaire for every topic
 export const generateQuestionnaire = () => {
-  if (Selectors.surveyForm) {
-    const questions = questionnaires[0].questions.map((question, i) => {
-      return `<input name="question${i}" type="checkbox"><p>${question}</p></input>`;
+  const renderEstateAdmin = () => {
+    if (Selectors.surveyForm) {
+      const questions = questionnaires[0].questions
+        .map((question, i) => {
+          return `<div class="question--container--row">
+        <p>${question}</p>
+        <input name="question${i}" type="checkbox" class="input${i}"></input>
+        </div>`;
+        })
+        .join(" ");
+      const markup = `<div class="question--container">${questions}</div>`;
+      return markup;
+    }
+  };
+  const renderEstatePlanning = () => {
+    if (Selectors.surveyForm) {
+      const questions = questionnaires[1].questions
+        .map((question, i) => {
+          return `<div class="question--container--row">
+        <p>${question}</p>
+        <input name="question${i}" type="checkbox" class="input${i}"></input>
+        <div class="question--container--row--subrow"><p>${
+          question.question
+        }</p>
+          <div class="question--container--row--subrow--questions">
+          ${
+            question.subQuestions
+              ? question.subQuestions.map((subQuestion, i) => {
+                  `<p>${subQuestion}</p><input name="subQuestion${i}" type="checkbox" class="subInput${i}"></input>`;
+                })
+              : null
+          }
+        </div>`;
+        })
+        .join(" ");
+      const markup = `<div class="question--container">${questions}</div>`;
+      return markup;
+    }
+  };
+
+  const changeSurvey = () => {
+    Selectors.surveyBtns.forEach(btn => {
+      btn.addEventListener("click", function(e) {
+        e.stopPropagation();
+        const btnText = this.textContent.toLowerCase().trim();
+        btnText === questionnaires[0].title.toLowerCase().trim()
+          ? (Selectors.surveyForm.innerHTML = renderEstateAdmin())
+          : null;
+        btnText === questionnaires[1].title.toLocaleLowerCase().trim()
+          ? (Selectors.surveyForm.innerHTML = renderEstatePlanning())
+          : null;
+      });
     });
+  };
 
-    const markup = `<div class="question--container"></h2>${questions}</div>`;
-
-    Selectors.surveyForm.insertAdjacentHTML("afterbegin", markup);
-  } else {
-    return null;
-  }
+  return [renderEstateAdmin, renderEstatePlanning, changeSurvey];
 };
-
 //scrolling navbar module
 export const scrollToSection = event => {
   event.scrollIntoView({

@@ -208,6 +208,42 @@ export const questionnaires = [
       "Is there a will?",
       "Are there other beneficiaries?",
       "Do you know what assets the decedent owned?"
-    ],
+    ]
+  },
+  {
+    title: "Estate Planning",
+    questions: [
+      "Are you looking to plan your estate or someone elses?",
+      "Have you ever planned your estate?",
+      "Do you have a will?",
+      "Do you have any trusts?",
+      "Are you a beneficiary under any trust?",
+      "Are you married?",
+      "Do you have any children?",
+      {
+        question: "What assets do you own?",
+        subQuestions: [
+          "Real Estate",
+          "Business",
+          "Life insurance on yourself or someone else",
+          "Retirement accounts",
+          {
+            question: "Financial Accounts",
+            subQuestions: [
+              "Checking, Savings C/D's",
+              "Brokerage accounts",
+              "Stocks",
+              "Bonds",
+              "Mutual Funds"
+            ]
+          },
+          {
+            question: "Collectables",
+            subQuestions: ["Antiques", "Coins", "Stamps", "Paintings", "Other"]
+          },
+          "Weapons? (pistols, rifles, ammunition)"
+        ]
+      }
+    ]
   }
 ];
