@@ -7,13 +7,19 @@ export const generateQuestionnaire = () => {
     if (Selectors.surveyForm) {
       const questions = questionnaires[0].questions
         .map((question, i) => {
-          return `<div class="question--container--row">
-        <p>${question}</p>
-        <input name="question${i}" type="checkbox" class="input${i}"></input>
-        </div>`;
+          return `
+            <div class="section-contact--questionnaire--container--question--container--row">
+            <p>${question}</p>
+            <input name="question${i}" type="checkbox" class="input${i}"></input>
+            </div>`;
         })
         .join(" ");
-      const markup = `<div class="question--container">${questions}</div>`;
+      const markup = `
+          <div class="section-contact--questionnaire--container--question--container">
+          ${questions}
+          <div class="section-contact--questionnaire--container--question--container--row">
+          <p>Please review the information you selected and then hit submit</p><button>Submit</button>
+          </div></div>`;
       return markup;
     }
   };
@@ -21,24 +27,13 @@ export const generateQuestionnaire = () => {
     if (Selectors.surveyForm) {
       const questions = questionnaires[1].questions
         .map((question, i) => {
-          return `<div class="question--container--row">
-        <p>${question}</p>
-        <input name="question${i}" type="checkbox" class="input${i}"></input>
-        <div class="question--container--row--subrow"><p>${
-          question.question
-        }</p>
-          <div class="question--container--row--subrow--questions">
-          ${
-            question.subQuestions
-              ? question.subQuestions.map((subQuestion, i) => {
-                  `<p>${subQuestion}</p><input name="subQuestion${i}" type="checkbox" class="subInput${i}"></input>`;
-                })
-              : null
-          }
-        </div>`;
+          return `<div class="section-contact--questionnaire--container--question--container--row">
+          <p>${question}</p>
+          <input name="question${i}" type="checkbox" class="input${i}"></input>
+          </div>`;
         })
         .join(" ");
-      const markup = `<div class="question--container">${questions}</div>`;
+      const markup = `<div class="section-contact--questionnaire--container--question--container">${questions}</div>`;
       return markup;
     }
   };

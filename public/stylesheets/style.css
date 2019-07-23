@@ -50,12 +50,35 @@
     justify-content: space-around; }
     .section-contact--questionnaire--buttons {
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      justify-content: center; }
     .section-contact--questionnaire--container {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      min-height: 20rem; }
+      min-height: 20rem;
+      margin: 2rem; }
+      .section-contact--questionnaire--container--question--container {
+        background: #fff; }
+        .section-contact--questionnaire--container--question--container--row {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          border-bottom: 1px solid #eee;
+          padding: 1rem; }
+          .section-contact--questionnaire--container--question--container--row p {
+            font-size: 1.2rem; }
+          .section-contact--questionnaire--container--question--container--row button {
+            background: #121254;
+            border: 1px solid #121254;
+            transition: all 0.3s ease-in-out;
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 4px; }
+            .section-contact--questionnaire--container--question--container--row button:hover {
+              cursor: pointer;
+              background: #303F9F;
+              border: 1px solid #303F9F; }
 
 .section-contact h5 {
   font-size: 1.9rem; }
