@@ -10,7 +10,7 @@ export const generateQuestionnaire = () => {
           return `
             <div class="section-contact--questionnaire--container--question--container--row">
             <p>${question}</p>
-            <input name="question${i}" type="checkbox" class="input${i}"></input>
+            <input name="question" type="checkbox" class="input${i}"></input>
             </div>`;
         })
         .join(" ");
@@ -18,7 +18,10 @@ export const generateQuestionnaire = () => {
           <div class="section-contact--questionnaire--container--question--container">
           ${questions}
           <div class="section-contact--questionnaire--container--question--container--row">
-          <p>Please review the information you selected and then hit submit</p><button>Submit</button>
+          <p>Please review the information you selected and then hit submit.</p></div>
+          <div class="section-contact--questionnaire--container--question--container--row">
+          <input type="text" name="name"></input><input type="email" name="email"></input>
+          <button>Submit</button>
           </div></div>`;
       return markup;
     }

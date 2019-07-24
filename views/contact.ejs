@@ -9,10 +9,15 @@
       <% }) %>
     </div>
 
-    <form class="section-contact--questionnaire--container">
+    <form
+      action="/api/send-email/survey"
+      method="POST"
+      class="section-contact--questionnaire--container"
+    >
       <p>
         If you would like to speed up the process, please fill out a survey in
-        one of the above practices. Otherwise please send us a general email below.
+        one of the above practices. Otherwise please send us a general email
+        below.
       </p>
     </form>
   </div>
