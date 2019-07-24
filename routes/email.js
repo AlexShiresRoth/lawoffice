@@ -5,7 +5,7 @@ const DOMAIN = process.env.DOMAIN;
 const mg = mailgun({ apiKey: process.env.API_KEY, domain: DOMAIN });
 
 // POST ROUTES FOR MAILGUN:
-router.post("/", async (req, res) => {
+router.post("/contact", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   const data = {
