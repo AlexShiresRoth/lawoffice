@@ -4,15 +4,14 @@ import {
 } from "./javascripts/contentControl.js";
 
 const genSurvey = generateQuestionnaire();
-const renderEstateAdmin = genSurvey[0];
+const renderSurvey = genSurvey[0];
 const changeBtns = genSurvey[2];
 
 const loadFile = () => {
-  //make sure DOM is loaded
-  renderEstateAdmin();
+  renderSurvey();
 
   changeBtns();
-  
+
   scrollToSection();
 };
 

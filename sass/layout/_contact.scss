@@ -51,6 +51,15 @@
                 border: 1px solid $color;
               }
             }
+            &--sub-row {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              padding: .5rem 4rem;
+              & p {
+                font-size: 1rem;
+              }
+            }
           }
         }
       }

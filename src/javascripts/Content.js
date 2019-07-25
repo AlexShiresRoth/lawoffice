@@ -213,37 +213,133 @@ export const questionnaires = [
   {
     title: "Estate Planning",
     questions: [
-      "Are you looking to plan your estate or someone elses?",
+      "Are you looking to plan your estate or someone else's?",
       "Have you ever planned your estate?",
       "Do you have a will?",
       "Do you have any trusts?",
       "Are you a beneficiary under any trust?",
       "Are you married?",
-      "Do you have any children?",
-      {
-        question: "What assets do you own?",
-        subQuestions: [
-          "Real Estate",
-          "Business",
-          "Life insurance on yourself or someone else",
-          "Retirement accounts",
-          {
-            question: "Financial Accounts",
-            subQuestions: [
-              "Checking, Savings C/D's",
-              "Brokerage accounts",
-              "Stocks",
-              "Bonds",
-              "Mutual Funds"
-            ]
-          },
-          {
-            question: "Collectables",
-            subQuestions: ["Antiques", "Coins", "Stamps", "Paintings", "Other"]
-          },
-          "Weapons? (pistols, rifles, ammunition)"
-        ]
-      }
-    ]
+      "Do you have any children?"
+    ],
+    subQuestion: "What assets do you own?",
+    subQuestions: [
+      "Real Estate",
+      "Business",
+      "Life insurance on yourself or someone else",
+      "Retirement accounts"
+    ],
+    subQuestionTwo: "Financial Accounts?",
+    subQuestionsTwo: [
+      "Checking, Savings C/D's",
+      "Brokerage accounts",
+      "Stocks",
+      "Bonds",
+      "Mutual Funds"
+    ],
+    subQuestionThree: "Collectables?",
+    subQuestionsThree: ["Antiques", "Coins", "Stamps", "Paintings", "Other"],
+    subQuestionFour: "Weapons?",
+    subQuestionsFour: ["pistols", "Rifles", "Ammunition", "Other"]
   }
 ];
+
+//create a label element for each p question element
+
+export const surveyMarkup = function() {
+  const estateAdminSuveyMarkup = () => {
+    let questionTitle = questionnaires[0].title;
+    let questions = questionnaires[0].questions
+      .map((question, i) => {
+        return `
+         <div class="section-contact--questionnaire--container--question--container--row">
+         <p>${question}</p>
+         <input name="question" type="checkbox" class="input${i}"></input>
+         </div>`;
+      })
+      .join(" ");
+    let markup = ` <div class="section-contact--questionnaire--container--question--container">
+    <div class="section-contact--questionnaire--container--question--container--row"><h4>${questionTitle}</h4></div>
+     ${questions} <div class="section-contact--questionnaire--container--question--container--row">
+    <p>Please review the information you selected and then hit submit.</p></div>
+    <div class="section-contact--questionnaire--container--question--container--row">
+    <input type="text" name="name"></input><input type="email" name="email"></input>
+    <button>Submit</button>
+    </div></div>`;
+
+    return markup;
+  };
+  const estatePlanningSurveyMarkup = () => {
+    let questionTitle = questionnaires[1].title;
+    let questions = questionnaires[1].questions
+      .map((question, i) => {
+        return `
+        <div class="section-contact--questionnaire--container--question--container--row">
+        <p>${question}</p>
+        <input name="question" type="checkbox" class="input${i}"></input>
+        </div>`;
+      })
+      .join(" ");
+    let subQuestion = questionnaires[1].subQuestion;
+    let subQuestions = questionnaires[1].subQuestions
+      .map((subQ, i) => {
+        return `
+      <div class="section-contact--questionnaire--container--question--container--row--sub-row">
+      <p>${subQ}</p>
+      <input name="question" type="checkbox" class="input${i}"></input>
+      </div>`;
+      })
+      .join(" ");
+    let subQuestionTwo = questionnaires[1].subQuestionTwo;
+    let subQuestionsTwo = questionnaires[1].subQuestionsTwo
+      .map((subQ, i) => {
+        return `
+      <div class="section-contact--questionnaire--container--question--container--row--sub-row">
+      <p>${subQ}</p>
+      <input name="question" type="checkbox" class="input${i}"></input>
+      </div>`;
+      })
+      .join(" ");
+    let subQuestionThree = questionnaires[1].subQuestionThree;
+    let subQuestionsThree = questionnaires[1].subQuestionsThree
+      .map((subQ, i) => {
+        return `
+      <div class="section-contact--questionnaire--container--question--container--row--sub-row">
+      <p>${subQ}</p>
+      <input name="question" type="checkbox" class="input${i}"></input>
+      </div>`;
+      })
+      .join(" ");
+    let subQuestionFour = questionnaires[1].subQuestionFour;
+    let subQuestionsFour = questionnaires[1].subQuestionsFour
+      .map((subQ, i) => {
+        return `
+      <div class="section-contact--questionnaire--container--question--container--row--sub-row">
+      <p>${subQ}</p>
+      <input name="question" type="checkbox" class="input${i}"></input>
+      </div>`;
+      })
+      .join(" ");
+
+    let markup = `<div class="section-contact--questionnaire--container--question--container">
+      <div class="section-contact--questionnaire--container--question--container--row"><h4>${questionTitle}</h4></div>
+       ${questions}
+      <div class="section-contact--questionnaire--container--question--container--row"><p>${subQuestion}</p></div> 
+      ${subQuestions}
+      <div class="section-contact--questionnaire--container--question--container--row"><p>${subQuestionTwo}</p></div>
+      ${subQuestionsTwo} 
+      <div class="section-contact--questionnaire--container--question--container--row"><p>${subQuestionThree}</p></div>
+      ${subQuestionsThree} 
+      <div class="section-contact--questionnaire--container--question--container--row"><p>${subQuestionFour}</p></div>
+      ${subQuestionsFour} 
+      <div class="section-contact--questionnaire--container--question--container--row">
+      <p>Please review the information you selected and then hit submit.</p></div>
+      <div class="section-contact--questionnaire--container--question--container--row">
+      <input type="text" name="name"></input><input type="email" name="email"></input>
+      <button>Submit</button>
+      </div></div>`;
+
+    return markup;
+  };
+
+  return [estateAdminSuveyMarkup, estatePlanningSurveyMarkup];
+};

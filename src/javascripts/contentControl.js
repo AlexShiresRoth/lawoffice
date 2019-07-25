@@ -1,63 +1,37 @@
 import { Selectors } from "./Selectors.js";
-import { questionnaires } from "./Content";
+import { surveyMarkup, questionnaires } from "./Content";
+
+//figure out how toextract survey info to email,
+//number each question
 
 //generate a questionnaire for every topic
 export const generateQuestionnaire = () => {
-  const renderEstateAdmin = () => {
-    if (Selectors.surveyForm) {
-      const questions = questionnaires[0].questions
-        .map((question, i) => {
-          return `
-            <div class="section-contact--questionnaire--container--question--container--row">
-            <p>${question}</p>
-            <input name="question" type="checkbox" class="input${i}"></input>
-            </div>`;
-        })
-        .join(" ");
-      const markup = `
-          <div class="section-contact--questionnaire--container--question--container">
-          ${questions}
-          <div class="section-contact--questionnaire--container--question--container--row">
-          <p>Please review the information you selected and then hit submit.</p></div>
-          <div class="section-contact--questionnaire--container--question--container--row">
-          <input type="text" name="name"></input><input type="email" name="email"></input>
-          <button>Submit</button>
-          </div></div>`;
-      return markup;
-    }
-  };
-  const renderEstatePlanning = () => {
-    if (Selectors.surveyForm) {
-      const questions = questionnaires[1].questions
-        .map((question, i) => {
-          return `<div class="section-contact--questionnaire--container--question--container--row">
-          <p>${question}</p>
-          <input name="question${i}" type="checkbox" class="input${i}"></input>
-          </div>`;
-        })
-        .join(" ");
-      const markup = `<div class="section-contact--questionnaire--container--question--container">${questions}</div>`;
-      return markup;
-    }
-  };
+  const getMarkup = surveyMarkup();
+
+  const renderMarkup = markup => (Selectors.surveyForm ? markup : null);
 
   const changeSurvey = () => {
     Selectors.surveyBtns.forEach(btn => {
       btn.addEventListener("click", function(e) {
         e.stopPropagation();
         const btnText = this.textContent.toLowerCase().trim();
-        btnText === questionnaires[0].title.toLowerCase().trim()
-          ? (Selectors.surveyForm.innerHTML = renderEstateAdmin())
-          : null;
-        btnText === questionnaires[1].title.toLocaleLowerCase().trim()
-          ? (Selectors.surveyForm.innerHTML = renderEstatePlanning())
-          : null;
+        if (btnText === questionnaires[0].title.toLowerCase().trim()) {
+          const markup = getMarkup[0];
+          Selectors.surveyForm.innerHTML = renderMarkup(markup());
+        } 
+        if (btnText === questionnaires[1].title.toLowerCase().trim()) {
+          const markup = getMarkup[1];
+          console.log(btnText)
+          Selectors.surveyForm.innerHTML = renderMarkup(markup());
+        } else {
+          return null;
+        }
       });
     });
   };
-
-  return [renderEstateAdmin, renderEstatePlanning, changeSurvey];
+  return [changeSurvey];
 };
+
 //scrolling navbar module
 export const scrollToSection = event => {
   event.scrollIntoView({
