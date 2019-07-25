@@ -2,6 +2,7 @@ import { Selectors } from "./Selectors.js";
 import { surveyMarkup, questionnaires } from "./Content";
 
 //figure out how toextract survey info to email,
+//add active class for buttons
 //number each question
 
 //generate a questionnaire for every topic
