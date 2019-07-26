@@ -1,16 +1,15 @@
 /* Reusable components=============*/
 
-
-.box{
-	padding: 1rem;
+.box {
+  padding: 1rem;
 }
 
-.list > li{
-    margin:1rem 0;
-    font-size: .85rem;
+.list > li {
+  margin: 1rem 0;
+  font-size: 0.85rem;
 }
 
 .fadeIn {
-    opacity:1;
-    animation: fadein .4s ease-in;
+  opacity: 1;
+  animation: fadein 0.4s ease-in;
 }

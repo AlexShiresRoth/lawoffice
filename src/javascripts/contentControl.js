@@ -1,9 +1,9 @@
 import { Selectors } from "./Selectors.js";
 import { surveyMarkup, questionnaires } from "./Content";
 
-//figure out how toextract survey info to email,
-//add active class for buttons
-//number each question
+//figure out how to extract survey info to email,
+//TODO fix add active class for buttons
+
 
 //generate a questionnaire for every topic
 export const generateQuestionnaire = () => {
@@ -19,17 +19,28 @@ export const generateQuestionnaire = () => {
         if (btnText === questionnaires[0].title.toLowerCase().trim()) {
           const markup = getMarkup[0];
           Selectors.surveyForm.innerHTML = renderMarkup(markup());
-        } 
+          e.target.classList.add('active--button');
+          removeActiveClass.call(this);
+        }
         if (btnText === questionnaires[1].title.toLowerCase().trim()) {
           const markup = getMarkup[1];
-          console.log(btnText)
           Selectors.surveyForm.innerHTML = renderMarkup(markup());
+          e.target.classList.add('active--button');
+          removeActiveClass.call(this);
         } else {
           return null;
         }
       });
     });
   };
+
+  const removeActiveClass = function() {
+    console.log(this)
+    !this.classList.contains("active--button")
+      ? this.classList.remove("active--button")
+      : null;
+  };
+
   return [changeSurvey];
 };
 
