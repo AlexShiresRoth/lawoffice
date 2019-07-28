@@ -1,12 +1,14 @@
+
+import { checkInputCommercial } from './SurveyControl';
+
 //titles for the services navbar
 export const Titles = {
   serviceTitles: [
-    "Wills, Trusts & Estates Law",
-    "Real Estate Law",
-    "Probate Law",
-    "Estate Litigation",
-    "Business Law",
-    "Bankruptcy Law"
+    "Estate Administration",
+    "Estate Planning",
+    "Real Estate",
+    "Rental Property Management",
+    "Commercial Transaction"
   ]
 };
 
@@ -81,20 +83,57 @@ export const questionnaires = [
       "-With a breaching tenant?"
     ],
     subQuestionFour: "6. Are you or other party in breach of a lease?"
+  },
+  {
+    title: "Rental Property Management",
+    questions: [
+      "1. Do you have property you want to rent out?",
+      "2. Do you need someone to manage your property?",
+      "3. Are you an absentee landlord in need of someone to oversee your property?"
+    ]
+  },
+  {
+    title: "Commercial Transaction",
+    questions: ["1. Are you buying a business?"],
+    subQuestion: "2. Are you selling a business?",
+    subQuestions: [
+      "-Do you have any offer?",
+      "-Have you put together documentation for the sale?"
+    ],
+    subSubQuestions: [
+      "1. Due Diligence",
+      "2. Leases",
+      "3. Financial Statements"
+    ]
   }
 ];
 
-//create a label element for each p question element
-
+//generate survey html per practice area
 export const surveyMarkup = function() {
+  const inputContainer = () => {
+    const markup = `<div class="section-contact--questionnaire--container--question--container--row">
+      <div class="section-contact--questionnaire--container--question--container--row--input-icon-row">
+      <div class="section-contact--questionnaire--container--question--container--row--input-icon-row--icon-container">
+      <i class="user outline icon"></i></div>
+      <input class="section-contact--questionnaire--container--question--container--row--input-icon-row--input" type="text" name="name" placeholder="Jane Birch"required>
+      </div>
+      <div class="section-contact--questionnaire--container--question--container--row--input-icon-row">
+      <div class="section-contact--questionnaire--container--question--container--row--input-icon-row--icon-container">
+      <i class="envelope outline icon"></i></div>
+      </input><input class="section-contact--questionnaire--container--question--container--row--input" type="email" name="email" placeholder="jane@gmail.com" required>
+      </input></div>
+      <button class="survey--button">Submit</button>
+      </div>`;
+    return markup;
+  };
   const estateAdminSuveyMarkup = () => {
     let questionTitle = questionnaires[0].title;
     let questions = questionnaires[0].questions
       .map((question, i) => {
         return `
          <div class="section-contact--questionnaire--container--question--container--row">
-         <label for="question">${question}</label>
-         <input name="question" type="checkbox" class="input${i}"></input>
+         <label for="question-${i}">${question}</label>
+         <input name="question-${i}" type="checkbox" class="input${i}"></input>
          </div>`;
       })
       .join(" ");
@@ -102,10 +141,8 @@ export const surveyMarkup = function() {
     <div class="section-contact--questionnaire--container--question--container--row"><h4>${questionTitle}</h4></div>
      ${questions} <div class="section-contact--questionnaire--container--question--container--row">
     <p>Please review the information you selected and then hit submit.</p></div>
-    <div class="section-contact--questionnaire--container--question--container--row">
-    <input type="text" name="name"></input><input type="email" name="email"></input>
-    <button>Submit</button>
-    </div></div>`;
+    ${inputContainer()}
+    </div>`;
 
     return markup;
   };
@@ -115,8 +152,8 @@ export const surveyMarkup = function() {
       .map((question, i) => {
         return `
         <div class="section-contact--questionnaire--container--question--container--row">
-        <label for="question">${question}</label>
-        <input name="question" type="checkbox" class="input${i}"></input>
+        <label for="question-${i}">${question}</label>
+        <input name="question-${i}" type="checkbox" class="input${i}"></input>
         </div>`;
       })
       .join(" ");
@@ -125,8 +162,8 @@ export const surveyMarkup = function() {
       .map((subQ, i) => {
         return `
       <div class="section-contact--questionnaire--container--question--container--row--sub-row">
-      <label for="subquestion">${subQ}</label>
-      <input name="subquestion" type="checkbox" class="subinput${i}"></input>
+      <label for="subquestion-${i}">${subQ}</label>
+      <input name="subquestion-${i}" type="checkbox" class="subinput${i}"></input>
       </div>`;
       })
       .join(" ");
@@ -135,8 +172,8 @@ export const surveyMarkup = function() {
       .map((subQ, i) => {
         return `
       <div class="section-contact--questionnaire--container--question--container--row--sub-row">
-      <label for="subquestion">${subQ}</label>
-      <input name="subquestion" type="checkbox" class="subinput${i}"></input>
+      <label for="subquestionTwo-${i}">${subQ}</label>
+      <input name="subquestionTwo-${i}" type="checkbox" class="subinput${i}"></input>
       </div>`;
       })
       .join(" ");
@@ -145,8 +182,8 @@ export const surveyMarkup = function() {
       .map((subQ, i) => {
         return `
       <div class="section-contact--questionnaire--container--question--container--row--sub-row">
-      <label for="subquestion">${subQ}</label>
-      <input name="subquestion" type="checkbox" class="subinput${i}"></input>
+      <label for="subquestionThree-${i}">${subQ}</label>
+      <input name="subquestionThree-${i}" type="checkbox" class="subinput${i}"></input>
       </div>`;
       })
       .join(" ");
@@ -156,8 +193,8 @@ export const surveyMarkup = function() {
       .map((subQ, i) => {
         return `
       <div class="section-contact--questionnaire--container--question--container--row--sub-row">
-      <label for="subquestion">${subQ}</label>
-      <input name="subquestion" type="checkbox" class="subinput${i}"></input>
+      <label for="subquestionFour-${i}">${subQ}</label>
+      <input name="subquestionFour-${i}" type="checkbox" class="subinput${i}"></input>
       </div>`;
       })
       .join(" ");
@@ -175,10 +212,7 @@ export const surveyMarkup = function() {
       ${subQuestionsFour} 
       <div class="section-contact--questionnaire--container--question--container--row">
       <p>Please review the information you selected and then hit submit.</p></div>
-      <div class="section-contact--questionnaire--container--question--container--row">
-      <input type="text" name="name"></input><input type="email" name="email"></input>
-      <button>Submit</button>
-      </div></div>`;
+      ${inputContainer()}</div>`;
 
     return markup;
   };
@@ -189,8 +223,8 @@ export const surveyMarkup = function() {
       .map((question, i) => {
         return `
         <div class="section-contact--questionnaire--container--question--container--row">
-        <label for="question">${question}</label>
-        <input name="question" type="checkbox" class="input${i}"></input>
+        <label for="question-${i}">${question}</label>
+        <input name="question-${i}" type="checkbox" class="input${i}"></input>
         </div>`;
       })
       .join(" ");
@@ -199,8 +233,8 @@ export const surveyMarkup = function() {
       .map((subQ, i) => {
         return `
       <div class="section-contact--questionnaire--container--question--container--row--sub-row">
-      <label for="subquestion">${subQ}</label>
-      <input name="subquestion" type="checkbox" class="subinput${i}"></input>
+      <label for="subquestion-${i}">${subQ}</label>
+      <input name="subquestion-${i}" type="checkbox" class="subinput${i}"></input>
       </div>`;
       })
       .join(" ");
@@ -209,8 +243,8 @@ export const surveyMarkup = function() {
       .map((subQ, i) => {
         return `
       <div class="section-contact--questionnaire--container--question--container--row--sub-row">
-      <label for="subquestion">${subQ}</label>
-      <input name="subquestion" type="checkbox" class="subinput${i}"></input>
+      <label for="subquestionTwo-${i}">${subQ}</label>
+      <input name="subquestion-${i}" type="checkbox" class="subinput${i}"></input>
       </div>`;
       })
       .join(" ");
@@ -219,8 +253,8 @@ export const surveyMarkup = function() {
       .map((subQ, i) => {
         return `
       <div class="section-contact--questionnaire--container--question--container--row--sub-row">
-      <label for="subquestion">${subQ}</label>
-      <input name="subquestion" type="checkbox" class="subinput${i}"></input>
+      <label for="subquestionThree-${i}">${subQ}</label>
+      <input name="subquestionThree-${i}" type="checkbox" class="subinput${i}"></input>
       </div>`;
       })
       .join(" ");
@@ -238,10 +272,70 @@ export const surveyMarkup = function() {
       <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestionFour}</label></div>
       <div class="section-contact--questionnaire--container--question--container--row">
       <p>Please review the information you selected and then hit submit.</p></div>
-      <div class="section-contact--questionnaire--container--question--container--row">
-      <input type="text" name="name"></input><input type="email" name="email"></input>
-      <button>Submit</button>
-      </div></div>`;
+      ${inputContainer()}</div>`;
+
+    return markup;
+  };
+  const rentalManagementSurvey = () => {
+    let questionTitle = questionnaires[3].title;
+    let questions = questionnaires[3].questions
+      .map((question, i) => {
+        return `
+         <div class="section-contact--questionnaire--container--question--container--row">
+         <label for="question-${i}">${question}</label>
+         <input name="question-${i}" type="checkbox" class="input${i}"></input>
+         </div>`;
+      })
+      .join(" ");
+    let markup = ` <div class="section-contact--questionnaire--container--question--container">
+    <div class="section-contact--questionnaire--container--question--container--row"><h4>${questionTitle}</h4></div>
+     ${questions} <div class="section-contact--questionnaire--container--question--container--row">
+    <p>Please review the information you selected and then hit submit.</p></div>
+    ${inputContainer()}</div>`;
+
+    return markup;
+  };
+
+  const commercialTransactionSurvey = () => {
+   
+    let questionTitle = questionnaires[4].title;
+    let questions = questionnaires[4].questions
+      .map((question, i) => {
+        return `
+         <div class="section-contact--questionnaire--container--question--container--row">
+         <label for="question-${i} class="input-label">${question}</label>
+         <input name="question-${i}" type="checkbox" class="input-box"></input>
+         </div>`;
+      })
+      .join(" ");
+    let subQuestion = questionnaires[4].subQuestion;
+    let subQuestions = questionnaires[4].subQuestions
+      .map((subQ, i) => {
+        return `
+        <div class="section-contact--questionnaire--container--question--container--row--sub-row">
+        <label for="subquestion-${i}" class="sub-label hidden">${subQ}</label>
+        <input name="subquestion-${i}" type="checkbox" class="sub-input hidden" ></input>
+        </div>`;
+      })
+      .join(" ");
+    let subSubQuestions = questionnaires[4].subSubQuestions
+      .map((subQ, i) => {
+        return `
+        <div class="section-contact--questionnaire--container--question--container--row--sub-row--deep">
+        <label for="subquestion-${i}" class="sub-label hidden">${subQ}</label>
+        <input name="subquestion-${i}" type="checkbox" class="sub-input hidden"></input>
+        </div>`;
+      })
+      .join(" ");
+    let markup = `<div class="section-contact--questionnaire--container--question--container">
+        <div class="section-contact--questionnaire--container--question--container--row"><h4>${questionTitle}</h4></div>
+         ${questions}
+        <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestion}</label>
+        <input name="subquestion" type="checkbox" class="sub-input" id="commercial-sub-q-1"></input></div>
+        ${subQuestions} ${subSubQuestions} 
+        <div class="section-contact--questionnaire--container--question--container--row">
+        <p>Please review the information you selected and then hit submit.</p></div>
+        ${inputContainer()}</div>`;
 
     return markup;
   };
@@ -249,6 +343,8 @@ export const surveyMarkup = function() {
   return [
     estateAdminSuveyMarkup,
     estatePlanningSurveyMarkup,
-    renderRealEstateSurvey
+    renderRealEstateSurvey,
+    rentalManagementSurvey,
+    commercialTransactionSurvey
   ];
 };

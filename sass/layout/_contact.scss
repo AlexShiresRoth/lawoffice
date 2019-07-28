@@ -15,23 +15,32 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-top: 5rem;
     &--buttons {
       display: flex;
       flex-direction: row;
       justify-content: center;
-      &--button{
-        padding: .7rem;
-        color:$color;
-        background: transparent;
-        border: 1px solid transparent;
+      margin-top: 5rem;
+      &--button {
+        padding: 0.7rem;
+        color: #fff;
+        background: lighten($color, 20%);
+        border: 1px solid lighten($color, 20%);
         transition: all 0.4s ease;
-        margin:0 1rem;
-        border-radius: 15px;
-        &:hover{
+        margin: 0 1rem;
+        border-radius: 25px;
+        &:hover {
           background: $color;
           border: 1px solid $color;
-          color:#fff;
-          cursor:pointer;
+          box-shadow: 0 20px 10px darken(#eee, 20%);
+          color: #fff;
+          cursor: pointer;
+        }
+        &::focus{
+          outline:none;
+        }
+        &::-moz-focus-inner {
+          border: 0 !important;
         }
       }
     }
@@ -39,7 +48,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      min-height: 20rem;
       margin: 2rem;
       &--question {
         &--container {
@@ -53,6 +61,36 @@
             & label {
               font-size: 1rem;
             }
+            &--input-icon-row {
+              display: flex;
+              flex-direction: row;
+              margin: 0 0.5rem;
+              width: 100%;
+              &--icon-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 3rem;
+                padding: 0.2rem 0.5rem;
+                background: $color;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+                vertical-align: middle;
+                & i {
+                  color: #fff;
+                  font-size: 1.4em;
+                }
+              }
+              &--input[type="text"],
+              input[type="email"] {
+                min-height: 3rem;
+                padding: 0.2rem;
+                width: 100%;
+                margin: 0;
+              }
+            }
+
             & button {
               background: $color;
               border: 1px solid $color;
@@ -65,14 +103,23 @@
                 background: $background;
                 border: 1px solid $background;
               }
+              &::-moz-focus-inner {
+                border: 0;
+              }
             }
             &--sub-row {
               display: flex;
               flex-direction: row;
               justify-content: space-between;
-              padding: .5rem 4rem;
+              padding: 0.5rem 4rem;
               & label {
                 font-size: 1rem;
+              }
+              &--deep {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0.5rem 8rem;
               }
             }
           }

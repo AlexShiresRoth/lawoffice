@@ -11,8 +11,15 @@
   background: $color;
   border: 1px solid $color;
   transition: all 0.4s ease;
+  box-shadow: 0 15px 15px darken(#eee,20%);
   margin: 0 1rem;
   border-radius: 15px;
+  &::focus{
+    outline:none;
+  }
+  &::-moz-focus-inner {
+    border: 0 !important;
+  }
 }
 .js-wp-active {
   padding-bottom: 0.5rem;

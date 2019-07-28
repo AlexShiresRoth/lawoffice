@@ -66,6 +66,13 @@ exports.getServicesInfo = {
       ref: "/bookkeeping",
       subCat: []
     }*/
+  ],
+  serviceTitles: [
+    "Estate Administration",
+    "Estate Planning",
+    "Real Estate",
+    "Rental Property Management",
+    "Commercial Transaction"
   ]
 };
 

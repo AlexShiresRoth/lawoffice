@@ -1,6 +1,13 @@
 /*========================================
 =======buttons===============*/
-
+button{
+	&::focus{
+		outline:none;
+	  }
+	  &::-moz-focus-inner {
+		border: 0 !important;
+	  }
+}
 .btn{
 	display: inline-block;
 	padding: 5px 20px;

@@ -47,29 +47,35 @@
     min-height: 20rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around; }
+    justify-content: space-around;
+    margin-top: 5rem; }
     .section-contact--questionnaire--buttons {
       display: flex;
       flex-direction: row;
-      justify-content: center; }
+      justify-content: center;
+      margin-top: 5rem; }
       .section-contact--questionnaire--buttons--button {
-        padding: .7rem;
-        color: #303F9F;
-        background: transparent;
-        border: 1px solid transparent;
+        padding: 0.7rem;
+        color: #fff;
+        background: #6573d0;
+        border: 1px solid #6573d0;
         transition: all 0.4s ease;
         margin: 0 1rem;
-        border-radius: 15px; }
+        border-radius: 25px; }
         .section-contact--questionnaire--buttons--button:hover {
           background: #303F9F;
           border: 1px solid #303F9F;
+          box-shadow: 0 20px 10px #bbbbbb;
           color: #fff;
           cursor: pointer; }
+        .section-contact--questionnaire--buttons--button::focus {
+          outline: none; }
+        .section-contact--questionnaire--buttons--button::-moz-focus-inner {
+          border: 0 !important; }
     .section-contact--questionnaire--container {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      min-height: 20rem;
       margin: 2rem; }
       .section-contact--questionnaire--container--question--container {
         background: #fff; }
@@ -81,6 +87,31 @@
           padding: 1rem; }
           .section-contact--questionnaire--container--question--container--row label {
             font-size: 1rem; }
+          .section-contact--questionnaire--container--question--container--row--input-icon-row {
+            display: flex;
+            flex-direction: row;
+            margin: 0 0.5rem;
+            width: 100%; }
+            .section-contact--questionnaire--container--question--container--row--input-icon-row--icon-container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              min-height: 3rem;
+              padding: 0.2rem 0.5rem;
+              background: #303F9F;
+              border-top-left-radius: 10px;
+              border-bottom-left-radius: 10px;
+              vertical-align: middle; }
+              .section-contact--questionnaire--container--question--container--row--input-icon-row--icon-container i {
+                color: #fff;
+                font-size: 1.4em; }
+            .section-contact--questionnaire--container--question--container--row--input-icon-row--input[type="text"],
+            .section-contact--questionnaire--container--question--container--row--input-icon-row input[type="email"] {
+              min-height: 3rem;
+              padding: 0.2rem;
+              width: 100%;
+              margin: 0; }
           .section-contact--questionnaire--container--question--container--row button {
             background: #303F9F;
             border: 1px solid #303F9F;
@@ -92,13 +123,20 @@
               cursor: pointer;
               background: #121254;
               border: 1px solid #121254; }
+            .section-contact--questionnaire--container--question--container--row button::-moz-focus-inner {
+              border: 0; }
           .section-contact--questionnaire--container--question--container--row--sub-row {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            padding: .5rem 4rem; }
+            padding: 0.5rem 4rem; }
             .section-contact--questionnaire--container--question--container--row--sub-row label {
               font-size: 1rem; }
+            .section-contact--questionnaire--container--question--container--row--sub-row--deep {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              padding: 0.5rem 8rem; }
 
 .section-contact h5 {
   font-size: 1.9rem; }
@@ -532,6 +570,12 @@ footer p {
 
 /*========================================
 =======buttons===============*/
+button::focus {
+  outline: none; }
+
+button::-moz-focus-inner {
+  border: 0 !important; }
+
 .btn {
   display: inline-block;
   padding: 5px 20px;
@@ -627,8 +671,13 @@ a.btn.btn-full:active,
   background: #303F9F;
   border: 1px solid #303F9F;
   transition: all 0.4s ease;
+  box-shadow: 0 15px 15px #bbbbbb;
   margin: 0 1rem;
   border-radius: 15px; }
+  .active--button::focus {
+    outline: none; }
+  .active--button::-moz-focus-inner {
+    border: 0 !important; }
 
 .js-wp-active {
   padding-bottom: 0.5rem;

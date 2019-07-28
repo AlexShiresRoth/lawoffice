@@ -1,25 +1,19 @@
 <% include partials/header %>
 <section class="section-contact" id="contact">
   <div class="section-contact--questionnaire">
+    <p>
+      If you would like to specify your request, please fill out one of the
+      below surveys.
+    </p>
     <div class="section-contact--questionnaire--buttons">
-      <% services.forEach((service) => { %>
+      <% serviceTitles.forEach((service) => { %>
       <button class="section-contact--questionnaire--buttons--button">
-        <%=service.title %>
+        <%=service %>
       </button>
       <% }) %>
     </div>
 
-    <form
-      action="/api/send-email/survey"
-      method="POST"
-      class="section-contact--questionnaire--container"
-    >
-      <p>
-        If you would like to speed up the process, please fill out a survey in
-        one of the above practices. Otherwise please send us a general email
-        below.
-      </p>
-    </form>
+    <form class="section-contact--questionnaire--container"></form>
   </div>
 
   <div class="container-form-map-row">
@@ -69,12 +63,9 @@
               <ion-icon name="filing"></ion-icon>
             </div>
             <select id="subject" name="subject" class="dropdown">
-              <option>Wills, Trusts and Estates Law</option>
-              <option>Bankruptcy Law</option>
-              <option>Business Law</option>
-              <option>Estate Litigation</option>
-              <option>Real Estate Law</option>
-              <option>Probate Law</option>
+              <% services.forEach(service => { %>
+                <option><%= service.title %></option>
+              <% }) %> 
             </select>
           </div>
         </div>
