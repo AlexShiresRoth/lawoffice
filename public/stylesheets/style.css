@@ -52,6 +52,19 @@
       display: flex;
       flex-direction: row;
       justify-content: center; }
+      .section-contact--questionnaire--buttons--button {
+        padding: .7rem;
+        color: #303F9F;
+        background: transparent;
+        border: 1px solid transparent;
+        transition: all 0.4s ease;
+        margin: 0 1rem;
+        border-radius: 15px; }
+        .section-contact--questionnaire--buttons--button:hover {
+          background: #303F9F;
+          border: 1px solid #303F9F;
+          color: #fff;
+          cursor: pointer; }
     .section-contact--questionnaire--container {
       display: flex;
       flex-direction: column;
@@ -66,25 +79,25 @@
           justify-content: space-between;
           border-bottom: 1px solid #eee;
           padding: 1rem; }
-          .section-contact--questionnaire--container--question--container--row p {
-            font-size: 1.2rem; }
+          .section-contact--questionnaire--container--question--container--row label {
+            font-size: 1rem; }
           .section-contact--questionnaire--container--question--container--row button {
-            background: #121254;
-            border: 1px solid #121254;
+            background: #303F9F;
+            border: 1px solid #303F9F;
             transition: all 0.3s ease-in-out;
             color: #fff;
             padding: 1rem 2rem;
             border-radius: 4px; }
             .section-contact--questionnaire--container--question--container--row button:hover {
               cursor: pointer;
-              background: #303F9F;
-              border: 1px solid #303F9F; }
+              background: #121254;
+              border: 1px solid #121254; }
           .section-contact--questionnaire--container--question--container--row--sub-row {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             padding: .5rem 4rem; }
-            .section-contact--questionnaire--container--question--container--row--sub-row p {
+            .section-contact--questionnaire--container--question--container--row--sub-row label {
               font-size: 1rem; }
 
 .section-contact h5 {
@@ -608,8 +621,17 @@ a.btn.btn-full:active,
   color: #fff;
   border-radius: 200px; }
 
+.active--button {
+  padding: 0.7rem;
+  color: #fff;
+  background: #303F9F;
+  border: 1px solid #303F9F;
+  transition: all 0.4s ease;
+  margin: 0 1rem;
+  border-radius: 15px; }
+
 .js-wp-active {
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   border-bottom: 2px solid #303F9F;
   color: #303F9F; }
 
@@ -702,11 +724,11 @@ nav .logo {
 
 .list > li {
   margin: 1rem 0;
-  font-size: .85rem; }
+  font-size: 0.85rem; }
 
 .fadeIn {
   opacity: 1;
-  animation: fadein .4s ease-in; }
+  animation: fadein 0.4s ease-in; }
 
 /*=============================================ANIMATIONS=========================================*/
 @keyframes scaleUp {
