@@ -23,7 +23,8 @@ export const generateQuestionnaire = () => {
           const markup = getMarkup[1];
           console.log(btnText)
           Selectors.surveyForm.innerHTML = renderMarkup(markup());
-        } else {
+        }
+         else {
           return null;
         }
       });
