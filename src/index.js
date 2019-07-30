@@ -10,7 +10,7 @@ const renderSurvey = genSurvey[0];
 const changeBtns = genSurvey[2];
 
 const subForm = formSubmit();
-const callFormSubmit = subForm[0]
+const callFormSubmit = subForm[0];
 const loadFile = () => {
   renderSurvey();
 

@@ -110,6 +110,7 @@ export const questionnaires = [
 
 //generate survey html per practice area
 export const surveyMarkup = function() {
+
   const inputContainer = () => {
     const markup = `<div class="section-contact--questionnaire--container--question--container--row">
       <div class="section-contact--questionnaire--container--question--container--row--input-icon-row">
@@ -126,18 +127,19 @@ export const surveyMarkup = function() {
       </div>`;
     return markup;
   };
+
   const estateAdminSuveyMarkup = () => {
     let questionTitle = questionnaires[0].title;
     let questions = questionnaires[0].questions
       .map((question, i) => {
         return `
          <div class="section-contact--questionnaire--container--question--container--row">
-         <label for="question-${i}">${question}</label>
-         <input name="question-${i}" type="checkbox" class="input${i}"></input>
+         <label for="question-${i}" class="input-label">${question}</label>
+         <input name="question-${i}" type="checkbox" class="input-box"></input>
          </div>`;
       })
       .join(" ");
-    let markup = ` <div class="section-contact--questionnaire--container--question--container">
+    let markup = `<div class="section-contact--questionnaire--container--question--container">
     <div class="section-contact--questionnaire--container--question--container--row"><h4>${questionTitle}</h4></div>
      ${questions} <div class="section-contact--questionnaire--container--question--container--row">
     <p>Please review the information you selected and then hit submit.</p></div>
@@ -146,14 +148,15 @@ export const surveyMarkup = function() {
 
     return markup;
   };
+
   const estatePlanningSurveyMarkup = () => {
     let questionTitle = questionnaires[1].title;
     let questions = questionnaires[1].questions
       .map((question, i) => {
         return `
         <div class="section-contact--questionnaire--container--question--container--row">
-        <label for="question-${i}">${question}</label>
-        <input name="question-${i}" type="checkbox" class="input${i}"></input>
+        <label for="question-${i}" class="input-label">${question}</label>
+        <input name="question-${i}" type="checkbox" class="input-box"></input>
         </div>`;
       })
       .join(" ");
@@ -162,8 +165,8 @@ export const surveyMarkup = function() {
       .map((subQ, i) => {
         return `
       <div class="section-contact--questionnaire--container--question--container--row--sub-row">
-      <label for="subquestion-${i}">${subQ}</label>
-      <input name="subquestion-${i}" type="checkbox" class="subinput${i}"></input>
+      <label for="subquestion-${i}" class="sub-label-level-one hidden">${subQ}</label>
+      <input name="subquestion-${i}" type="checkbox" class="sub-input-level-one hidden"></input>
       </div>`;
       })
       .join(" ");
@@ -172,8 +175,8 @@ export const surveyMarkup = function() {
       .map((subQ, i) => {
         return `
       <div class="section-contact--questionnaire--container--question--container--row--sub-row">
-      <label for="subquestionTwo-${i}">${subQ}</label>
-      <input name="subquestionTwo-${i}" type="checkbox" class="subinput${i}"></input>
+      <label for="subquestionTwo-${i}" class="sub-label-level-two hidden">${subQ}</label>
+      <input name="subquestionTwo-${i}" type="checkbox" class="sub-input-level-two hidden"></input>
       </div>`;
       })
       .join(" ");
@@ -182,8 +185,8 @@ export const surveyMarkup = function() {
       .map((subQ, i) => {
         return `
       <div class="section-contact--questionnaire--container--question--container--row--sub-row">
-      <label for="subquestionThree-${i}">${subQ}</label>
-      <input name="subquestionThree-${i}" type="checkbox" class="subinput${i}"></input>
+      <label for="subquestionThree-${i}" class="sub-label-level-three hidden">${subQ}</label>
+      <input name="subquestionThree-${i}" type="checkbox" class="sub-input-level-three hidden"></input>
       </div>`;
       })
       .join(" ");
@@ -193,8 +196,8 @@ export const surveyMarkup = function() {
       .map((subQ, i) => {
         return `
       <div class="section-contact--questionnaire--container--question--container--row--sub-row">
-      <label for="subquestionFour-${i}">${subQ}</label>
-      <input name="subquestionFour-${i}" type="checkbox" class="subinput${i}"></input>
+      <label for="subquestionFour-${i}" class="sub-label-level-four hidden">${subQ}</label>
+      <input name="subquestionFour-${i}" type="checkbox" class="sub-input-level-four hidden"></input>
       </div>`;
       })
       .join(" ");
@@ -202,13 +205,17 @@ export const surveyMarkup = function() {
     let markup = `<div class="section-contact--questionnaire--container--question--container">
       <div class="section-contact--questionnaire--container--question--container--row"><h4>${questionTitle}</h4></div>
        ${questions}
-      <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestion}</label></div> 
+      <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestion}</label>
+      <input name="subquestion" type="checkbox" class="sub-q-1"></input></div> 
       ${subQuestions}
-      <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestionTwo}</label></div>
+      <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestionTwo}</label>
+      <input name="subquestion" type="checkbox" class="sub-q-2"></input></div>
       ${subQuestionsTwo} 
-      <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestionThree}</label></div>
+      <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestionThree}</label>
+      <input name="subquestion" type="checkbox" class="sub-q-3"></input></div>
       ${subQuestionsThree} 
-      <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestionFour}</label></div>
+      <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestionFour}</label>
+      <input name="subquestion" type="checkbox" class="sub-q-4"></input></div>
       ${subQuestionsFour} 
       <div class="section-contact--questionnaire--container--question--container--row">
       <p>Please review the information you selected and then hit submit.</p></div>
@@ -223,8 +230,8 @@ export const surveyMarkup = function() {
       .map((question, i) => {
         return `
         <div class="section-contact--questionnaire--container--question--container--row">
-        <label for="question-${i}">${question}</label>
-        <input name="question-${i}" type="checkbox" class="input${i}"></input>
+        <label for="question-${i}" >${question}</label>
+        <input name="question-${i}" type="checkbox" class="input-box"></input>
         </div>`;
       })
       .join(" ");
@@ -233,8 +240,8 @@ export const surveyMarkup = function() {
       .map((subQ, i) => {
         return `
       <div class="section-contact--questionnaire--container--question--container--row--sub-row">
-      <label for="subquestion-${i}">${subQ}</label>
-      <input name="subquestion-${i}" type="checkbox" class="subinput${i}"></input>
+      <label for="subquestion-${i}" class="sub-label-level-one hidden">${subQ}</label>
+      <input name="subquestion-${i}" type="checkbox" class="sub-input-level-one hidden"></input>
       </div>`;
       })
       .join(" ");
@@ -243,8 +250,8 @@ export const surveyMarkup = function() {
       .map((subQ, i) => {
         return `
       <div class="section-contact--questionnaire--container--question--container--row--sub-row">
-      <label for="subquestionTwo-${i}">${subQ}</label>
-      <input name="subquestion-${i}" type="checkbox" class="subinput${i}"></input>
+      <label for="subquestionTwo-${i}" class="sub-label-level-two hidden">${subQ}</label>
+      <input name="subquestion-${i}" type="checkbox" class="sub-input-level-two hidden"></input>
       </div>`;
       })
       .join(" ");
@@ -253,8 +260,8 @@ export const surveyMarkup = function() {
       .map((subQ, i) => {
         return `
       <div class="section-contact--questionnaire--container--question--container--row--sub-row">
-      <label for="subquestionThree-${i}">${subQ}</label>
-      <input name="subquestionThree-${i}" type="checkbox" class="subinput${i}"></input>
+      <label for="subquestionThree-${i}" class="sub-label-level-three hidden">${subQ}</label>
+      <input name="subquestionThree-${i}" type="checkbox" class="sub-input-level-three hidden"></input>
       </div>`;
       })
       .join(" ");
@@ -263,13 +270,17 @@ export const surveyMarkup = function() {
     let markup = `<div class="section-contact--questionnaire--container--question--container">
       <div class="section-contact--questionnaire--container--question--container--row"><h4>${questionTitle}</h4></div>
        ${questions}
-      <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestion}</label></div> 
+      <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestion}</label>
+      <input name="subquestion" type="checkbox"  class="sub-q-1"></input></div> 
       ${subQuestions}
-      <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestionTwo}</label></div>
+      <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestionTwo}</label>
+      <input name="subquestion" type="checkbox"  class="sub-q-2"></input></div>
       ${subQuestionsTwo} 
-      <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestionThree}</label></div>
+      <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestionThree}</label>
+      <input name="subquestion" type="checkbox"  class="sub-q-3"></input></div>
       ${subQuestionsThree} 
-      <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestionFour}</label></div>
+      <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestionFour}</label>
+      <input name="subquestion" type="checkbox"  class="sub-q-4"></input></div>
       <div class="section-contact--questionnaire--container--question--container--row">
       <p>Please review the information you selected and then hit submit.</p></div>
       ${inputContainer()}</div>`;
@@ -282,8 +293,8 @@ export const surveyMarkup = function() {
       .map((question, i) => {
         return `
          <div class="section-contact--questionnaire--container--question--container--row">
-         <label for="question-${i}">${question}</label>
-         <input name="question-${i}" type="checkbox" class="input${i}"></input>
+         <label for="question-${i}" class="input-label">${question}</label>
+         <input name="question-${i}" type="checkbox" class="input-box"></input>
          </div>`;
       })
       .join(" ");
@@ -303,7 +314,7 @@ export const surveyMarkup = function() {
       .map((question, i) => {
         return `
          <div class="section-contact--questionnaire--container--question--container--row">
-         <label for="question-${i} class="input-label">${question}</label>
+         <label for="question-${i}" class="input-label">${question}</label>
          <input name="question-${i}" type="checkbox" class="input-box"></input>
          </div>`;
       })
@@ -313,8 +324,8 @@ export const surveyMarkup = function() {
       .map((subQ, i) => {
         return `
         <div class="section-contact--questionnaire--container--question--container--row--sub-row">
-        <label for="subquestion-${i}" class="sub-label hidden">${subQ}</label>
-        <input name="subquestion-${i}" type="checkbox" class="sub-input hidden" ></input>
+        <label for="subquestion-${i}" class="sub-label-level-one hidden">${subQ}</label>
+        <input name="subquestion-${i}" type="checkbox" class="sub-input-level-one hidden" ></input>
         </div>`;
       })
       .join(" ");
@@ -322,8 +333,8 @@ export const surveyMarkup = function() {
       .map((subQ, i) => {
         return `
         <div class="section-contact--questionnaire--container--question--container--row--sub-row--deep">
-        <label for="subquestion-${i}" class="sub-label hidden">${subQ}</label>
-        <input name="subquestion-${i}" type="checkbox" class="sub-input hidden"></input>
+        <label for="subquestion-${i}" class="sub-label-level-two hidden">${subQ}</label>
+        <input name="subquestion-${i}" type="checkbox" class="sub-input-level-two hidden"></input>
         </div>`;
       })
       .join(" ");
@@ -331,7 +342,7 @@ export const surveyMarkup = function() {
         <div class="section-contact--questionnaire--container--question--container--row"><h4>${questionTitle}</h4></div>
          ${questions}
         <div class="section-contact--questionnaire--container--question--container--row"><label for="subquestion">${subQuestion}</label>
-        <input name="subquestion" type="checkbox" class="sub-input" id="commercial-sub-q-1"></input></div>
+        <input name="subquestion" type="checkbox" class="sub-q-1"></input></div>
         ${subQuestions} ${subSubQuestions} 
         <div class="section-contact--questionnaire--container--question--container--row">
         <p>Please review the information you selected and then hit submit.</p></div>

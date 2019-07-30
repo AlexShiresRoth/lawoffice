@@ -1,6 +1,6 @@
 import { Selectors } from "./Selectors.js";
 import { surveyMarkup, questionnaires } from "./Content";
-import { checkInputCommercial } from './SurveyControl';
+import { checkInput } from './SurveyControl';
 
 //TODO figure out how to extract survey info to email,
 //TODO create an axios request for email api
@@ -24,27 +24,31 @@ export const generateQuestionnaire = () => {
           case btnText === questionnaires[0].title.toLowerCase().trim():
             markup = getMarkup[0];
             Selectors.surveyForm.innerHTML = renderMarkup(markup());
+            checkInput();
             this.classList.add("active--button");
             break;
           case btnText === questionnaires[1].title.toLowerCase().trim():
             markup = getMarkup[1];
             Selectors.surveyForm.innerHTML = renderMarkup(markup());
+            checkInput();
             this.classList.add("active--button");
             break;
           case btnText === questionnaires[2].title.toLowerCase().trim():
             markup = getMarkup[2];
             Selectors.surveyForm.innerHTML = renderMarkup(markup());
+            checkInput();
             this.classList.add("active--button");
             break;
           case btnText === questionnaires[3].title.toLowerCase().trim():
             markup = getMarkup[3];
             Selectors.surveyForm.innerHTML = renderMarkup(markup());
+            checkInput();
             this.classList.add("active--button");
             break;
           case btnText === questionnaires[4].title.toLowerCase().trim():
             markup = getMarkup[4];
             Selectors.surveyForm.innerHTML = renderMarkup(markup());
-            checkInputCommercial();
+            checkInput();
             this.classList.add("active--button");
             break;
           default:
