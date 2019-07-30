@@ -24,9 +24,11 @@ export const checkInput = () => {
   const subLabelsLvlThree = [
     ...document.querySelectorAll(".sub-label-level-three")
   ];
-  const subInputsLvlFour = [...document.querySelectorAll(".sub-input-level-")];
+  const subInputsLvlFour = [
+    ...document.querySelectorAll(".sub-input-level-four")
+  ];
   const subLabelsLvlFour = [
-    ...document.querySelectorAll(".sub-label-level-one")
+    ...document.querySelectorAll(".sub-label-level-four")
   ];
   console.log(subQuestionLvlOneCheck);
   if (subQuestionLvlOneCheck) {
@@ -64,6 +66,46 @@ export const checkInput = () => {
           label.classList.toggle("hidden");
         });
         subInputsLvlTwo.map(input => {
+          input.classList.toggle("hidden");
+        });
+      }
+    });
+  }
+  if (subQuestionLvlThreeCheck) {
+    subQuestionLvlThreeCheck.addEventListener("click", () => {
+      console.log("click");
+      if (subQuestionLvlThreeCheck.checked) {
+        subLabelsLvlThree.map(label => {
+          label.classList.toggle("hidden");
+        });
+        subInputsLvlThree.map(input => {
+          input.classList.toggle("hidden");
+        });
+      } else if (!subQuestionLvlThreeCheck.checked) {
+        subLabelsLvlThree.map(label => {
+          label.classList.toggle("hidden");
+        });
+        subInputsLvlThree.map(input => {
+          input.classList.toggle("hidden");
+        });
+      }
+    });
+  }
+  if (subQuestionLvlFourCheck) {
+    subQuestionLvlFourCheck.addEventListener("click", () => {
+      console.log("click");
+      if (subQuestionLvlFourCheck.checked) {
+        subLabelsLvlFour.map(label => {
+          label.classList.toggle("hidden");
+        });
+        subInputsLvlFour.map(input => {
+          input.classList.toggle("hidden");
+        });
+      } else if (!subQuestionLvlFourCheck.checked) {
+        subLabelsLvlFour.map(label => {
+          label.classList.toggle("hidden");
+        });
+        subInputsLvlFour.map(input => {
           input.classList.toggle("hidden");
         });
       }
