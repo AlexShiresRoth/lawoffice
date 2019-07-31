@@ -166,8 +166,9 @@ export const formSubmit = () => {
   return [checkInputs, createEmailSubmit, postSurvey];
 };
 
-//get all the info from  checkboxes/labels and submit the survey info
+//if survey form exists in dom
 if (Selectors.surveyForm) {
+  //get all the info from  checkboxes/labels and submit the survey info
   Selectors.surveyForm.addEventListener("submit", e => {
     const submitForm = formSubmit();
     const submitSurvey = submitForm[2];
