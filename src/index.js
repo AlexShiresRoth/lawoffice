@@ -3,18 +3,12 @@ import {
   generateQuestionnaire
 } from "./javascripts/contentControl.js";
 
-import { formSubmit } from "./javascripts/SurveyControl.js";
-
 const genSurvey = generateQuestionnaire();
 const renderSurvey = genSurvey[0];
 const changeBtns = genSurvey[2];
 
-const subForm = formSubmit();
-const callFormSubmit = subForm[0];
 const loadFile = () => {
   renderSurvey();
-
-  callFormSubmit();
 
   changeBtns();
 

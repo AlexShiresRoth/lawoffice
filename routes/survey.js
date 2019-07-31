@@ -8,22 +8,24 @@ const mg = mailgun({ apiKey: process.env.API_KEY, domain: DOMAIN });
 
 router.use(cors());
 
-// POST ROUTES FOR MAILGUN:
 router.post("/", async (req, res) => {
-  const { name, email, subject, message } = req.body;
-
+  const { text, name, email } = req.query;
+  //need to return the value of the question and which question
+  console.log(name, email);
   const data = {
-    from: email,
-    name,
-    to: "bruce@urmyattorney.com",
-    subject: subject,
-    text: message
+    from: name,
+    to: "alexshiresroth@alexshiresroth.com",
+    subject: "Survey Form Information",
+    text: `
+    ${text}
+
+    <p>submitted by:<h3>${email}</h3></p>`
   };
 
   try {
     await mg.messages().send(data, (error, body) => {
       console.log(body);
-      req.flash("success", "Email has been sent!");
+      req.flash("success", "The questionnaire has been submitted, thank you.");
       res.redirect("/contact#contact");
     });
   } catch (error) {

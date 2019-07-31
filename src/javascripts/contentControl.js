@@ -13,6 +13,7 @@ export const generateQuestionnaire = () => {
 
   const renderMarkup = markup => (Selectors.surveyForm ? markup : null);
 
+  //toggle between different surveys pertaining to which button is selected
   const changeSurvey = () => {
     Selectors.surveyBtns.forEach(btn => {
       btn.addEventListener("click", function(e) {

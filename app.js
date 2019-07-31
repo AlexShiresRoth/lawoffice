@@ -9,6 +9,7 @@ const passport = require("passport");
 
 const indexRouter = require("./routes/index");
 const emailRouter = require("./routes/email");
+const surveyRouter = require("./routes/survey");
 
 const app = express();
 
@@ -46,5 +47,6 @@ app.use((req, res, next) => {
 
 app.use("/", indexRouter);
 app.use("/api/send-email", emailRouter);
+app.use("/api/send-survey", surveyRouter);
 
 module.exports = app;
