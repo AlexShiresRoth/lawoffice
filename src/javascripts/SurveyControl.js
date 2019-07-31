@@ -73,10 +73,6 @@ export const checkInput = () => {
   }
   if (subQuestionLvlThreeCheck) {
     subQuestionLvlThreeCheck.addEventListener("click", () => {
-<<<<<<< HEAD
-=======
-      console.log("click");
->>>>>>> 50c1b8f74e7b11d88ed8d2296600773c9eac7923
       if (subQuestionLvlThreeCheck.checked) {
         subLabelsLvlThree.map(label => {
           label.classList.toggle("hidden");
@@ -96,10 +92,6 @@ export const checkInput = () => {
   }
   if (subQuestionLvlFourCheck) {
     subQuestionLvlFourCheck.addEventListener("click", () => {
-<<<<<<< HEAD
-=======
-      console.log("click");
->>>>>>> 50c1b8f74e7b11d88ed8d2296600773c9eac7923
       if (subQuestionLvlFourCheck.checked) {
         subLabelsLvlFour.map(label => {
           label.classList.toggle("hidden");
@@ -175,9 +167,11 @@ export const formSubmit = () => {
 };
 
 //get all the info from  checkboxes/labels and submit the survey info
-Selectors.surveyForm.addEventListener("submit", e => {
-  const submitForm = formSubmit();
-  const submitSurvey = submitForm[2];
-  e.preventDefault();
-  submitSurvey();
-});
+if (Selectors.surveyForm) {
+  Selectors.surveyForm.addEventListener("submit", e => {
+    const submitForm = formSubmit();
+    const submitSurvey = submitForm[2];
+    e.preventDefault();
+    submitSurvey();
+  });
+}

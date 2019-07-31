@@ -1,7 +1,5 @@
-import {
-  scrollToSection,
-  generateQuestionnaire
-} from "./javascripts/contentControl.js";
+import { generateQuestionnaire } from "./javascripts/contentControl.js";
+import { scrollToSection } from "./javascripts/menu";
 
 const genSurvey = generateQuestionnaire();
 const renderSurvey = genSurvey[0];
