@@ -113,7 +113,6 @@ export const checkInput = () => {
 
 //Todo setup axios post request to the email api to send checkbox questions and values
 export const formSubmit = () => {
-  console.log("form submit");
   const formCheckBoxes = [
     ...document.querySelectorAll("input[type='checkbox']")
   ];
@@ -153,14 +152,27 @@ export const formSubmit = () => {
   const postSurvey = async () => {
     const Email = email.value;
     const Name = name.value;
-    console.log(typeof Email, typeof Name);
     return await axios({
       method: "post",
       url: `http://localhost:3000/api/send-survey?&email=${Email}&name=${Name}&text=${createEmailSubmit()}`,
       data: {
         headers: { "Content-Type": "application/x-www-form-urlencoded" }
       }
-    });
+    })
+      .then(res => {
+        //need to create a modal for email response
+        alert(
+          "Thank You, your answers have been submitted and someone will be in contact with you soon."
+        );
+        Selectors.surveyForm.classList.add("hidden");
+      })
+      .catch(error => {
+        alert(
+          `Uh oh, ${
+            error.status
+          } something happened with your request, please submit again.`
+        );
+      });
   };
 
   return [checkInputs, createEmailSubmit, postSurvey];

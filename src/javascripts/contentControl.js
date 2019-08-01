@@ -24,30 +24,45 @@ export const generateQuestionnaire = () => {
         switch (true) {
           case btnText === questionnaires[0].title.toLowerCase().trim():
             markup = getMarkup[0];
+            Selectors.surveyForm.classList.contains("hidden")
+              ? Selectors.surveyForm.classList.remove("hidden")
+              : null;
             Selectors.surveyForm.innerHTML = renderMarkup(markup());
             checkInput();
             this.classList.add("active--button");
             break;
           case btnText === questionnaires[1].title.toLowerCase().trim():
             markup = getMarkup[1];
+            Selectors.surveyForm.classList.contains("hidden")
+              ? Selectors.surveyForm.classList.remove("hidden")
+              : null;
             Selectors.surveyForm.innerHTML = renderMarkup(markup());
             checkInput();
             this.classList.add("active--button");
             break;
           case btnText === questionnaires[2].title.toLowerCase().trim():
             markup = getMarkup[2];
+            Selectors.surveyForm.classList.contains("hidden")
+              ? Selectors.surveyForm.classList.remove("hidden")
+              : null;
             Selectors.surveyForm.innerHTML = renderMarkup(markup());
             checkInput();
             this.classList.add("active--button");
             break;
           case btnText === questionnaires[3].title.toLowerCase().trim():
             markup = getMarkup[3];
+            Selectors.surveyForm.classList.contains("hidden")
+              ? Selectors.surveyForm.classList.remove("hidden")
+              : null;
             Selectors.surveyForm.innerHTML = renderMarkup(markup());
             checkInput();
             this.classList.add("active--button");
             break;
           case btnText === questionnaires[4].title.toLowerCase().trim():
             markup = getMarkup[4];
+            Selectors.surveyForm.classList.contains("hidden")
+              ? Selectors.surveyForm.classList.remove("hidden")
+              : null;
             Selectors.surveyForm.innerHTML = renderMarkup(markup());
             checkInput();
             this.classList.add("active--button");
