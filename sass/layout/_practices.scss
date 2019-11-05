@@ -2,74 +2,79 @@
 ========practices======================
 */
 .section-practices {
-  min-height: 100vh;
-  padding: 2rem 2rem 0 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
+	min-height: 100vh;
+	padding: 2rem 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
 }
 .section-practices__container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  &--service-bubble {
-    opacity: 0;
-    background: $color;
-    border-radius: 1px;
-    min-height: 20rem;
-    min-width: 10rem;
-    max-width: 30rem;
-    box-shadow: 0 25px 25px darken($color, 20%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 3rem;
-    margin: 2rem;
-    transition: all 0.3s ease-in-out;
-    & a {
-      display: block;
-    }
-    & h4 {
-      color: #fff;
-      font-size: 1.2rem;
-      transition: all 0.3s ease-in-out;
-      text-align:center;
-      &:hover {
-        cursor: pointer;
-        color:#eee;
-      }
-      &:after {
-        transition: all 0.3s ease-in-out;
-      }
-    }
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	&--service-bubble {
+		opacity: 0;
+		background: $color;
+		border-radius: 1px;
+		box-shadow: 0 25px 25px darken($color, 20%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		padding: 3rem;
+		margin: 1rem;
+		transition: all 0.3s ease-in-out;
+		& a {
+			display: block;
+		}
+		& h4 {
+			color: #fff;
+			font-size: 1.3rem;
+			transition: all 0.3s ease-in-out;
+			text-align: center;
+			&:hover {
+				cursor: pointer;
+				color: #eee;
+			}
+			&:after {
+				transition: all 0.3s ease-in-out;
+			}
+		}
 
-    & i {
-      color: lighten($accentColor, 10%);
-      font-size: 5rem;
-      transition: all 0.3s ease-in-out;
-    }
-    &:hover {
-      box-shadow: 0 35px 35px darken($color, 20%);
-      transform: translateY(-2vh);
-    }
-    &:hover i {
-      color: lighten($accentColor, 20%);
-    }
-    &:hover h4:after {
-      background-color: lighten($accentColor, 10%);
-    }
-    & ul {
-      margin: 1.5rem;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-around;
-      align-items:flex-start;
-      & li {
-        color: #eee;
-      }
-    }
-  }
+		& i {
+			color: lighten($accentColor, 10%);
+			font-size: 5rem;
+			transition: all 0.3s ease-in-out;
+		}
+		&:hover {
+			box-shadow: 0 35px 35px darken($color, 20%);
+			transform: translateY(-2vh);
+		}
+		&:hover i {
+			color: lighten($accentColor, 20%);
+		}
+		&:hover h4:after {
+			background-color: lighten($accentColor, 10%);
+		}
+		& ul {
+			margin: 1.5rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			align-items: flex-start;
+			& li {
+				color: #eee;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1020px) {
+	.section-practices__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0.5rem;
+	}
 }
