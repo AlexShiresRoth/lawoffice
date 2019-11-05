@@ -20,7 +20,7 @@
     "express-session": "^1.15.6",
     "google-maps": "^3.3.0",
     "mailgun-js": "^0.22.0",
-    "mongoose": "^5.4.5",
+    "mongoose": "^5.7.8",
     "morgan": "^1.9.1",
     "nodemailer": "^4.6.8",
     "passport": "^0.4.0",
