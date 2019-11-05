@@ -22,6 +22,7 @@
     "mailgun-js": "^0.22.0",
     "mongoose": "^5.7.8",
     "morgan": "^1.9.1",
+    "node-sass": "^4.13.0",
     "nodemailer": "^4.6.8",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
@@ -31,7 +32,6 @@
   "devDependencies": {
     "dotenv": "^6.2.0",
     "html-webpack-plugin": "^4.0.0-beta.5",
-    "node-sass": "^4.11.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
   }
