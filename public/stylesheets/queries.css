@@ -56,10 +56,6 @@
 	}
 }
 @media (max-width: 767px) {
-	.hero-text-box h1 {
-		font-size: 2rem;
-	}
-
 	/*================================================== Section Practices =========================================*/
 	.section-practices .left-bar,
 	.section-practices .right-bar {
