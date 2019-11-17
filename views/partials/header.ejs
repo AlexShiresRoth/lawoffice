@@ -10,10 +10,6 @@
 		/>
 		<link href="/stylesheets/style.css" rel="stylesheet" type="text/css" />
 		<link href="/stylesheets/queries.css" rel="stylesheet" type="text/css" />
-		<link
-			href="https://fonts.googleapis.com/css?family=Raleway:300,400,700|Work+Sans:300,400,700"
-			rel="stylesheet"
-		/>
 
 		<script
 			async
@@ -63,7 +59,7 @@
 					<a id="nav--services">Services<i class="angle down icon"></i></a>
 					<ul class="main-nav__dropdown--service-list hidden">
 						<% services.forEach(service => { %>
-						<li><a href="<%= service.ref %>"> <%= service.title %> </a></li>
+						<a href="<%= service.ref %>"><li><%= service.title %></li> </a>
 						<% }) %>
 					</ul>
 				</div>
@@ -74,7 +70,6 @@
 			</li>
 		</ul>
 		<div class="mobile-navbar">
-			<a href="/"><img src="stylesheets/img/lawofficelogo.png" class="mobile-logo"/></a>
 			<a class="mobile-nav">
 				<div class="nav-icon-container">
 					<i class="bars icon"></i>

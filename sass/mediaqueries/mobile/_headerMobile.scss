@@ -1,11 +1,53 @@
 @media screen and (max-width: 480px) {
-    .hero-text-box {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transform: translate(0vw, 100vh);
-      animation: 0.5s slidein480 0.5s forwards;
-    }
-  }
+	.hero-text-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		transform: translate(0vw, 100vh);
+		animation: 0.5s slidein480 0.5s forwards;
+		&__buttons {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(2, 1fr);
+			justify-items: center;
+			align-content: center;
+			gap: 2rem;
+			margin: 2rem 0;
+			&--survey-btn {
+				padding: 0.5rem 1rem;
+				background: $background;
+				color: $brand-white;
+				font-size: 1rem;
+				letter-spacing: 1.5px;
+				border: 2px solid $background;
+				transition: all 0.2s ease-in-out;
+				&:hover {
+					background: lighten($background, 10%);
+					border: 2px solid lighten($background, 10%);
+					box-shadow: 0 5px 5px darken($background, 20%);
+					cursor: pointer;
+				}
+			}
+			&--about-btn {
+				padding: 0.5rem 1rem;
+				background: transparent;
+				color: $brand-white;
+				font-size: 1rem;
+				letter-spacing: 1.5px;
+				border: 2px solid $brand-white;
+				transition: all 0.2s ease-in-out;
+				&:hover {
+					background: lighten($background, 10%);
+					border: 2px solid lighten($background, 10%);
+					box-shadow: 0 5px 5px darken($background, 20%);
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.slogan {
+		align-items: center;
+	}
+}

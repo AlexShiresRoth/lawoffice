@@ -2,38 +2,42 @@
 ========about======================
 */
 .section-about {
-  line-height: 1.6;
-  opacity: 0;
-  transition: all 0.6s;
+	line-height: 1.6;
+	opacity: 0;
+	transition: all 0.6s;
+	background: $brand-white;
+	& .container {
+		max-width: 60vw;
+	}
 }
 .section-about--transition {
-  opacity: 1;
+	opacity: 1;
 }
 .section-about p {
-  word-spacing: 2px;
-  margin: 0;
-  font-size: 1.2rem;
-  text-align: center;
+	word-spacing: 2px;
+	margin: 1rem 0;
+	font-size: 1.2rem;
+	text-align: center;
 }
 .p-break {
-  display: flex;
-  flex-direction: row;
-  margin: 2rem 0 4rem;
-  justify-content: space-around;
+	display: flex;
+	flex-direction: row;
+	margin: 2rem 0 4rem;
+	justify-content: space-around;
 }
 .p-break i {
-  color: $accentColor;
-  font-size: 2em;
+	color: $accentColor;
+	font-size: 3rem;
 }
 .logo2 {
-  height: 15rem;
-  width: auto;
+	height: 15rem;
+	width: auto;
 }
 
 .section-about h4 {
-  color: #333;
-  margin: 0 0 10px 0;
+	color: #333;
+	margin: 0 0 10px 0;
 }
 .section-about h4:after {
-  display: none;
+	display: none;
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Public+Sans|Domine&display=swap');
+
 @import 'bases/mixins';
 @import 'bases/variables';
 
@@ -8,13 +10,14 @@
 @import 'layout/header';
 @import 'layout/footer';
 
-@import 'mediaqueries/mobile/headerMobile';
-@import 'mediaqueries/mobile/servicesMobile';
-
 @import 'components/buttons';
 @import 'components/alerts';
 @import 'components/active';
 @import 'components/navigation';
+
+@import 'mediaqueries/mobile/headerMobile';
+@import 'mediaqueries/mobile/practicesMobile';
+@import 'mediaqueries/mobile/navMobile';
 
 @import 'utilities/reusable';
 @import 'utilities/animations';
@@ -27,81 +30,41 @@
 }
 
 body {
-	color: #262626;
-	font-family: 'Work Sans', sans-serif;
-	font-weight: 500;
-	font-size: 100%;
-	letter-spacing: 1.5px;
+	color: #666;
+	font-family: 'Public Sans', sans-serif;
+	font-size: 83%;
+	letter-spacing: 1.2px;
 	text-rendering: optimizeLegibility;
 	overflow-x: hidden;
 }
 
-h1,
 h2,
 h3,
 h4 {
-	font-family: 'Raleway';
-	font-weight: 500;
-	word-spacing: 4px;
+	font-family: 'Merriweather';
 	text-transform: uppercase;
+	color: $brand-heading;
 }
 h1 {
-	margin-top: 0;
-	margin-bottom: 20px;
-	color: #fff;
-	font-size: 4rem;
+	color: $brand-white;
+	font-size: 5rem;
+	font-family: 'Domine', sans-serif;
 	font-weight: 300;
+	margin: 0;
 	letter-spacing: 1px;
 	word-spacing: 4px;
 	letter-spacing: 1px;
-	padding: 5px;
 }
 h2 {
 	font-size: 3rem;
 	word-spacing: 2px;
 	text-align: center;
-	margin-bottom: 20px;
 	letter-spacing: 1px;
 	font-weight: 400;
 }
-h2:after {
-	display: block;
-	height: 2px;
-	background-color: $accentColor;
-	content: ' ';
-	width: 100px;
-	margin: 0 auto;
-	margin-top: 10px;
-	margin-bottom: 30px;
-}
 
-h4:after {
-	display: block;
-	height: 2px;
-	background-color: $accentColor;
-	content: ' ';
-	width: 100%;
-	margin-top: 10px;
-	text-align: center;
-	position: absolute;
-}
-
-h3 {
-	font-size: 2rem;
-	margin-bottom: 15px;
-}
-h4 {
-	position: relative;
-	font-size: 2rem;
-}
-h5 {
-	margin-bottom: 10px;
-}
-h6 {
-	font-size: 1.5rem;
-}
 a {
-	font-family: 'Work Sans', 'Arial', sans-serif;
+	font-family: 'Public Sans', sans-serif;
 }
 img {
 	padding: 0;
@@ -113,6 +76,7 @@ ul {
 section p {
 	max-width: 75vw;
 	font-size: 1.7rem;
+	color: $brand-text;
 }
 section {
 	display: flex;

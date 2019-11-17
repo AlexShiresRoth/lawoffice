@@ -1,47 +1,47 @@
 /*active classes */
 .active {
-  background: rgba(48, 63, 159, 0.3);
-  padding: 1rem;
-  color: #fff;
-  border-radius: 200px;
+	background: rgba(48, 63, 159, 0.3);
+	padding: 1rem;
+	color: #fff;
+	border-radius: 200px;
 }
 .active--button {
-  padding: 0.7rem;
-  color: #fff;
-  background: $color;
-  border: 1px solid $color;
-  transition: all 0.4s ease;
-  box-shadow: 0 15px 15px darken(#eee,20%);
-  margin: 0 1rem;
-  border-radius: 15px;
-  &::focus{
-    outline:none;
-  }
-  &::-moz-focus-inner {
-    border: 0 !important;
-  }
+	padding: 0.7rem;
+	color: #fff;
+	background: $color;
+	border: 1px solid $color;
+	transition: all 0.4s ease;
+	box-shadow: 0 15px 15px darken(#eee, 20%);
+	margin: 0 1rem;
+	border-radius: 15px;
+	&::focus {
+		outline: none;
+	}
+	&::-moz-focus-inner {
+		border: 0 !important;
+	}
 }
 .js-wp-active {
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid $color;
-  color: $color;
+	padding-bottom: 0.5rem;
+	border-bottom: 2px solid $color;
+	color: $color;
 }
 
 //hidden
 
 .hidden {
-  display: none;
-  opacity: 0;
-  height: 0;
+	display: none;
+	opacity: 0;
+	height: 0;
 }
 
 .show {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 1rem;
-  background-color: rgba(30, 30, 30, 0.9);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 1rem;
+	background-color: rgba(10, 10, 10, 0.9);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }

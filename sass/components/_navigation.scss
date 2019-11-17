@@ -1,41 +1,5 @@
 /* main nav */
 
-.main-nav__dropdown {
-	position: relative;
-}
-.main-nav li a {
-	color: #f5f5f5;
-	text-decoration: none;
-	list-style: none;
-	font-size: 1.2rem;
-	letter-spacing: 1.7px;
-	-webkit-transition: 0.2s;
-	padding-bottom: 5px;
-	transition: 0.2s;
-	border-bottom: 1px solid transparent;
-}
-.main-nav li a:hover,
-.main-nav li a:active {
-	color: #bdbdbd;
-	padding-bottom: 0.5rem;
-	border-bottom: 2px solid $color;
-	cursor: pointer;
-}
-
-.services-nav,
-.main-nav {
-	display: flex;
-	flex-direction: row;
-	z-index: 9999;
-}
-
-.services-nav li,
-.main-nav li {
-	list-style: none;
-	margin: 0 0.5rem;
-	padding: 1rem 0;
-}
-
 nav {
 	position: fixed;
 	padding: 0 4rem;
@@ -47,10 +11,64 @@ nav {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	background-color: rgba(30, 30, 30, 0.9);
+	background-color: rgba(10, 10, 10, 0.9);
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 	animation: 1s fadein ease;
 	z-index: 99999;
+	& .main-nav {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		align-content: center;
+		justify-items: center;
+		gap: 1rem;
+
+		& li > a {
+			color: $brand-white;
+			font-size: 1.2rem;
+			padding: 0.5rem;
+			&:hover {
+				cursor: pointer;
+				border-bottom: 2px solid $background;
+			}
+		}
+	}
+	& .main-nav__dropdown {
+		position: relative;
+		& a {
+			color: $brand-white;
+			font-size: 1.2rem;
+			transition: all 0.2s ease-in-out;
+			border-bottom: 2px solid transparent;
+			padding: 0.5rem;
+			&:hover {
+				cursor: pointer;
+				border-bottom: 2px solid $background;
+			}
+		}
+		&--service-list {
+			padding: 0;
+			& a {
+				width: 100%;
+				color: $brand-white;
+				font-size: 1.2rem;
+				transition: all 0.2s ease-in-out;
+				&:hover {
+					color: darken($brand-white, 10%);
+					background: rgba(20, 20, 20, 0.9);
+					cursor: pointer;
+				}
+				& li {
+					transition: all 0.2s ease-in-out;
+					padding: 1rem;
+					width: 100%;
+					&:hover {
+						background: rgba(20, 20, 20, 0.9);
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
 }
 nav .logo {
 	display: block;
@@ -64,11 +82,17 @@ nav .logo {
 	vertical-align: middle;
 }
 
-/*mobile nav */
-.mobile-navbar {
-	display: none;
-}
+@media screen and (min-width: 535px) {
+	/*mobile nav */
+	.mobile-navbar {
+		visibility: hidden;
+		max-height: 0;
+		display: none;
+	}
 
-.mobile-nav {
-	display: none;
+	.mobile-nav {
+		visibility: hidden;
+		max-height: 0;
+		display: none;
+	}
 }

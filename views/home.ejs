@@ -3,15 +3,22 @@
 <body>
 	<div class="header">
 		<header id="header">
+			<div class="overlay"></div>
 			<div class="hero-text-box">
-				<div>
-					<h1>Rothenberg Law Office, PLLC</h1>
-				</div>
+				<h1>Rothenberg Law Offices, PLLC</h1>
+
 				<hr />
-				<div>
-					<ul class="slogan">
-						<li>Experience You Can Trust</li>
-					</ul>
+				<ul class="slogan">
+					<li>Experience You Can Trust,</li>
+					<li>Established 1992.</li>
+				</ul>
+				<div class="hero-text-box__buttons">
+					<a href="/contact" alt="contact page"
+						><button class="hero-text-box__buttons--survey-btn">Fill out survey</button></a
+					>
+					<a href="/about" alt="about page"
+						><button class="hero-text-box__buttons--about-btn">Learn about us</button></a
+					>
 				</div>
 				<!--<a href="#" class="btn btn-full btn-question">Questionnaire</a>-->
 			</div>
@@ -20,6 +27,11 @@
 
 	<section class="section-practices" id="js-wp-practices">
 		<h2>Practice Areas</h2>
+		<div class="custom-hr">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
 		<div class="section-practices__container">
 			<% services.map(service => { %>
 			<div class="section-practices__container--service-bubble">
@@ -36,13 +48,14 @@
 	</section>
 
 	<section class="section-phrase" id="js-wp-phrase">
-		<h2>Contact us!</h2>
+		<h2>Contact us</h2>
+		<div class="custom-hr">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-			<path
-				fill="#1f243e"
-				fill-opacity="1"
-				d="M0,224L480,192L960,160L1440,64L1440,320L960,320L480,320L0,320Z"
-			></path>
+			<path fill="#09092b" fill-opacity="0.2" d="M0,224L720,192L1440,32L1440,320L720,320L0,320Z"></path>
 		</svg>
 		<div class="section-phrase-p-break">
 			<div class="p--block">
@@ -75,7 +88,11 @@
 
 	<section class="section-about js-wp-about" id="js-wp-about">
 		<h2>About Rothenberg Law Offices</h2>
-
+		<div class="custom-hr">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
 		<div class="container">
 			<p>
 				You can protect your rights and your interests with the help of a lawyer from the Rothenberg Law Office
