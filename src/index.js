@@ -3,8 +3,11 @@ import { scrollToSection } from './javascripts/menu';
 
 const genSurvey = generateQuestionnaire();
 const renderSurvey = genSurvey[0];
+const renderInitSurvey = genSurvey[1];
 
-const loadFile = () => {
+const loadFile = e => {
+	renderInitSurvey(e);
+
 	renderSurvey();
 
 	scrollToSection();
@@ -12,10 +15,8 @@ const loadFile = () => {
 
 (() => {
 	if (document.readyState == 'loading') {
-		console.log(loadFile());
-		document.addEventListener('DOMContentLoaded', loadFile);
+		document.addEventListener('DOMContentLoaded', e => loadFile(e));
 	} else {
-		console.log(loadFile());
 		loadFile();
 	}
 })();

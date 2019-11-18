@@ -30,10 +30,11 @@
 .section-phrase-p-break {
 	width: 100%;
 	margin: 3rem 1.5rem;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-around;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+	grid-template-rows: 1fr;
+	justify-items: center;
 	opacity: 0;
 	z-index: 1;
 	transition: all 0.5s;
@@ -46,7 +47,7 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	width: 20vw;
+	max-width: 20vw;
 	margin: 0 2.5rem;
 }
 .p--block p {

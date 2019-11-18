@@ -1,0 +1,11 @@
+@media screen and (max-width: 535px) {
+	.section-about {
+		line-height: 1.6;
+		transition: all 0.6s;
+		background: $brand-white;
+		padding: 2rem;
+		& .container {
+			max-width: 100%;
+		}
+	}
+}

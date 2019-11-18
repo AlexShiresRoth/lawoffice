@@ -2,294 +2,252 @@
 ========contact======================
 */
 .section-contact {
-  display: flex;
-  flex-direction: column;
-  background: repeating-linear-gradient(
-    145deg,
-    #f5f5f5 0.5px,
-    #e6e6e6 1px,
-    #fff 2px
-  );
-  &--questionnaire {
-    min-height: 20rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-top: 5rem;
-    &--buttons {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      margin-top: 5rem;
-      &--button {
-        padding: 0.7rem;
-        color: #fff;
-        background: lighten($color, 20%);
-        border: 1px solid lighten($color, 20%);
-        transition: all 0.4s ease;
-        margin: 0 1rem;
-        border-radius: 25px;
-        &:hover {
-          background: $color;
-          border: 1px solid $color;
-          box-shadow: 0 20px 10px darken(#eee, 20%);
-          color: #fff;
-          cursor: pointer;
-        }
-        &::focus{
-          outline:none;
-        }
-        &::-moz-focus-inner {
-          border: 0 !important;
-        }
-      }
-    }
-    &--container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      margin: 2rem;
-      &--question {
-        &--container {
-          background: #fff;
-          &--row {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            border-bottom: 1px solid #eee;
-            padding: 1rem;
-            & label {
-              font-size: 1rem;
-            }
-            &--input-icon-row {
-              display: flex;
-              flex-direction: row;
-              margin: 0 0.5rem;
-              width: 100%;
-              &--icon-container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                min-height: 3rem;
-                padding: 0.2rem 0.5rem;
-                background: $color;
-                border-top-left-radius: 10px;
-                border-bottom-left-radius: 10px;
-                vertical-align: middle;
-                & i {
-                  color: #fff;
-                  font-size: 1.4em;
-                }
-              }
-              &--input[type="text"],
-              input[type="email"] {
-                min-height: 3rem;
-                padding: 0.2rem;
-                width: 100%;
-                margin: 0;
-              }
-            }
+	background: repeating-linear-gradient(145deg, #f5f5f5 0.5px, #e6e6e6 1px, #fff 2px);
 
-            & button {
-              background: $color;
-              border: 1px solid $color;
-              transition: all 0.3s ease-in-out;
-              color: #fff;
-              padding: 1rem 2rem;
-              border-radius: 4px;
-              &:hover {
-                cursor: pointer;
-                background: $background;
-                border: 1px solid $background;
-              }
-              &::-moz-focus-inner {
-                border: 0;
-              }
-            }
-            &--sub-row {
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-              padding: 0.5rem 4rem;
-              & label {
-                font-size: 1rem;
-              }
-              &--deep {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                padding: 0.5rem 8rem;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-.section-contact h5 {
-  font-size: 1.9rem;
-}
-.section-contact h6 {
-  margin-top: 1.2rem;
-  font-family: "Raleway";
-}
-.section-contact h3 {
-  margin-top: 0;
-  font-size: 1.3rem;
-}
-.section-contact p {
-  margin-bottom: 10px;
-}
-.section-contact .header-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  justify-content: space-around;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid #d6d6d6;
-}
-.container-form label:after {
-  content: " *";
-  color: red;
-}
-.container-business {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 80vw;
-  margin: 1rem 0;
-}
-.business--list {
-  width: 25rem;
-}
-.business--list h5 {
-  font-size: 1.4rem;
-  margin: 1rem 0;
-}
-.business--list p {
-  font-size: 1.2rem;
-}
+	padding: 0;
 
-div.container-form-map-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  width: 80%;
-  margin: 1.5rem 0;
-}
-#map {
-  height: 40rem;
-  min-height: 40rem;
-  width: 98vw;
-  padding: 2rem;
-  border-radius: 5px;
-  box-shadow: 0 2px 2px #bdbdbd;
-}
+	& h3 {
+		text-align: center;
+		margin: 4rem;
+		max-width: 60vw;
+	}
 
-#form.contact-form {
-  width: 50rem;
-  padding: 2rem;
-  border-radius: 5px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 2px #bdbdbd;
-}
-.inputs {
-  display: flex;
-  flex-direction: row;
-  min-height: 5vh;
-}
-.input-row {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  min-height: 5vh;
-}
-.input-column .row {
-  display: flex;
-  flex-direction: row;
-  margin: 0.3rem 0;
-  width: 100%;
-}
-div.row.subject--row {
-  margin: 0;
-}
-p.subject--select {
-  font-size: 1.2rem;
-  margin: 0;
-}
-.input-column {
-  display: flex;
-  flex-direction: column;
-  margin: 0.3rem 0;
-}
-.icon--container {
-  min-height: 2rem;
-  display: flex;
-  align-items: center;
-  padding: 0.2rem;
-  min-width: 2rem;
-  justify-content: center;
-  background-color: $accentColor;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
+	& .contact__container {
+		display: grid;
+		grid-template-columns: repeat(1, auto);
+		justify-items: center;
+		align-content: center;
+		gap: 1rem;
+		grid-template-rows: repeat(2, 1fr);
+		background: #fff;
+		margin: 2rem 0;
+		padding: 2rem;
+	}
 
-.input-column ion-icon {
-  color: #fff;
-  font-size: 1.2rem;
-}
-.input-column:nth-child(2) {
-  margin-top: 2.5%;
-}
+	&--questionnaire {
+		min-height: 20rem;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		&--buttons {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			&--button {
+				padding: 0.7rem;
+				color: #fff;
+				background: lighten($color, 20%);
+				border: 1px solid lighten($color, 20%);
+				transition: all 0.4s ease;
+				margin: 0 1rem;
+				border-radius: 25px;
+				&:hover {
+					background: $color;
+					border: 1px solid $color;
+					box-shadow: 0 20px 10px darken(#eee, 20%);
+					color: #fff;
+					cursor: pointer;
+				}
+				&:focus {
+					outline: none;
+				}
+				&::-moz-focus-inner {
+					border: 0 !important;
+				}
+			}
+		}
+		&--container {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			margin: 2rem;
+			&--question {
+				&--container {
+					background: #fff;
+					&--row {
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+						border-bottom: 1px solid #eee;
+						padding: 1rem;
+						& label {
+							font-size: 1rem;
+						}
+						&--input-icon-row {
+							display: flex;
+							flex-direction: row;
+							margin: 0 0.5rem;
+							width: 100%;
+							&--icon-container {
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+								min-height: 3rem;
+								padding: 0.2rem 0.5rem;
+								background: $color;
+								border-top-left-radius: 5px;
+								border-bottom-left-radius: 5px;
+								& i {
+									color: #fff;
+									font-size: 1.2rem;
+								}
+							}
+							&--input[type='text'],
+							input[type='email'] {
+								min-height: 3rem;
+								padding: 0.2rem;
+								width: 100%;
+								margin: 0;
+								border: 1px solid $background;
+								border-top-right-radius: 5px;
+								border-bottom-right-radius: 5px;
+								transition: all 0.2s ease-in-out;
+								&:hover {
+									border: 1px solid lighten($background, 30%);
+									box-shadow: 0 0 5px lighten($background, 30%);
+								}
+								&:focus {
+									outline: 0px;
+									border: 1px solid lighten($background, 30%);
+									box-shadow: 0 0 5px lighten($background, 30%);
+								}
+							}
+						}
 
-input[type="text"],
-input[type="email"],
-select {
-  min-height: 2rem;
-  padding: 0.2rem;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  border: 1px solid $color;
-  background-color: #f7f7f7;
-  width: 100%;
-}
+						& button {
+							background: $color;
+							border: 1px solid $color;
+							transition: all 0.3s ease-in-out;
+							color: #fff;
+							padding: 1rem 2rem;
+							border-radius: 4px;
+							&:hover {
+								cursor: pointer;
+								background: $background;
+								border: 1px solid $background;
+							}
+							&::-moz-focus-inner {
+								border: 0;
+							}
+						}
+						&--sub-row {
+							display: flex;
+							flex-direction: row;
+							justify-content: space-between;
+							padding: 0.5rem 4rem;
+							& label {
+								font-size: 1rem;
+							}
+							&--deep {
+								display: flex;
+								flex-direction: row;
+								justify-content: space-between;
+								padding: 0.5rem 8rem;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&--form-container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 1fr;
+		gap: 1rem;
+		justify-items: center;
+		align-content: center;
+		& .business--list {
+			margin: 0.5rem 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			& li {
+				margin: 0.5rem 0;
+				& p {
+					font-size: 1.2rem;
+				}
+			}
+		}
+		&--form {
+			background: #fff;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 1rem;
 
-textarea {
-  padding: 0.2rem;
-  min-height: 8rem;
-  border-radius: 3px;
-  border: 1px solid $color;
-  background-color: #f7f7f7;
-  width: 100%;
-}
-textarea:hover,
-input:hover {
-  border: 1px solid navy;
-}
+			&--heading {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				& h3 {
+					color: $brand-text;
+				}
+			}
+			&--logo {
+				max-width: 10rem;
+			}
+			&--inputs {
+				&--input-column {
+					display: flex;
+					flex-direction: column;
 
-form .contact-button {
-  margin: 1.5rem 0;
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  width: 100%;
-  letter-spacing: 2px;
-}
-
-#footer-logo {
-  max-height: 3rem;
-  margin-bottom: 1rem;
-}
-
-*:focus {
-  outline: none;
+					margin: 1rem 0;
+					& label {
+						color: lighten($background, 10%);
+						&::after {
+							content: '*';
+							color: darken(#ff0000, 10%);
+						}
+					}
+					& .row {
+						display: flex;
+						flex-direction: row;
+						transition: all 0.2s ease-in-out;
+						border: 1px solid rgba(30, 30, 30, 0.2);
+						border-radius: 5px;
+						&:hover {
+							border: 1px solid lighten($background, 30%);
+							box-shadow: 0 0 5px lighten($background, 30%);
+							border-radius: 5px;
+						}
+						& .icon--container {
+							padding: 1rem;
+							background: $background;
+							display: flex;
+							flex-direction: row;
+							justify-content: center;
+							align-items: center;
+							border-top-left-radius: 5px;
+							border-bottom-left-radius: 5px;
+							border: 1px solid transparent;
+							& ion-icon {
+								color: $brand-white;
+								font-size: 1.2rem;
+							}
+						}
+						& input,
+						select,
+						textarea {
+							width: 100%;
+							padding: 1rem;
+							font-size: 16px;
+							border: 1px solid transparent;
+							background: $brand-white;
+							border-top-right-radius: 5px;
+							border-bottom-right-radius: 5px;
+							&:hover,
+							:focus {
+								border: 1px solid lighten($background, 30%);
+								box-shadow: 0 0 5px lighten($background, 30%);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
