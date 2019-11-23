@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { Selectors } from './Selectors';
+import Modal from './Modal';
 
-//toggle sub level checkboxes depending on if the higher was selected
+//toggle sub level checkboxes depending on if the main question was selected
 //there should only be at most 4 levels of questions
 export const checkInput = () => {
 	const subQuestionLvlOneCheck = document.querySelector('#sub-q-1');
@@ -17,85 +18,87 @@ export const checkInput = () => {
 	const subInputsLvlFour = [...document.querySelectorAll('.sub-input-level-four')];
 	const subLabelsLvlFour = [...document.querySelectorAll('.sub-label-level-four')];
 
-	if (subQuestionLvlOneCheck) {
-		subQuestionLvlOneCheck.addEventListener('click', () => {
-			if (subQuestionLvlOneCheck.checked) {
-				subLabelsLvlOne.map(label => {
-					label.classList.toggle('hidden');
-				});
-				subInputsLvlOne.map(input => {
-					input.classList.toggle('hidden');
-				});
-			} else if (!subQuestionLvlOneCheck.checked) {
-				subLabelsLvlOne.map(label => {
-					label.classList.toggle('hidden');
-				});
-				subInputsLvlOne.map(input => {
-					input.classList.toggle('hidden');
-				});
-			}
-		});
-	}
-	if (subQuestionLvlTwoCheck) {
-		subQuestionLvlTwoCheck.addEventListener('click', () => {
-			if (subQuestionLvlTwoCheck.checked) {
-				subLabelsLvlTwo.map(label => {
-					label.classList.toggle('hidden');
-				});
-				subInputsLvlTwo.map(input => {
-					input.classList.toggle('hidden');
-				});
-			} else if (!subQuestionLvlTwoCheck.checked) {
-				subLabelsLvlTwo.map(label => {
-					label.classList.toggle('hidden');
-				});
-				subInputsLvlTwo.map(input => {
-					input.classList.toggle('hidden');
-				});
-			}
-		});
-	}
-	if (subQuestionLvlThreeCheck) {
-		subQuestionLvlThreeCheck.addEventListener('click', () => {
-			if (subQuestionLvlThreeCheck.checked) {
-				subLabelsLvlThree.map(label => {
-					label.classList.toggle('hidden');
-				});
-				subInputsLvlThree.map(input => {
-					input.classList.toggle('hidden');
-				});
-			} else if (!subQuestionLvlThreeCheck.checked) {
-				subLabelsLvlThree.map(label => {
-					label.classList.toggle('hidden');
-				});
-				subInputsLvlThree.map(input => {
-					input.classList.toggle('hidden');
-				});
-			}
-		});
-	}
-	if (subQuestionLvlFourCheck) {
-		subQuestionLvlFourCheck.addEventListener('click', () => {
-			if (subQuestionLvlFourCheck.checked) {
-				subLabelsLvlFour.map(label => {
-					label.classList.toggle('hidden');
-				});
-				subInputsLvlFour.map(input => {
-					input.classList.toggle('hidden');
-				});
-			} else if (!subQuestionLvlFourCheck.checked) {
-				subLabelsLvlFour.map(label => {
-					label.classList.toggle('hidden');
-				});
-				subInputsLvlFour.map(input => {
-					input.classList.toggle('hidden');
-				});
-			}
-		});
-	}
+	subQuestionLvlOneCheck
+		? subQuestionLvlOneCheck.addEventListener('click', () => {
+				subQuestionLvlOneCheck.checked
+					? (subLabelsLvlOne.map(label => {
+							label.classList.toggle('hidden');
+					  }),
+					  subInputsLvlOne.map(input => {
+							input.classList.toggle('hidden');
+					  }))
+					: !subQuestionLvlOneCheck.checked
+					? (subLabelsLvlOne.map(label => {
+							label.classList.toggle('hidden');
+					  }),
+					  subInputsLvlOne.map(input => {
+							input.classList.toggle('hidden');
+					  }))
+					: null;
+		  })
+		: null;
+
+	subQuestionLvlTwoCheck
+		? subQuestionLvlTwoCheck.addEventListener('click', () => {
+				subQuestionLvlTwoCheck.checked
+					? (subLabelsLvlTwo.map(label => {
+							label.classList.toggle('hidden');
+					  }),
+					  subInputsLvlTwo.map(input => {
+							input.classList.toggle('hidden');
+					  }))
+					: !subQuestionLvlTwoCheck.checked
+					? (subLabelsLvlTwo.map(label => {
+							label.classList.toggle('hidden');
+					  }),
+					  subInputsLvlTwo.map(input => {
+							input.classList.toggle('hidden');
+					  }))
+					: null;
+		  })
+		: null;
+
+	subQuestionLvlThreeCheck
+		? subQuestionLvlThreeCheck.addEventListener('click', () => {
+				subQuestionLvlThreeCheck.checked
+					? (subLabelsLvlThree.map(label => {
+							label.classList.toggle('hidden');
+					  }),
+					  subInputsLvlThree.map(input => {
+							input.classList.toggle('hidden');
+					  }))
+					: !subQuestionLvlThreeCheck.checked
+					? (subLabelsLvlThree.map(label => {
+							label.classList.toggle('hidden');
+					  }),
+					  subInputsLvlThree.map(input => {
+							input.classList.toggle('hidden');
+					  }))
+					: null;
+		  })
+		: null;
+
+	subQuestionLvlFourCheck
+		? subQuestionLvlFourCheck.addEventListener('click', () => {
+				subQuestionLvlFourCheck.checked
+					? (subLabelsLvlFour.map(label => {
+							label.classList.toggle('hidden');
+					  }),
+					  subInputsLvlFour.map(input => {
+							input.classList.toggle('hidden');
+					  }))
+					: !subQuestionLvlFourCheck.checked
+					? (subLabelsLvlFour.map(label => {
+							label.classList.toggle('hidden');
+					  }),
+					  subInputsLvlFour.map(input => {
+							input.classList.toggle('hidden');
+					  }))
+					: null;
+		  })
+		: null;
 };
 
-//Todo setup axios post request to the email api to send checkbox questions and values
 export const formSubmit = () => {
 	const formCheckBoxes = [...document.querySelectorAll("input[type='checkbox']")];
 	const formLabels = [...document.querySelectorAll('label')];
@@ -104,35 +107,33 @@ export const formSubmit = () => {
 
 	const checkInputs = () => {
 		//check to make sure survey has rendered to dom
-		const survey = [];
 
-		if (Selectors.surveyForm) {
-			//check if the checkboxes and labels have rendered
-			if (formCheckBoxes && formLabels) {
-				//check if checkbox amount equals label amount
-				if (formCheckBoxes.length === formLabels.length) {
-					for (let i = 0; i < formCheckBoxes.length; i++) {
-						const emailMarkup = ` ${formLabels[i].textContent} ${formCheckBoxes[i].checked ? 'yes' : 'no'}`;
-						survey.push(emailMarkup);
-					}
-				}
-			}
-		}
-		return survey;
+		return Selectors.surveyForm
+			? //check if the checkboxes and labels have rendered
+			  formCheckBoxes && formLabels
+				? //check if checkbox amount equals label amount
+				  formCheckBoxes.map((check, i) => {
+						const emailMarkup = ` ${formLabels[i].textContent} ${check.checked ? 'yes' : 'no'}`;
+						return emailMarkup;
+				  })
+				: ''
+			: null;
 	};
 
 	//email template form
 	const createEmailSubmit = () => {
 		if (checkInputs().length > 0) {
-			const emailTemp = ` ${checkInputs()} `;
+			const emailTemp = `${checkInputs()}`;
 			return emailTemp;
 		}
 	};
+
 	//send the post request to the mailgun api in the router
 	const postSurvey = async () => {
 		const Email = email.value;
 		const Name = name.value;
-		return await axios({
+
+		await axios({
 			method: 'post',
 			url: `http://localhost:3000/api/send-survey?&email=${Email}&name=${Name}&text=${createEmailSubmit()}`,
 			data: {
@@ -140,12 +141,16 @@ export const formSubmit = () => {
 			},
 		})
 			.then(res => {
+				const createModal = new Modal('succes', res.data);
+				createModal.createModal();
+
 				//need to create a modal for email response
-				alert('Thank You, your answers have been submitted and someone will be in contact with you soon.');
-				Selectors.surveyForm.classList.add('hidden');
+				//clear input fields
 			})
 			.catch(error => {
-				alert(`Uh oh, ${error.status} something happened with your request, please submit again.`);
+				const createModal = new Modal('error', error.response);
+				createModal.createModal();
+				console.error(error.response);
 			});
 	};
 

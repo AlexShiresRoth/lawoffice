@@ -8,6 +8,7 @@ export const generateQuestionnaire = () => {
 
 	const renderMarkup = markup => (Selectors.surveyForm ? markup : null);
 
+	//Render page with first survey
 	const initialSurvey = e => {
 		let markup = getMarkup[0];
 		Selectors.surveyForm.innerHTML = renderMarkup(markup());
@@ -79,9 +80,7 @@ export const generateQuestionnaire = () => {
 	//remove active class on services buttons if one exists on a click
 	const removeActiveClass = () => {
 		const active = document.getElementsByClassName('active--button');
-		if (active.length > 0) {
-			active[0].className = active[0].className.replace(' active--button', '');
-		}
+		active.length > 0 ? (active[0].className = active[0].className.replace(' active--button', '')) : '';
 	};
 
 	return [changeSurvey, initialSurvey];

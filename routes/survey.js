@@ -10,10 +10,10 @@ router.use(cors());
 router.post('/', async (req, res) => {
 	const { text, name, email } = req.query;
 	//need to return the value of the question and which question
-	console.log(name, email);
+
 	const data = {
 		from: name,
-		to: 'alexshiresroth@alexshiresroth.com',
+		to: 'alex@alexshiresroth.com',
 		subject: 'Survey Form Information',
 		text: `
     ${text}
@@ -24,13 +24,13 @@ router.post('/', async (req, res) => {
 	try {
 		await mg.messages().send(data, (error, body) => {
 			console.log(body);
-			req.flash('success', 'The questionnaire has been submitted, thank you.');
-			res.redirect('/contact#contact');
+			error
+				? res.status(500).json({ msg: 'Internal Server Error, Please Resubmit Survey' })
+				: res.status(200).json({ msg: 'Survey Submitted, someone will be in touch soon.' });
 		});
 	} catch (error) {
 		console.log(error);
-		req.flash('error', 'Something went wrong with the request, please try again.');
-		res.redirect('/contact#contact');
+		res.status(500).json({ msg: 'Internal Server Error, Please Resubmit Survey' });
 	}
 });
 
