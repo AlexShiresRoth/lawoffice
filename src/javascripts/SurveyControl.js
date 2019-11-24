@@ -106,8 +106,6 @@ export const formSubmit = () => {
 	const email = document.querySelector('#survey-name');
 
 	const checkInputs = () => {
-		//check to make sure survey has rendered to dom
-
 		return Selectors.surveyForm
 			? //check if the checkboxes and labels have rendered
 			  formCheckBoxes && formLabels
@@ -141,29 +139,41 @@ export const formSubmit = () => {
 			},
 		})
 			.then(res => {
-				const createModal = new Modal('succes', res.data);
+				const createModal = new Modal('success', res.data.msg);
 				createModal.createModal();
-
-				//need to create a modal for email response
-				//clear input fields
+				setTimeout(() => {
+					formCheckBoxes.map(box => (box.checked = false));
+					createModal ? createModal.removeModal() : null;
+				}, 3000);
+				//allow user to close modal
+				document.addEventListener('click', e => {
+					return e.target && e.target.className === 'modal__type--close' ? createModal.removeModal() : null;
+				});
 			})
 			.catch(error => {
+				console.error(error.response);
 				const createModal = new Modal('error', error.response);
 				createModal.createModal();
-				console.error(error.response);
+				setTimeout(() => {
+					formCheckBoxes.map(box => (box.checked = false));
+					createModal ? createModal.removeModal() : null;
+				}, 3000);
+				//allow user to close modal
+				document.addEventListener('click', e => {
+					return e.target && e.target.className === 'modal__type--close' ? createModal.removeModal() : null;
+				});
 			});
 	};
 
 	return [checkInputs, createEmailSubmit, postSurvey];
 };
 
-//if survey form exists in dom
-if (Selectors.surveyForm) {
-	//get all the info from  checkboxes/labels and submit the survey info
-	Selectors.surveyForm.addEventListener('submit', e => {
-		const submitForm = formSubmit();
-		const submitSurvey = submitForm[2];
-		e.preventDefault();
-		submitSurvey();
-	});
-}
+Selectors.surveyForm
+	? //get all the info from  checkboxes/labels and submit the survey info
+	  Selectors.surveyForm.addEventListener('submit', e => {
+			const submitForm = formSubmit();
+			const submitSurvey = submitForm[2];
+			e.preventDefault();
+			submitSurvey();
+	  })
+	: null;

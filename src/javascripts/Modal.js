@@ -4,10 +4,14 @@ export default class Modal {
 		this.res = res;
 	}
 	createModal() {
-		console.log(this.type, this.res);
 		const body = document.querySelector('body');
-		const markup = `<div class="modal"><div class="modal--${this.type}"><p>${this.res}</p></div></div>`;
+		const markup = `<div class="modal__type"><div class="modal__type--${this.type}"><p>${this.res}</p>
+        <button class="modal__type--close">Close</button></div></div>`;
 		return body.insertAdjacentHTML('afterbegin', markup);
 	}
-	removeModal() {}
+	removeModal() {
+		const body = document.querySelector('body');
+		[...document.querySelectorAll('input')].map(input => (input.value = ''));
+		return body.removeChild(document.querySelector('.modal__type'));
+	}
 }

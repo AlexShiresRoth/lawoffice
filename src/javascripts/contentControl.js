@@ -10,10 +10,12 @@ export const generateQuestionnaire = () => {
 
 	//Render page with first survey
 	const initialSurvey = e => {
-		let markup = getMarkup[0];
-		Selectors.surveyForm.innerHTML = renderMarkup(markup());
-		checkInput();
-		Selectors.surveyBtns[0].classList.add('active--button');
+		if (Selectors.surveyForm) {
+			let markup = getMarkup[0];
+			Selectors.surveyForm.innerHTML = renderMarkup(markup());
+			checkInput();
+			Selectors.surveyBtns[0].classList.add('active--button');
+		}
 	};
 
 	//toggle between different surveys pertaining to which button is selected
